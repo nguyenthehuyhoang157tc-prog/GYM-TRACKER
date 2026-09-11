@@ -85,7 +85,57 @@ git push origin master
 
 ## 4. Agent Claude trên Notion làm việc thế nào
 
-Agent đọc repo qua GitHub API. Những gì nó có và không có:
+### 4.1 Đừng nhầm hai thứ khác nhau
+
+Notion có **hai** tích hợp GitHub, chỉ một trong hai biến Claude thành coding agent:
+
+| | GitHub AI **Connector** | GitHub trong **Agent** (cái cần dùng) |
+|---|---|---|
+| Vào từ đâu | `Settings` → `Notion AI` → `+` cạnh GitHub | Mở agent → `•••` / `Connect GitHub` |
+| Bản chất | **Chỉ đọc** — index code, PR, issue để hỏi đáp | **Đọc + ghi** — sửa code, tạo pull request |
+| Xác thực | OAuth, yêu cầu GitHub **organization** owner | **Personal access token** |
+| Yêu cầu gói | Business / Enterprise, workspace > 1 thành viên | Gói có agent |
+
+Connector chỉ để **tra cứu** ("PR nào sửa auth tuần trước?"). Nó **không sửa được code**. Muốn
+Claude thành coding agent thì phải dùng đường **Agent → Connect GitHub** với PAT.
+
+Lưu ý: tài liệu Connector nói repo cá nhân phải chuyển vào organization — điều đó **chỉ áp
+dụng cho Connector**. Với đường PAT của Agent, chọn resource owner là tài khoản cá nhân và
+chọn repo trực tiếp là được (đúng như bạn đã làm).
+
+### 4.2 Tạo personal access token — các bước chính xác
+
+Vào `github.com/settings/personal-access-tokens/new` (fine-grained):
+
+1. **Token name**: tuỳ ý (ví dụ `notion-auron`).
+2. **Resource owner**: `nguyenthehuyhoang157tc-prog`.
+3. **Expiration**: xem cảnh báo ở mục 4.3.
+4. **Repository access**: `Only select repositories` → chọn `nguyenthehuyhoang157tc-prog/GYM-TRACKER`.
+5. **Permissions** — đây là bước **dễ bỏ sót nhất**. Bấm `+ Add permissions` và thêm:
+   - `Contents` → **Read and write** (đọc và sửa file)
+   - `Pull requests` → **Read and write** (tạo/cập nhật PR)
+   - `Metadata` được GitHub **tự thêm** ở mức Read-only và không tắt được.
+6. Bấm **Generate token**, rồi **copy ngay** — GitHub chỉ hiện token **một lần duy nhất**.
+   Rời trang là mất, phải tạo lại token mới.
+7. Dán vào ô `Personal access token` trong Notion, chọn repository, bấm `Connect`.
+
+**Nếu ô Permissions vẫn ghi "No repository permissions added yet" (0 Repositories) thì token
+vô dụng** — agent sẽ không đọc được file nào, dù đã kết nối thành công.
+
+### 4.3 Có nên để `No expiration`?
+
+GitHub cảnh báo về việc này và cảnh báo đó là có lý. Đánh đổi:
+
+| | `No expiration` | Có hạn (ví dụ 90 ngày) |
+|---|---|---|
+| Tiện | Đặt một lần, dùng mãi | Phải tạo lại token và kết nối lại khi hết hạn |
+| Rủi ro | Token lộ là mất quyền ghi vào repo **vĩnh viễn** | Cửa sổ rủi ro có giới hạn |
+
+Token này có quyền **ghi** vào repo, nên hãy đối xử với nó như mật khẩu: không dán vào chat,
+không commit vào repo, không đưa vào ảnh chụp màn hình. Nếu muốn cân bằng, đặt hạn 90 ngày và
+ghi lịch nhắc gia hạn.
+
+### 4.4 Những gì agent có và không có
 
 **Có:** toàn bộ source Kotlin/XML, `app/src/main/assets` (1.154 ảnh bài tập + catalog JSON),
 `app/schemas` (10 file schema Room), toàn bộ build config, 132 file `docs/`, và 3 thư mục
@@ -100,7 +150,7 @@ tới `docs/engineering_notes.md` (bài học AGSL, bug dialog-insets, kế ho�
 - `graphify-out/graph.json` — có, nhưng là **ảnh chụp 06/09**, không phải index sống.
 - Bộ nhớ phiên làm việc local của bạn (`.workbuddy-ai/memory/`).
 
-### Hạn chế lớn nhất: agent không tự compile được
+### 4.5 Hạn chế lớn nhất: agent không tự compile được
 
 Nếu tích hợp Notion chỉ có quyền GitHub API (không có sandbox có JDK + Android SDK), agent
 **sửa code mà không biên dịch**, tức là không biết mình vừa làm hỏng build hay chưa. CI chính
@@ -109,6 +159,20 @@ là lưới an toàn bù cho việc đó: mọi push/PR đều được compile 
 **Hệ quả thực tế:** với việc nhỏ, phạm vi hẹp thì ổn. Với việc đụng Compose UI hoặc AGSL
 liquid glass thì nên yêu cầu agent mở PR để CI kiểm tra trước khi merge, thay vì commit thẳng
 vào `master`.
+
+**Đổi model mạnh hơn không giải quyết được điểm này.** Dù chọn model mạnh nhất có trong gói,
+giới hạn thật vẫn là agent không có phản hồi biên dịch. Model mạnh giúp viết code đúng hơn,
+nhưng không thay được một lần `./gradlew :app:compileDebugKotlin`.
+
+### 4.6 Cách giao việc để ít rủi ro nhất
+
+1. Yêu cầu agent **mở pull request**, không push thẳng vào `master`.
+2. PR sẽ tự kích hoạt CI; đợi CI xanh rồi mới merge.
+3. Việc đụng liquid glass/AGSL: yêu cầu agent **đọc `docs/engineering_notes.md` trước**, và
+   nói rõ nó không được sửa 3 file được bảo vệ
+   (`MuscleRecovery.kt`, `MuscleHeatEngine.kt`, `ProgressiveOverload.kt`) — có test đóng băng
+   byte canh những file này.
+4. Sau khi merge, vẫn nên `git pull` rồi tự chạy lại build ở máy trước khi build APK thật.
 
 ---
 
@@ -129,6 +193,9 @@ Xem kết quả tại **`https://github.com/nguyenthehuyhoang157tc-prog/GYM-TRAC
 
 Đã kiểm chứng chạy được: cả hai lệnh trên đều xanh ở local (468 test, 0 failure), và cũng
 xanh trong một bản checkout sạch mô phỏng môi trường CI.
+
+**Đã xác nhận trên GitHub:** 7/7 workflow run đầu tiên đều **xanh**, thời gian 55 giây –
+4 phút 49 giây mỗi lần.
 
 **Hạn chế:**
 - Repo **Private** nên Actions tiêu tốn phút trả phí (gói Free: 2.000 phút/tháng; build
