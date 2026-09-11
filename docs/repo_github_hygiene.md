@@ -343,3 +343,70 @@ với LF còn bản trên đĩa dùng CRLF.
 
 **Kết luận: đã đủ điều kiện về dung lượng.** Việc còn lại chỉ là tạo repo trống trên GitHub
 (không tick "Add README/.gitignore") và chạy `git push -u origin master`.
+
+---
+
+## 10. Danh tính commit và CI (11/09/2026)
+
+### Danh tính commit — dùng địa chỉ noreply, không dùng email thật
+
+Toàn bộ 6 commit đã được viết lại để tác giả là:
+
+```
+nguyenthehuyhoang157tc-prog <248923513+nguyenthehuyhoang157tc-prog@users.noreply.github.com>
+```
+
+**Vì sao không dùng `nguyenthehuyhoang157tc@gmail.com`?** Tài khoản GitHub này đang bật
+tuỳ chọn *"Block command line pushes that expose my email"*. Khi push commit mang email thật,
+GitHub từ chối thẳng:
+
+```
+remote: error: GH007: Your push would publish a private email address.
+```
+
+Hai cách gỡ, và đây là đánh đổi:
+
+| Cách | Kết quả |
+|---|---|
+| **Dùng địa chỉ noreply** (đang áp dụng) | Commit vẫn gắn vào profile, email thật không bị lộ, không cần đổi cài đặt GitHub |
+| Tắt "Block command line pushes…" tại `github.com/settings/emails` | Dùng được email thật, nhưng email đó **nằm vĩnh viễn trong metadata commit** và hiện công khai |
+
+Địa chỉ noreply lấy theo công thức `<user-id>+<username>@users.noreply.github.com`; user id
+lấy từ `https://api.github.com/users/<username>`.
+
+**Cấu hình để commit tương lai không bị chặn** (đã đặt ở mức repo, không đụng global):
+
+```bash
+git config user.name  "nguyenthehuyhoang157tc-prog"
+git config user.email "248923513+nguyenthehuyhoang157tc-prog@users.noreply.github.com"
+```
+
+> Lưu ý: `git config --global user.email` trên máy vẫn là
+> `nguyenthehuyhoang157tc@gmail.com`. Email đó **sẽ bị GH007 chặn** ở bất kỳ repo GitHub nào.
+> Nếu muốn sửa cho mọi repo, đặt lại global bằng địa chỉ noreply ở trên, hoặc tắt tuỳ chọn
+> chặn email trong cài đặt GitHub.
+
+Cách viết lại tác giả đã dùng: dựng lại chuỗi commit bằng plumbing `git commit-tree` (tái sử
+dụng nguyên tree/blob, chỉ ghi 6 object commit mới), có kiểm chứng `TREE_IDENTICAL=yes` trước
+khi force-push. Ngày tác giả gốc được giữ nguyên.
+
+### CI — đã kiểm chứng chạy được
+
+`.github/workflows/android-ci.yml` hợp lệ về YAML (trigger `push` + `pull_request` trên
+`master`/`main`, chạy trên `ubuntu-latest`, 8 bước).
+
+Hai lệnh mà CI thực thi đã được chạy thử ngay trên máy với JDK 17.0.19:
+
+| Lệnh | Kết quả |
+|---|---|
+| `./gradlew :app:compileDebugKotlin` | **BUILD SUCCESSFUL** (1m 30s) |
+| `./gradlew :app:testDebugUnitTest` | **BUILD SUCCESSFUL** (21s) |
+
+Nên lần chạy CI đầu tiên được kỳ vọng xanh. Trạng thái thực tế xem tại
+`https://github.com/nguyenthehuyhoang157tc-prog/GYM-TRACKER/actions` — không truy vấn được
+bằng dòng lệnh vì repo là private và `gh` CLI không có trên máy.
+
+Một chi tiết đã sửa để CI chạy được: `gradlew` từng được lưu ở mode `100644` (do
+`core.filemode = false` khi phát triển trên Windows), khiến `./gradlew` chết với
+"Permission denied" trên runner Linux. Đã đặt lại thành `100755` và workflow vẫn có thêm
+bước `chmod +x ./gradlew` để phòng hờ.
