@@ -289,7 +289,9 @@ Nếu vẫn muốn cấu trúc module, cách chia hợp lý cho repo này:
 
 ## 8. Lệnh đẩy lên GitHub
 
-Repo **chưa có remote** (`git remote -v` trống). Sau khi commit `ed5d609`:
+Repo đã có remote `origin` trỏ tới
+`https://github.com/nguyenthehuyhoang157tc-prog/GYM-TRACKER.git`, nhánh `master`.
+Quy trình hằng ngày và cách xử lý sự cố xem `docs/github_workflow_guide.md`.
 
 ```bash
 # 1) Tạo repo trống trên GitHub trước (KHÔNG tick "Add README/.gitignore")
