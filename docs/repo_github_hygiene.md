@@ -306,3 +306,40 @@ lượng repo trên GitHub (~151 MB).
 
 **Cảnh báo:** không dùng `git push --all` / `--mirror` / `git push origin --tags` nếu không
 muốn đẩy checkpoint Codex và 15 branch `claude/*` lên GitHub.
+
+---
+
+## 9. Kiểm chứng giới hạn GitHub (11/09/2026)
+
+Đo trên cả object store, không chỉ cây hiện tại:
+
+| Hạng mục | Giá trị đo được | Ngưỡng GitHub | Kết luận |
+|---|---|---|---|
+| File lớn nhất (toàn bộ object store) | **3,13 MB** | chặn ở 100 MB | Đạt — biên an toàn **32×** |
+| Số file > 100 MB | **0** | chặn cứng | Đạt |
+| Số file > 50 MB | **0** | cảnh báo | Đạt |
+| Số file > 20 MB | **0** | — | Đạt |
+| Payload push (lịch sử `master`) | **148,53 MB** / 1.956 blob | giới hạn 2 GB/push | Đạt |
+| Cây commit hiện tại | **136,58 MB** / 1.845 file | khuyến nghị < 1 GB | Đạt |
+| Nếu lỡ `push --all` | 348,89 MB / 4.715 blob | vẫn dưới ngưỡng | Không chặn, nhưng thừa |
+| `.gitignore` | **6,10 KB**, đã được track | — | Đạt |
+
+File lớn nhất: `AndroidLiquidGlass-kmp/.../artworks/homescreen.png` (3,13 MB).
+Blob lớn nhất trong **toàn bộ** object store (kể cả object rời không còn ref) cũng chỉ 3,13 MB
+— nên dù push thế nào cũng không thể vượt giới hạn 100 MB.
+
+Lưu ý chênh lệch nhỏ: 137,1 MB (đo trên đĩa) so với 136,58 MB (đo trong git) là do Git lưu
+với LF còn bản trên đĩa dùng CRLF.
+
+### Trạng thái sẵn sàng
+
+| Điều kiện | Trạng thái |
+|---|---|
+| Cây làm việc sạch | ✅ không có thay đổi chưa commit |
+| File rác còn tracked | ✅ 0 |
+| `.gitignore` đã commit | ✅ |
+| Giới hạn 100 MB | ✅ |
+| Remote | ❌ **chưa cấu hình** — cần tạo repo trên GitHub rồi `git remote add origin` |
+
+**Kết luận: đã đủ điều kiện về dung lượng.** Việc còn lại chỉ là tạo repo trống trên GitHub
+(không tick "Add README/.gitignore") và chạy `git push -u origin master`.
