@@ -1,12 +1,33 @@
+## Read first
+
+`docs/engineering_notes.md` carries the durable, hard-won knowledge that is not obvious from
+the source: the AGSL liquid-glass traps (`shouldAutoInvalidate`, bevel/overhang blending, the
+`DEBUG_EFFECT` ladder), the Compose dialog-inset bug, the set-type domain plan and the design
+rules. Read it before non-trivial work.
+
 ## graphify
 
-This project has a knowledge graph at graphify-out/ with god nodes, community structure, and cross-file relationships.
+This project has a knowledge graph at `graphify-out/` with god nodes, community structure and
+cross-file relationships.
 
-Rules:
-- For codebase questions, first run `graphify query "<question>"` when graphify-out/graph.json exists. Use `graphify path "<A>" "<B>"` for relationships and `graphify explain "<concept>"` for focused concepts. These return a scoped subgraph, usually much smaller than GRAPH_REPORT.md or raw grep output.
-- If graphify-out/wiki/index.md exists, use it for broad navigation instead of raw source browsing.
-- Read graphify-out/GRAPH_REPORT.md only for broad architecture review or when query/path/explain do not surface enough context.
-- After modifying code, run `graphify update .` to keep the graph current (AST-only, no API cost).
+**Important — read this before following the rules below.** The `graphify` CLI is **not
+installed** and is not available as a standard package, so the graph **cannot be regenerated**
+here. `graphify-out/graph.json` and `graphify-out/GRAPH_REPORT.md` are committed as a
+**snapshot dated 2026-09-06** and drift as the code changes. Treat them as a navigation aid and
+verify anything important against the actual source. Do not assume `graphify update` succeeded.
+The dated `graphify-out/2026-*/` folders and `graphify-out/cache/` are git-ignored (163 MB
+total, ~9 MB useful).
+
+Rules (only where the CLI is actually available):
+- For codebase questions, run `graphify query "<question>"`. Use `graphify path "<A>" "<B>"`
+  for relationships and `graphify explain "<concept>"` for focused concepts. These return a
+  scoped subgraph, usually much smaller than `GRAPH_REPORT.md` or raw grep output.
+- Read `graphify-out/GRAPH_REPORT.md` for broad architecture review, or when
+  query/path/explain do not surface enough context. There is **no** `graphify-out/wiki/`
+  directory in this repo.
+- After modifying code, run `graphify update .` to keep the graph current (AST-only, no API
+  cost) — but only if the CLI exists.
+- Without the CLI, read `graphify-out/graph.json` directly.
 
 ## Compose `Dialog` window insets (bit us twice — read before touching any sheet/modal)
 

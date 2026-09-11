@@ -132,8 +132,18 @@ local.properties
 .tmp-kotlin/
 .tmp-scan/
 .workbuddy-ai/
-graphify-out/
 skills-lock.json
+
+# graphify-out/: CHỈ commit graph hiện tại + báo cáo kiến trúc, KHÔNG commit cache
+# và snapshot theo ngày. Tổng thư mục là 163,61 MB nhưng phần dùng được chỉ ~9,25 MB:
+#   graph.json 9,15 MB + GRAPH_REPORT.md 98 KB  -> commit
+#   cache/ 43,36 MB + ~40 thư mục ngày (2026-07-17/ ...) ~100 MB -> bỏ
+# Lưu ý: graphify CLI KHÔNG có sẵn trên máy, nên agent cloud không tự tạo lại được
+# graph. Vì vậy giữ lại bản mới nhất là có giá trị, nhưng phải coi là ảnh chụp có
+# thể lệch (snapshot 2026-09-06) chứ không phải nguồn sự thật.
+graphify-out/*
+!graphify-out/graph.json
+!graphify-out/GRAPH_REPORT.md
 
 # -----------------------------------------------------------------------------
 # 6. Ứng dụng/tiện ích cài kèm trong workspace (KHÔNG phải source)

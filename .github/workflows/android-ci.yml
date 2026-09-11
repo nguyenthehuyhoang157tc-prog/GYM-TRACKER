@@ -1,0 +1,58 @@
+name: Android CI
+
+# Compile-check + unit tests on every push and PR.
+# Purpose: any agent (or human) editing this repo through the GitHub API has no local build,
+# so this job is the safety net that catches broken Kotlin before it reaches master.
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
+
+# Cancel superseded runs — saves Actions minutes on a private repo.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Compile + unit tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Set up Gradle (with caching)
+        uses: gradle/actions/setup-gradle@v4
+
+      # The repo is developed on Windows with core.filemode=false, so the executable bit on
+      # gradlew is not stored in git. Without this, ./gradlew fails with "Permission denied".
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+
+      # Required by the project's own convention: after any Composable edit this must pass.
+      - name: Compile debug Kotlin
+        run: ./gradlew :app:compileDebugKotlin
+
+      - name: Run unit tests
+        run: ./gradlew :app:testDebugUnitTest
+
+      - name: Upload test reports
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-reports
+          path: app/build/reports/tests/
+          if-no-files-found: ignore
