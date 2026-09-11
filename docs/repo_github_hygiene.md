@@ -4,6 +4,9 @@
 **Phạm vi:** toàn bộ `D:\HOCTIN\GYM TRACKER` (không tính `.git`)
 **Mục tiêu:** chỉ đẩy source code + README + docs, giảm dung lượng tối đa
 
+**Trạng thái:** đã thực thi. Commit `ed5d609` — cây làm việc sạch, 0 file rác còn tracked.
+Chưa `push` (repo chưa có remote) — xem mục 8.
+
 ---
 
 ## 1. Kết quả đo lường
@@ -40,7 +43,7 @@ Dung lượng `.git` hiện tại: **379,34 MB** (10.872 loose object, 0 pack) �
 
 ---
 
-## 3. Những gì được GIỮ (139,1 MB / 1.941 file)
+## 3. Những gì được GIỮ (137,1 MB / 1.845 file)
 
 | Dung lượng | File | Đường dẫn |
 |---|---|---|
@@ -116,39 +119,81 @@ Lệnh này liệt kê mọi file ở gốc còn sót lại; nếu thấy file Q
 
 ### Hệ quả
 
-Nếu `git push` ngay bây giờ, GitHub sẽ nhận **~291 MB lịch sử**, trong đó phần lớn là rác
-mà `.gitignore` đã chặn ở working tree. Repo vẫn phình dù cây làm việc đã sạch.
+`git push --all` hoặc `--mirror` sẽ đẩy **~291 MB lịch sử**, phần lớn là rác mà `.gitignore`
+đã chặn ở working tree. Tuy nhiên `git push origin master` thì **không** — xem mục dưới.
 
-### Cách xử lý (chạy sau khi đã xác nhận)
+### Điểm mấu chốt: KHÔNG cần xoá ref Codex để GitHub sạch
+
+`git push origin master` **chỉ gửi object reachable từ `master`**. Ref không được push sẽ ở
+lại máy local. Nghĩa là có thể có repo GitHub sạch mà **không mất một byte dữ liệu nào**:
+
+| | Đẩy riêng `master` | Đẩy `--all` / `--mirror` |
+|---|---|---|
+| GitHub nhận | ~151 MB (cây sạch + 3 commit) | ~291 MB (kèm checkpoint Codex) |
+| Ref Codex | giữ nguyên ở local | bị đẩy lên |
+| 15 branch `claude/*` | không lên GitHub | lên GitHub |
+| `.git` local | vẫn 379 MB | vẫn 379 MB |
+
+**Khuyến nghị: đẩy riêng `master`.** Chỉ dùng `--all` / `--mirror` nếu thật sự muốn 15 branch
+`claude/*` xuất hiện trên GitHub.
+
+Lưu ý: 15 branch `claude/*` đều trỏ **cùng một commit** `def77819` với `master`, nên chúng
+chiếm **0 byte** dữ liệu riêng. Xoá chúng chỉ để gọn danh sách branch, không giảm dung lượng.
+
+### Ref Codex chứa gì (đo ngày 11/09/2026)
+
+Checkpoint được tạo **07/07/2026 18:35 UTC** (65 ngày trước), là ảnh chụp toàn workspace:
+
+| | Số object | Dung lượng |
+|---|---|---|
+| Tổng reachable từ ref | 5.793 | 289,8 MB |
+| **Duy nhất so với `master`** | **5.682** | **277,6 MB** |
+| Dùng chung với `master` | 111 | 12,2 MB |
+
+Thành phần 5.682 đường dẫn duy nhất: `external_catalog_sources/` 3.078 · `app/src/` 1.828 ·
+file gốc 199 · `qa-screenshots/` 89 · `docs/` 57 · ~25 thư mục `_backup_*`.
+
+**Kết luận:** xoá ref này = mất khả năng rollback về checkpoint 07/07, gồm cả một bản
+`app/src` cũ. **Không ảnh hưởng việc dùng Codex về sau** — Codex tạo checkpoint mới cho mỗi
+turn, và `.codex/` chỉ chứa `config.toml` + `hooks.json`, không chứa dữ liệu phiên.
+
+### Nếu vẫn muốn `.git` local nhỏ lại — archive trước khi xoá
 
 ```bash
-# 1) Bỏ theo dõi 131 file đã bị ignore nhưng còn trong index (KHÔNG xoá file trên đĩa)
-git rm -r --cached _backup_20260603_153958 _backup_20260603_205629 \
-    _backup_20260606_100541 _asset_sources_hero_new _asset_backup_hero_old \
-    qa-screenshots
+# 0) Lưu checkpoint ra ngoài repo (khôi phục được bằng git clone <file>.bundle)
+git bundle create D:/codex-checkpoint-backup.bundle <ref-codex-day-du>
 
-# 2) Xoá ref rác của agent (nguồn phình 291 MB)
-git update-ref -d refs/codex/turn-diffs/checkpoints/50af8993d5992b36fd59675e67777b0258d033ac06a6eb736ba486874ba105ad/b6de300b985d2cf91e90b18dd26bd.../1783449301640/4fcb3a61-4237-4360-b56e-dad15672c33e
+# 1) Xoá ref Codex
+git update-ref -d <ref-codex-day-du>
+
+# 2) Detach worktree TRƯỚC khi xoá branch (xem cảnh báo bên dưới)
+for w in .claude/worktrees/*/; do git -C "$w" checkout --detach; done
 for b in $(git for-each-ref --format='%(refname:short)' refs/heads/claude); do
   git branch -D "$b"
 done
 
-# 3) Gỡ worktree của agent rồi dọn object
-git worktree list --porcelain | awk '/^worktree/ {print $2}' | grep '\.claude/worktrees' \
-  | while read w; do git worktree remove --force "$w"; done
-git worktree prune
-
-# 4) Nén lại object store (đưa .git từ ~380 MB xuống ~20 MB)
+# 3) Nén object store (đưa .git từ ~380 MB xuống ~20 MB)
 git reflog expire --expire=now --all
-git gc --prune=now --aggressive
+git gc --prune=now
 ```
 
-Sau bước 4, kiểm tra lại: `git count-objects -vH` và `git rev-list --objects --all | wc -l`.
+### CẢNH BÁO: 3 worktree đang có thay đổi CHƯA commit
+
+`git worktree remove --force` xoá **cả thư mục**, sẽ mất phần chưa commit:
+
+| Worktree | Số thay đổi | Nội dung |
+|---|---|---|
+| `peaceful-raman-3788b1` | **20** | 7 file nguồn đã sửa (`Formatters.kt`, `GymTrackerApp.kt`, `HomeScreen.kt`, `HomeViewModel.kt`, `OnboardingScreen.kt`, `hero_default.xml`, `strings.xml`) + package mới `ui/detail/` + 4 PNG hero |
+| `pedantic-cohen-265975` | 1 | `.claude/settings.local.json` |
+| `pedantic-nash-5141da` | 1 | `_verify_tmp.py` |
+
+Vì vậy: dùng `checkout --detach` (giữ nguyên thư mục + thay đổi) thay vì
+`worktree remove --force`. **Không xoá** `peaceful-raman-3788b1` trước khi xác nhận package
+`ui/detail/` đã được hợp nhất vào cây chính.
 
 ### Phương án thay thế — tạo lịch sử mới hoàn toàn
 
-Repo hiện chỉ có **2 commit** (`b731372` initial + `def7781` hygiene), nên giá trị lịch sử
-gần như bằng không. Có thể bỏ hẳn lịch sử cũ:
+Repo hiện có **3 commit**, nên giá trị lịch sử thấp. Có thể bỏ hẳn lịch sử cũ:
 
 ```bash
 git checkout --orphan clean-main
@@ -158,7 +203,8 @@ git branch -D master
 git branch -m master
 ```
 
-Cách này cho kết quả sạch tuyệt đối và không cần `gc` nặng.
+Cách này cho cây sạch tuyệt đối và `.git` chỉ còn ~140 MB. Nhược điểm: mất 3 commit cũ.
+**Không cần thiết** nếu bạn chỉ đẩy riêng `master` như khuyến nghị ở trên.
 
 ---
 
@@ -170,11 +216,33 @@ thêm nếu muốn repo nhẹ hơn nữa:
 | Dung lượng | Đường dẫn | Nhận xét |
 |---|---|---|
 | 30,9 MB | `docs/screenshots/` | 38 ảnh PNG bằng chứng QA. Bỏ được nếu chấp nhận mất ảnh minh hoạ trong docs |
-| 11,8 MB | `AndroidLiquidGlass-kmp/` | Thư viện tham chiếu, **không** có trong `settings.gradle.kts` (build chỉ `include(":app")`) |
-| 7,4 MB | `PrismalAGSL-master/` | Repo tham chiếu AGSL, không build |
+| 11,8 MB | `AndroidLiquidGlass-kmp/` | Thư viện tham chiếu (Kyant0), **không** có trong `settings.gradle.kts` |
+| 7,4 MB | `PrismalAGSL-master/` | Repo tham chiếu AGSL (styropyr0), không build |
 | 454 KB | `react-muscle-highlighter-main/` | Nguồn SVG path đã port vào `BodyMapPaths.kt` |
 
 Nếu bỏ cả 4 mục: còn khoảng **87 MB**.
+
+### 3 repo tham chiếu có ảnh hưởng gì tới công việc liquid glass?
+
+Đã kiểm chứng bằng build file: `app/build.gradle.kts` chỉ khai báo dependency qua toạ độ
+Maven (`libs.androidx.*`, `libs.lottie.compose`), **không có `project(...)`** nào trỏ tới
+3 thư mục này. `settings.gradle.kts` cũng chỉ `include(":app")`.
+
+→ **Cả 3 đều KHÔNG được biên dịch vào app.** Xoá chúng không thể làm hỏng build.
+
+Giá trị tham khảo khi đang làm liquid glass:
+
+- `AndroidLiquidGlass-kmp` — đây chính là bản tham chiếu kiến trúc mà lens của dự án dựa
+  theo (Kyant dùng `graphicsContext.createGraphicsLayer()` + `drawLayer()`). Hữu ích khi
+  còn tinh chỉnh hiệu ứng.
+- `PrismalAGSL-master` — tham chiếu AGSL.
+- `react-muscle-highlighter-main` — SVG path **đã port xong** vào
+  `ui/muscleheat/BodyMapPaths.kt`; repo gốc chỉ còn giá trị ghi công (MIT).
+
+**Khuyến nghị: giữ trên đĩa, ignore khỏi git.** Chúng là repo của bên thứ ba, clone lại được
+từ upstream bất cứ lúc nào; đẩy vào repo của bạn vừa trùng lặp upstream vừa thêm 18,6 MB.
+Vì vẫn nằm trên đĩa nên công việc liquid glass không bị ảnh hưởng gì. Nếu muốn giữ chúng
+trên GitHub cho tiện thì để nguyên — đây là lựa chọn hợp lệ, chỉ tốn 18,6 MB.
 
 ---
 
@@ -186,3 +254,55 @@ Nếu bỏ cả 4 mục: còn khoảng **87 MB**.
   (`AndroidLiquidGlass-kmp/.../homescreen.png`), an toàn so với ngưỡng chặn 100 MB/file.
 - **`external_catalog_sources/`** — nếu cần lưu vết nguồn gốc của catalog, nên đẩy lên
   object storage/release asset thay vì commit vào repo.
+
+---
+
+## 7. Về việc tách thành nhiều file `.gitignore`
+
+Git **có** hỗ trợ `.gitignore` lồng nhau: file đặt trong thư mục con chỉ áp dụng cho cây con
+đó. Tuy nhiên với repo này, tách file **không giảm được dung lượng**, vì hai lý do:
+
+1. **Không có dự án Node.js nào của bạn.** Lệnh
+   `find . -maxdepth 4 -name package.json` chỉ tìm thấy **một** kết quả:
+   `react-muscle-highlighter-main/.../package.json` — thuộc repo tham chiếu bên thứ ba.
+   `node_modules/` chỉ tồn tại trong `Verdent/` (app đã cài) và trong các `_backup_*`.
+   Vậy nên "file .gitignore cho Node.js đặt cạnh package.json" không có đối tượng áp dụng.
+
+2. **~95% rác nằm ở thư mục GỐC** — `_backup_*/`, `Verdent/`, `.claude/`, `.gradle-user/`,
+   `graphify-out/`, `external_catalog_sources/`. Một file `.gitignore` lồng nhau **không thể**
+   ignore thứ nằm ngoài cây con của nó, nên file gốc vẫn phải giữ đầy đủ các rule này.
+
+Kết luận: tách file là hợp lệ và vẫn idiomatic, nhưng ở repo này lợi ích bằng 0 về dung lượng —
+chỉ là tổ chức lại. Chỉ nên tách khi bạn thực sự thêm một toolchain JS/Node mới (ví dụ web
+dashboard trong `web/`).
+
+Nếu vẫn muốn cấu trúc module, cách chia hợp lý cho repo này:
+
+| File | Phạm vi | Nội dung |
+|---|---|---|
+| `/.gitignore` (gốc) | Toàn repo | OS/editor, Node/Python generic, backup & asset staging, QA artifact, tooling/agent, app cài kèm, signing |
+| `/app/.gitignore` | Module Android | `build/`, `*.apk`, `*.aab`, `*.dex`, `*.class`, `*.kotlin_module`, `externalNativeBuild/` |
+
+**Bắt buộc giữ** trong file gốc: ngoại lệ `!gradle/wrapper/gradle-wrapper.jar`.
+
+---
+
+## 8. Lệnh đẩy lên GitHub
+
+Repo **chưa có remote** (`git remote -v` trống). Sau khi commit `ed5d609`:
+
+```bash
+# 1) Tạo repo trống trên GitHub trước (KHÔNG tick "Add README/.gitignore")
+
+# 2) Gắn remote (thay <user> và <repo>)
+git remote add origin https://github.com/<user>/<repo>.git
+
+# 3) Đẩy DUY NHẤT nhánh master -> GitHub sạch, ref Codex ở lại local
+git push -u origin master
+```
+
+Kiểm tra sau khi đẩy: `git count-objects -vH` (local vẫn 379 MB — bình thường) và xem dung
+lượng repo trên GitHub (~151 MB).
+
+**Cảnh báo:** không dùng `git push --all` / `--mirror` / `git push origin --tags` nếu không
+muốn đẩy checkpoint Codex và 15 branch `claude/*` lên GitHub.
