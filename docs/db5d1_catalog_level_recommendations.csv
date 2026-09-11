@@ -1,0 +1,554 @@
+exercise_name,slug,current_level,recommended_level,reason,confidence
+3/4 Sit-Up,3-4-sit-up,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Ab Crunch Machine,ab-crunch-machine,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Ab Roller,ab-roller,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Advanced Kettlebell Windmill,advanced-kettlebell-windmill,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Air Bike,air-bike,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Alternate Hammer Curl,alternate-hammer-curl,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Alternate Heel Touchers,alternate-heel-touchers,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Alternate Incline Dumbbell Curl,alternate-incline-dumbbell-curl,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Alternating Cable Shoulder Press,alternating-cable-shoulder-press,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Alternating Deltoid Raise,alternating-deltoid-raise,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Alternating Floor Press,alternating-floor-press,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Alternating Hang Clean,alternating-hang-clean,INTERMEDIATE,INTERMEDIATE,[REVIEW_MANUAL] Technical KB ballistic clean — consider ADVANCED,low
+Alternating Kettlebell Press,alternating-kettlebell-press,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Alternating Kettlebell Row,alternating-kettlebell-row,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Alternating Renegade Row,alternating-renegade-row,ADVANCED,ADVANCED,[KEEP] FED level appears reasonable for this movement,n/a
+Anti-Gravity Press,anti-gravity-press,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Arnold Dumbbell Press,arnold-dumbbell-press,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Around The Worlds,around-the-worlds,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Back Flyes - With Bands,back-flyes-with-bands,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Ball Leg Curl,ball-leg-curl,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Band Assisted Pull-Up,band-assisted-pull-up,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Band Hip Adductions,band-hip-adductions,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Band Pull Apart,band-pull-apart,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Band Skull Crusher,band-skull-crusher,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Barbell Ab Rollout,barbell-ab-rollout,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Barbell Ab Rollout - On Knees,barbell-ab-rollout-on-knees,ADVANCED,INTERMEDIATE,[SHOULD_DOWNGRADE_LEVEL] Kneeling (assisted) rollout is the easier variant; ADVANCED over-rates it,medium
+Barbell Bench Press - Medium Grip,barbell-bench-press-medium-grip,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Barbell Curl,barbell-curl,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Barbell Curls Lying Against An Incline,barbell-curls-lying-against-an-incline,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Barbell Deadlift,barbell-deadlift,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Barbell Full Squat,barbell-full-squat,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Barbell Glute Bridge,barbell-glute-bridge,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Barbell Guillotine Bench Press,barbell-guillotine-bench-press,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Barbell Hack Squat,barbell-hack-squat,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Barbell Hip Thrust,barbell-hip-thrust,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Barbell Incline Bench Press - Medium Grip,barbell-incline-bench-press-medium-grip,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Barbell Incline Shoulder Raise,barbell-incline-shoulder-raise,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Barbell Lunge,barbell-lunge,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Barbell Rear Delt Row,barbell-rear-delt-row,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Barbell Rollout from Bench,barbell-rollout-from-bench,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Barbell Seated Calf Raise,barbell-seated-calf-raise,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Barbell Shoulder Press,barbell-shoulder-press,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Barbell Shrug,barbell-shrug,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Barbell Shrug Behind The Back,barbell-shrug-behind-the-back,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Barbell Side Bend,barbell-side-bend,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Barbell Side Split Squat,barbell-side-split-squat,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Barbell Squat,barbell-squat,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Barbell Squat To A Bench,barbell-squat-to-a-bench,ADVANCED,ADVANCED,[REVIEW_MANUAL] Box squat variant; ADVANCED may over-rate it,low
+Barbell Step Ups,barbell-step-ups,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Barbell Walking Lunge,barbell-walking-lunge,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Bench Dips,bench-dips,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Bench Press - With Bands,bench-press-with-bands,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Bent Over Barbell Row,bent-over-barbell-row,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Bent Over Dumbbell Rear Delt Raise With Head On Bench,bent-over-dumbbell-rear-delt-raise-with-head-on-bench,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Bent Over Low-Pulley Side Lateral,bent-over-low-pulley-side-lateral,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Bent Over One-Arm Long Bar Row,bent-over-one-arm-long-bar-row,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Bent Over Two-Arm Long Bar Row,bent-over-two-arm-long-bar-row,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Bent Over Two-Dumbbell Row,bent-over-two-dumbbell-row,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Bent Over Two-Dumbbell Row With Palms In,bent-over-two-dumbbell-row-with-palms-in,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Bent Press,bent-press,ADVANCED,ADVANCED,[KEEP] FED level appears reasonable for this movement,n/a
+Bent-Arm Barbell Pullover,bent-arm-barbell-pullover,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Bent-Arm Dumbbell Pullover,bent-arm-dumbbell-pullover,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Bent-Knee Hip Raise,bent-knee-hip-raise,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Board Press,board-press,INTERMEDIATE,INTERMEDIATE,[REVIEW_MANUAL] Specialty PL lockout press — consider ADVANCED,low
+Body Tricep Press,body-tricep-press,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Body-Up,body-up,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Bodyweight Flyes,bodyweight-flyes,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Bodyweight Squat,bodyweight-squat,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Bodyweight Walking Lunge,bodyweight-walking-lunge,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Bosu Ball Cable Crunch With Side Bends,bosu-ball-cable-crunch-with-side-bends,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Bottoms Up,bottoms-up,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Bottoms-Up Clean From The Hang Position,bottoms-up-clean-from-the-hang-position,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Box Squat,box-squat,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Box Squat with Chains,box-squat-with-chains,ADVANCED,ADVANCED,[KEEP] FED level appears reasonable for this movement,n/a
+Bradford/Rocky Presses,bradford-rocky-presses,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Butt Lift (Bridge),butt-lift-bridge,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Butt-Ups,butt-ups,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Butterfly,butterfly,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Cable Chest Press,cable-chest-press,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Cable Crossover,cable-crossover,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Cable Crunch,cable-crunch,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Cable Deadlifts,cable-deadlifts,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Cable Hammer Curls - Rope Attachment,cable-hammer-curls-rope-attachment,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Cable Hip Adduction,cable-hip-adduction,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Cable Incline Pushdown,cable-incline-pushdown,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Cable Incline Triceps Extension,cable-incline-triceps-extension,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Cable Internal Rotation,cable-internal-rotation,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Cable Iron Cross,cable-iron-cross,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Cable Judo Flip,cable-judo-flip,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Cable Lying Triceps Extension,cable-lying-triceps-extension,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Cable One Arm Tricep Extension,cable-one-arm-tricep-extension,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Cable Preacher Curl,cable-preacher-curl,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Cable Rear Delt Fly,cable-rear-delt-fly,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Cable Reverse Crunch,cable-reverse-crunch,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Cable Rope Overhead Triceps Extension,cable-rope-overhead-triceps-extension,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Cable Rope Rear-Delt Rows,cable-rope-rear-delt-rows,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Cable Russian Twists,cable-russian-twists,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Cable Seated Crunch,cable-seated-crunch,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Cable Seated Lateral Raise,cable-seated-lateral-raise,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Cable Shoulder Press,cable-shoulder-press,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Cable Shrugs,cable-shrugs,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Cable Wrist Curl,cable-wrist-curl,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Calf Press,calf-press,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Calf Press On The Leg Press Machine,calf-press-on-the-leg-press-machine,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Calf Raise On A Dumbbell,calf-raise-on-a-dumbbell,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Calf Raises - With Bands,calf-raises-with-bands,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Calf-Machine Shoulder Shrug,calf-machine-shoulder-shrug,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Car Drivers,car-drivers,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Chair Squat,chair-squat,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Chin-Up,chin-up,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Clean and Press,clean-and-press,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Clock Push-Up,clock-push-up,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Close-Grip Barbell Bench Press,close-grip-barbell-bench-press,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Close-Grip Dumbbell Press,close-grip-dumbbell-press,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Close-Grip EZ Bar Curl,close-grip-ez-bar-curl,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Close-Grip EZ-Bar Curl with Band,close-grip-ez-bar-curl-with-band,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Close-Grip EZ-Bar Press,close-grip-ez-bar-press,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Close-Grip Front Lat Pulldown,close-grip-front-lat-pulldown,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Close-Grip Push-Up off of a Dumbbell,close-grip-push-up-off-of-a-dumbbell,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Close-Grip Standing Barbell Curl,close-grip-standing-barbell-curl,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Cocoons,cocoons,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Concentration Curls,concentration-curls,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Cross Body Hammer Curl,cross-body-hammer-curl,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Cross Over - With Bands,cross-over-with-bands,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Cross-Body Crunch,cross-body-crunch,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Crunch - Hands Overhead,crunch-hands-overhead,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Crunch - Legs On Exercise Ball,crunch-legs-on-exercise-ball,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Crunches,crunches,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Cuban Press,cuban-press,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Dead Bug,dead-bug,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Decline Barbell Bench Press,decline-barbell-bench-press,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Decline Close-Grip Bench To Skull Crusher,decline-close-grip-bench-to-skull-crusher,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Decline Crunch,decline-crunch,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Decline Dumbbell Bench Press,decline-dumbbell-bench-press,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Decline Dumbbell Flyes,decline-dumbbell-flyes,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Decline Dumbbell Triceps Extension,decline-dumbbell-triceps-extension,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Decline EZ Bar Triceps Extension,decline-ez-bar-triceps-extension,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Decline Oblique Crunch,decline-oblique-crunch,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Decline Push-Up,decline-push-up,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Decline Reverse Crunch,decline-reverse-crunch,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Decline Smith Press,decline-smith-press,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Deficit Deadlift,deficit-deadlift,INTERMEDIATE,INTERMEDIATE,[REVIEW_MANUAL] Specialty deadlift (extra ROM) — consider ADVANCED,low
+Dip Machine,dip-machine,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Dips - Chest Version,dips-chest-version,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Dips - Triceps Version,dips-triceps-version,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Donkey Calf Raises,donkey-calf-raises,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Double Kettlebell Alternating Hang Clean,double-kettlebell-alternating-hang-clean,INTERMEDIATE,INTERMEDIATE,[REVIEW_MANUAL] Double-KB ballistic clean — likely ADVANCED,medium
+Double Kettlebell Jerk,double-kettlebell-jerk,INTERMEDIATE,INTERMEDIATE,[REVIEW_MANUAL] Double-KB jerk — likely ADVANCED,medium
+Double Kettlebell Push Press,double-kettlebell-push-press,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Double Kettlebell Snatch,double-kettlebell-snatch,ADVANCED,ADVANCED,[KEEP] FED level appears reasonable for this movement,n/a
+Downward Facing Balance,downward-facing-balance,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Drag Curl,drag-curl,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Dumbbell Alternate Bicep Curl,dumbbell-alternate-bicep-curl,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Dumbbell Bench Press,dumbbell-bench-press,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Dumbbell Bench Press with Neutral Grip,dumbbell-bench-press-with-neutral-grip,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Dumbbell Bicep Curl,dumbbell-bicep-curl,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Dumbbell Clean,dumbbell-clean,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Dumbbell Floor Press,dumbbell-floor-press,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Dumbbell Flyes,dumbbell-flyes,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Dumbbell Incline Row,dumbbell-incline-row,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Dumbbell Incline Shoulder Raise,dumbbell-incline-shoulder-raise,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Dumbbell Lunges,dumbbell-lunges,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Dumbbell Lying One-Arm Rear Lateral Raise,dumbbell-lying-one-arm-rear-lateral-raise,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Dumbbell Lying Pronation,dumbbell-lying-pronation,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Dumbbell Lying Rear Lateral Raise,dumbbell-lying-rear-lateral-raise,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Dumbbell Lying Supination,dumbbell-lying-supination,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Dumbbell One-Arm Shoulder Press,dumbbell-one-arm-shoulder-press,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Dumbbell One-Arm Triceps Extension,dumbbell-one-arm-triceps-extension,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Dumbbell One-Arm Upright Row,dumbbell-one-arm-upright-row,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Dumbbell Prone Incline Curl,dumbbell-prone-incline-curl,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Dumbbell Raise,dumbbell-raise,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Dumbbell Rear Lunge,dumbbell-rear-lunge,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Dumbbell Scaption,dumbbell-scaption,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Dumbbell Seated One-Leg Calf Raise,dumbbell-seated-one-leg-calf-raise,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Dumbbell Shoulder Press,dumbbell-shoulder-press,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Dumbbell Shrug,dumbbell-shrug,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Dumbbell Side Bend,dumbbell-side-bend,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Dumbbell Squat,dumbbell-squat,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Dumbbell Squat To A Bench,dumbbell-squat-to-a-bench,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Dumbbell Step Ups,dumbbell-step-ups,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Dumbbell Tricep Extension -Pronated Grip,dumbbell-tricep-extension-pronated-grip,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+EZ-Bar Curl,ez-bar-curl,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+EZ-Bar Skullcrusher,ez-bar-skullcrusher,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Elbow to Knee,elbow-to-knee,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Elevated Back Lunge,elevated-back-lunge,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Elevated Cable Rows,elevated-cable-rows,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Exercise Ball Crunch,exercise-ball-crunch,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Exercise Ball Pull-In,exercise-ball-pull-in,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Extended Range One-Arm Kettlebell Floor Press,extended-range-one-arm-kettlebell-floor-press,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+External Rotation,external-rotation,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+External Rotation with Band,external-rotation-with-band,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+External Rotation with Cable,external-rotation-with-cable,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Face Pull,face-pull,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Finger Curls,finger-curls,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Flat Bench Cable Flyes,flat-bench-cable-flyes,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Flat Bench Leg Pull-In,flat-bench-leg-pull-in,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Flat Bench Lying Leg Raise,flat-bench-lying-leg-raise,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Flexor Incline Dumbbell Curls,flexor-incline-dumbbell-curls,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Floor Press,floor-press,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Flutter Kicks,flutter-kicks,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Freehand Jump Squat,freehand-jump-squat,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Frog Sit-Ups,frog-sit-ups,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Front Barbell Squat,front-barbell-squat,ADVANCED,ADVANCED,[REVIEW_MANUAL] Front squat is a fundamental intermediate lift; ADVANCED may over-rate it,medium
+Front Barbell Squat To A Bench,front-barbell-squat-to-a-bench,ADVANCED,ADVANCED,[REVIEW_MANUAL] Box front-squat variant; ADVANCED may over-rate it,low
+Front Cable Raise,front-cable-raise,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Front Dumbbell Raise,front-dumbbell-raise,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Front Incline Dumbbell Raise,front-incline-dumbbell-raise,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Front Plate Raise,front-plate-raise,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Front Raise And Pullover,front-raise-and-pullover,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Front Squat (Clean Grip),front-squat-clean-grip,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Front Squats With Two Kettlebells,front-squats-with-two-kettlebells,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Front Two-Dumbbell Raise,front-two-dumbbell-raise,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Full Range-Of-Motion Lat Pulldown,full-range-of-motion-lat-pulldown,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Glute Ham Raise,glute-ham-raise,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Glute Kickback,glute-kickback,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Goblet Squat,goblet-squat,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Good Morning,good-morning,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Gorilla Chin/Crunch,gorilla-chin-crunch,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Hack Squat,hack-squat,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Hammer Curls,hammer-curls,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Hammer Grip Incline DB Bench Press,hammer-grip-incline-db-bench-press,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Handstand Push-Ups,handstand-push-ups,ADVANCED,ADVANCED,[KEEP] FED level appears reasonable for this movement,n/a
+Hanging Leg Raise,hanging-leg-raise,ADVANCED,ADVANCED,[KEEP] FED level appears reasonable for this movement,n/a
+Hanging Pike,hanging-pike,ADVANCED,ADVANCED,[KEEP] FED level appears reasonable for this movement,n/a
+High Cable Curls,high-cable-curls,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Hip Extension with Bands,hip-extension-with-bands,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Hip Flexion with Band,hip-flexion-with-band,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Hyperextensions (Back Extensions),hyperextensions-back-extensions,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Hyperextensions With No Hyperextension Bench,hyperextensions-with-no-hyperextension-bench,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Incline Barbell Triceps Extension,incline-barbell-triceps-extension,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Incline Bench Pull,incline-bench-pull,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Incline Cable Chest Press,incline-cable-chest-press,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Incline Cable Flye,incline-cable-flye,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Incline Dumbbell Bench With Palms Facing In,incline-dumbbell-bench-with-palms-facing-in,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Incline Dumbbell Curl,incline-dumbbell-curl,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Incline Dumbbell Flyes,incline-dumbbell-flyes,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Incline Dumbbell Flyes - With A Twist,incline-dumbbell-flyes-with-a-twist,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Incline Dumbbell Press,incline-dumbbell-press,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Incline Hammer Curls,incline-hammer-curls,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Incline Push-Up,incline-push-up,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Incline Push-Up Close-Grip,incline-push-up-close-grip,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Incline Push-Up Medium,incline-push-up-medium,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Incline Push-Up Reverse Grip,incline-push-up-reverse-grip,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Incline Push-Up Wide,incline-push-up-wide,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Inverted Row,inverted-row,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Inverted Row with Straps,inverted-row-with-straps,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Iron Cross,iron-cross,INTERMEDIATE,INTERMEDIATE,[REVIEW_MANUAL] Name ambiguous (gymnastic ring move vs dumbbell raise) — verify which exercise,medium
+Isometric Wipers,isometric-wipers,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+JM Press,jm-press,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Jackknife Sit-Up,jackknife-sit-up,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Janda Sit-Up,janda-sit-up,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Jefferson Squats,jefferson-squats,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Kettlebell Arnold Press,kettlebell-arnold-press,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Kettlebell Dead Clean,kettlebell-dead-clean,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Kettlebell Hang Clean,kettlebell-hang-clean,INTERMEDIATE,INTERMEDIATE,[REVIEW_MANUAL] Technical KB clean — consider ADVANCED,low
+Kettlebell One-Legged Deadlift,kettlebell-one-legged-deadlift,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Kettlebell Pass Between The Legs,kettlebell-pass-between-the-legs,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Kettlebell Pirate Ships,kettlebell-pirate-ships,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Kettlebell Pistol Squat,kettlebell-pistol-squat,ADVANCED,ADVANCED,[KEEP] FED level appears reasonable for this movement,n/a
+Kettlebell Seated Press,kettlebell-seated-press,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Kettlebell Seesaw Press,kettlebell-seesaw-press,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Kettlebell Sumo High Pull,kettlebell-sumo-high-pull,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Kettlebell Thruster,kettlebell-thruster,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Kettlebell Turkish Get-Up (Lunge style),kettlebell-turkish-get-up-lunge-style,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Kettlebell Turkish Get-Up (Squat style),kettlebell-turkish-get-up-squat-style,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Kettlebell Windmill,kettlebell-windmill,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Knee/Hip Raise On Parallel Bars,knee-hip-raise-on-parallel-bars,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Kneeling Cable Crunch With Alternating Oblique Twists,kneeling-cable-crunch-with-alternating-oblique-twists,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Kneeling Cable Triceps Extension,kneeling-cable-triceps-extension,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Kneeling High Pulley Row,kneeling-high-pulley-row,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Kneeling Single-Arm High Pulley Row,kneeling-single-arm-high-pulley-row,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Kneeling Squat,kneeling-squat,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Landmine 180's,landmine-180s,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Landmine Linear Jammer,landmine-linear-jammer,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Lateral Raise - With Bands,lateral-raise-with-bands,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Leg Extensions,leg-extensions,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Leg Lift,leg-lift,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Leg Press,leg-press,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Leg Pull-In,leg-pull-in,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Leg-Over Floor Press,leg-over-floor-press,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Leverage Chest Press,leverage-chest-press,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Leverage Deadlift,leverage-deadlift,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Leverage Decline Chest Press,leverage-decline-chest-press,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Leverage High Row,leverage-high-row,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Leverage Incline Chest Press,leverage-incline-chest-press,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Leverage Iso Row,leverage-iso-row,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Leverage Shoulder Press,leverage-shoulder-press,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Leverage Shrug,leverage-shrug,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Low Cable Crossover,low-cable-crossover,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Low Cable Triceps Extension,low-cable-triceps-extension,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Low Pulley Row To Neck,low-pulley-row-to-neck,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Lunge Pass Through,lunge-pass-through,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Lunge Sprint,lunge-sprint,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Lying Cable Curl,lying-cable-curl,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Lying Cambered Barbell Row,lying-cambered-barbell-row,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Lying Close-Grip Bar Curl On High Pulley,lying-close-grip-bar-curl-on-high-pulley,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Lying Close-Grip Barbell Triceps Extension Behind The Head,lying-close-grip-barbell-triceps-extension-behind-the-head,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Lying Close-Grip Barbell Triceps Press To Chin,lying-close-grip-barbell-triceps-press-to-chin,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Lying Dumbbell Tricep Extension,lying-dumbbell-tricep-extension,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Lying High Bench Barbell Curl,lying-high-bench-barbell-curl,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Lying Leg Curls,lying-leg-curls,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Lying Machine Squat,lying-machine-squat,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Lying One-Arm Lateral Raise,lying-one-arm-lateral-raise,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Lying Rear Delt Raise,lying-rear-delt-raise,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Lying Supine Dumbbell Curl,lying-supine-dumbbell-curl,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Lying T-Bar Row,lying-t-bar-row,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Lying Triceps Press,lying-triceps-press,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Machine Bench Press,machine-bench-press,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Machine Bicep Curl,machine-bicep-curl,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Machine Preacher Curls,machine-preacher-curls,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Machine Shoulder (Military) Press,machine-shoulder-military-press,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Machine Triceps Extension,machine-triceps-extension,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Middle Back Shrug,middle-back-shrug,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Monster Walk,monster-walk,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Narrow Stance Hack Squats,narrow-stance-hack-squats,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Narrow Stance Leg Press,narrow-stance-leg-press,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Narrow Stance Squats,narrow-stance-squats,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Natural Glute Ham Raise,natural-glute-ham-raise,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Neck Press,neck-press,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Oblique Crunches,oblique-crunches,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Oblique Crunches - On The Floor,oblique-crunches-on-the-floor,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+One Arm Dumbbell Bench Press,one-arm-dumbbell-bench-press,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+One Arm Dumbbell Preacher Curl,one-arm-dumbbell-preacher-curl,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+One Arm Floor Press,one-arm-floor-press,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+One Arm Lat Pulldown,one-arm-lat-pulldown,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+One Arm Pronated Dumbbell Triceps Extension,one-arm-pronated-dumbbell-triceps-extension,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+One Arm Supinated Dumbbell Triceps Extension,one-arm-supinated-dumbbell-triceps-extension,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+One Leg Barbell Squat,one-leg-barbell-squat,ADVANCED,ADVANCED,[KEEP] FED level appears reasonable for this movement,n/a
+One-Arm Dumbbell Row,one-arm-dumbbell-row,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+One-Arm Flat Bench Dumbbell Flye,one-arm-flat-bench-dumbbell-flye,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+One-Arm High-Pulley Cable Side Bends,one-arm-high-pulley-cable-side-bends,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+One-Arm Incline Lateral Raise,one-arm-incline-lateral-raise,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+One-Arm Kettlebell Clean,one-arm-kettlebell-clean,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+One-Arm Kettlebell Clean and Jerk,one-arm-kettlebell-clean-and-jerk,INTERMEDIATE,INTERMEDIATE,[REVIEW_MANUAL] Technical KB clean&jerk — consider ADVANCED,low
+One-Arm Kettlebell Floor Press,one-arm-kettlebell-floor-press,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+One-Arm Kettlebell Jerk,one-arm-kettlebell-jerk,INTERMEDIATE,INTERMEDIATE,[REVIEW_MANUAL] Technical KB jerk — consider ADVANCED,low
+One-Arm Kettlebell Military Press To The Side,one-arm-kettlebell-military-press-to-the-side,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+One-Arm Kettlebell Para Press,one-arm-kettlebell-para-press,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+One-Arm Kettlebell Push Press,one-arm-kettlebell-push-press,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+One-Arm Kettlebell Row,one-arm-kettlebell-row,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+One-Arm Kettlebell Snatch,one-arm-kettlebell-snatch,ADVANCED,ADVANCED,[KEEP] FED level appears reasonable for this movement,n/a
+One-Arm Kettlebell Split Jerk,one-arm-kettlebell-split-jerk,INTERMEDIATE,INTERMEDIATE,[REVIEW_MANUAL] Split-jerk footwork — likely ADVANCED,medium
+One-Arm Kettlebell Split Snatch,one-arm-kettlebell-split-snatch,ADVANCED,ADVANCED,[KEEP] FED level appears reasonable for this movement,n/a
+One-Arm Kettlebell Swings,one-arm-kettlebell-swings,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+One-Arm Long Bar Row,one-arm-long-bar-row,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+One-Arm Medicine Ball Slam,one-arm-medicine-ball-slam,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+One-Arm Open Palm Kettlebell Clean,one-arm-open-palm-kettlebell-clean,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+One-Arm Overhead Kettlebell Squats,one-arm-overhead-kettlebell-squats,ADVANCED,ADVANCED,[KEEP] FED level appears reasonable for this movement,n/a
+One-Arm Side Deadlift,one-arm-side-deadlift,ADVANCED,ADVANCED,[KEEP] FED level appears reasonable for this movement,n/a
+One-Arm Side Laterals,one-arm-side-laterals,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+One-Legged Cable Kickback,one-legged-cable-kickback,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Open Palm Kettlebell Clean,open-palm-kettlebell-clean,ADVANCED,ADVANCED,[KEEP] FED level appears reasonable for this movement,n/a
+Overhead Cable Curl,overhead-cable-curl,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Pallof Press,pallof-press,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Pallof Press With Rotation,pallof-press-with-rotation,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Palms-Down Dumbbell Wrist Curl Over A Bench,palms-down-dumbbell-wrist-curl-over-a-bench,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Palms-Down Wrist Curl Over A Bench,palms-down-wrist-curl-over-a-bench,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Palms-Up Barbell Wrist Curl Over A Bench,palms-up-barbell-wrist-curl-over-a-bench,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Palms-Up Dumbbell Wrist Curl Over A Bench,palms-up-dumbbell-wrist-curl-over-a-bench,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Physioball Hip Bridge,physioball-hip-bridge,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Pin Presses,pin-presses,INTERMEDIATE,INTERMEDIATE,[REVIEW_MANUAL] Specialty PL dead-stop press — consider ADVANCED,low
+Plank,plank,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Plate Twist,plate-twist,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Platform Hamstring Slides,platform-hamstring-slides,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Plie Dumbbell Squat,plie-dumbbell-squat,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Plyo Kettlebell Pushups,plyo-kettlebell-pushups,ADVANCED,ADVANCED,[KEEP] FED level appears reasonable for this movement,n/a
+Power Clean,power-clean,INTERMEDIATE,ADVANCED,[SHOULD_UPGRADE_LEVEL] Explosive Olympic-style lift; technique/power demand is advanced,high
+Power Partials,power-partials,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Preacher Curl,preacher-curl,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Preacher Hammer Dumbbell Curl,preacher-hammer-dumbbell-curl,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Press Sit-Up,press-sit-up,ADVANCED,ADVANCED,[REVIEW_MANUAL] Weighted ab movement; ADVANCED may over-rate it,low
+Pull Through,pull-through,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Pullups,pullups,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Push Up to Side Plank,push-up-to-side-plank,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Push-Up Wide,push-up-wide,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Push-Ups - Close Triceps Position,push-ups-close-triceps-position,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Push-Ups With Feet Elevated,push-ups-with-feet-elevated,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Push-Ups With Feet On An Exercise Ball,push-ups-with-feet-on-an-exercise-ball,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Pushups,pushups,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Pushups (Close and Wide Hand Positions),pushups-close-and-wide-hand-positions,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Rack Pulls,rack-pulls,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Reverse Barbell Curl,reverse-barbell-curl,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Reverse Barbell Preacher Curls,reverse-barbell-preacher-curls,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Reverse Cable Curl,reverse-cable-curl,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Reverse Crunch,reverse-crunch,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Reverse Flyes,reverse-flyes,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Reverse Flyes With External Rotation,reverse-flyes-with-external-rotation,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Reverse Grip Bent-Over Rows,reverse-grip-bent-over-rows,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Reverse Grip Triceps Pushdown,reverse-grip-triceps-pushdown,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Reverse Hyperextension,reverse-hyperextension,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Reverse Machine Flyes,reverse-machine-flyes,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Reverse Plate Curls,reverse-plate-curls,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Reverse Triceps Bench Press,reverse-triceps-bench-press,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Rocking Standing Calf Raise,rocking-standing-calf-raise,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Romanian Deadlift,romanian-deadlift,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Rope Crunch,rope-crunch,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Rope Straight-Arm Pulldown,rope-straight-arm-pulldown,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Russian Twist,russian-twist,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Seated Band Hamstring Curl,seated-band-hamstring-curl,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Seated Barbell Military Press,seated-barbell-military-press,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Seated Barbell Twist,seated-barbell-twist,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Seated Bent-Over One-Arm Dumbbell Triceps Extension,seated-bent-over-one-arm-dumbbell-triceps-extension,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Seated Bent-Over Rear Delt Raise,seated-bent-over-rear-delt-raise,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Seated Bent-Over Two-Arm Dumbbell Triceps Extension,seated-bent-over-two-arm-dumbbell-triceps-extension,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Seated Cable Rows,seated-cable-rows,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Seated Cable Shoulder Press,seated-cable-shoulder-press,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Seated Calf Raise,seated-calf-raise,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Seated Close-Grip Concentration Barbell Curl,seated-close-grip-concentration-barbell-curl,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Seated Dumbbell Curl,seated-dumbbell-curl,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Seated Dumbbell Inner Biceps Curl,seated-dumbbell-inner-biceps-curl,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Seated Dumbbell Palms-Down Wrist Curl,seated-dumbbell-palms-down-wrist-curl,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Seated Dumbbell Palms-Up Wrist Curl,seated-dumbbell-palms-up-wrist-curl,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Seated Dumbbell Press,seated-dumbbell-press,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Seated Flat Bench Leg Pull-In,seated-flat-bench-leg-pull-in,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Seated Good Mornings,seated-good-mornings,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Seated Leg Curl,seated-leg-curl,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Seated Leg Tucks,seated-leg-tucks,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Seated One-Arm Dumbbell Palms-Down Wrist Curl,seated-one-arm-dumbbell-palms-down-wrist-curl,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Seated One-Arm Dumbbell Palms-Up Wrist Curl,seated-one-arm-dumbbell-palms-up-wrist-curl,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Seated One-arm Cable Pulley Rows,seated-one-arm-cable-pulley-rows,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Seated Palm-Up Barbell Wrist Curl,seated-palm-up-barbell-wrist-curl,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Seated Palms-Down Barbell Wrist Curl,seated-palms-down-barbell-wrist-curl,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Seated Side Lateral Raise,seated-side-lateral-raise,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Seated Triceps Press,seated-triceps-press,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Seated Two-Arm Palms-Up Low-Pulley Wrist Curl,seated-two-arm-palms-up-low-pulley-wrist-curl,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+See-Saw Press (Alternating Side Press),see-saw-press-alternating-side-press,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Shotgun Row,shotgun-row,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Shoulder Press - With Bands,shoulder-press-with-bands,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Side Bridge,side-bridge,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Side Jackknife,side-jackknife,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Side Lateral Raise,side-lateral-raise,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Side Laterals to Front Raise,side-laterals-to-front-raise,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Single Leg Glute Bridge,single-leg-glute-bridge,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Single-Arm Cable Crossover,single-arm-cable-crossover,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Single-Arm Linear Jammer,single-arm-linear-jammer,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Single-Arm Push-Up,single-arm-push-up,INTERMEDIATE,ADVANCED,"[SHOULD_UPGRADE_LEVEL] One-arm push-up is an elite calisthenic, well beyond intermediate",high
+Single-Leg Leg Extension,single-leg-leg-extension,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Sit-Up,sit-up,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Smith Incline Shoulder Raise,smith-incline-shoulder-raise,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Smith Machine Behind the Back Shrug,smith-machine-behind-the-back-shrug,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Smith Machine Bench Press,smith-machine-bench-press,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Smith Machine Bent Over Row,smith-machine-bent-over-row,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Smith Machine Calf Raise,smith-machine-calf-raise,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Smith Machine Close-Grip Bench Press,smith-machine-close-grip-bench-press,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Smith Machine Hang Power Clean,smith-machine-hang-power-clean,INTERMEDIATE,ADVANCED,[SHOULD_UPGRADE_LEVEL] Technical hang power clean (Smith-guided but still explosive),medium
+Smith Machine Hip Raise,smith-machine-hip-raise,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Smith Machine Incline Bench Press,smith-machine-incline-bench-press,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Smith Machine Leg Press,smith-machine-leg-press,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Smith Machine One-Arm Upright Row,smith-machine-one-arm-upright-row,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Smith Machine Overhead Shoulder Press,smith-machine-overhead-shoulder-press,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Smith Machine Pistol Squat,smith-machine-pistol-squat,INTERMEDIATE,INTERMEDIATE,[REVIEW_MANUAL] Pistol pattern (Smith-assisted) — verify intermediate vs advanced,low
+Smith Machine Reverse Calf Raises,smith-machine-reverse-calf-raises,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Smith Machine Squat,smith-machine-squat,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Smith Machine Stiff-Legged Deadlift,smith-machine-stiff-legged-deadlift,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Smith Machine Upright Row,smith-machine-upright-row,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Smith Single-Leg Split Squat,smith-single-leg-split-squat,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Snatch Pull,snatch-pull,INTERMEDIATE,ADVANCED,[SHOULD_UPGRADE_LEVEL] Olympic snatch-grip pull; technical and explosive,medium
+Speed Band Overhead Triceps,speed-band-overhead-triceps,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Speed Squats,speed-squats,ADVANCED,ADVANCED,[KEEP] FED level appears reasonable for this movement,n/a
+Spell Caster,spell-caster,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Spider Crawl,spider-crawl,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Spider Curl,spider-curl,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Split Squat with Dumbbells,split-squat-with-dumbbells,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Squat Jerk,squat-jerk,ADVANCED,ADVANCED,[KEEP] FED level appears reasonable for this movement,n/a
+Squat with Plate Movers,squat-with-plate-movers,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Squats - With Bands,squats-with-bands,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Standing Alternating Dumbbell Press,standing-alternating-dumbbell-press,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Standing Barbell Calf Raise,standing-barbell-calf-raise,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Standing Barbell Press Behind Neck,standing-barbell-press-behind-neck,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Standing Bent-Over One-Arm Dumbbell Triceps Extension,standing-bent-over-one-arm-dumbbell-triceps-extension,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Standing Bent-Over Two-Arm Dumbbell Triceps Extension,standing-bent-over-two-arm-dumbbell-triceps-extension,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Standing Biceps Cable Curl,standing-biceps-cable-curl,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Standing Bradford Press,standing-bradford-press,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Standing Cable Chest Press,standing-cable-chest-press,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Standing Cable Lift,standing-cable-lift,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Standing Cable Wood Chop,standing-cable-wood-chop,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Standing Calf Raises,standing-calf-raises,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Standing Concentration Curl,standing-concentration-curl,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Standing Dumbbell Calf Raise,standing-dumbbell-calf-raise,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Standing Dumbbell Press,standing-dumbbell-press,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Standing Dumbbell Reverse Curl,standing-dumbbell-reverse-curl,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Standing Dumbbell Straight-Arm Front Delt Raise Above Head,standing-dumbbell-straight-arm-front-delt-raise-above-head,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Standing Dumbbell Triceps Extension,standing-dumbbell-triceps-extension,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Standing Dumbbell Upright Row,standing-dumbbell-upright-row,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Standing Front Barbell Raise Over Head,standing-front-barbell-raise-over-head,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Standing Inner-Biceps Curl,standing-inner-biceps-curl,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Standing Leg Curl,standing-leg-curl,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Standing Low-Pulley Deltoid Raise,standing-low-pulley-deltoid-raise,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Standing Low-Pulley One-Arm Triceps Extension,standing-low-pulley-one-arm-triceps-extension,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Standing Military Press,standing-military-press,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Standing One-Arm Cable Curl,standing-one-arm-cable-curl,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Standing One-Arm Dumbbell Curl Over Incline Bench,standing-one-arm-dumbbell-curl-over-incline-bench,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Standing One-Arm Dumbbell Triceps Extension,standing-one-arm-dumbbell-triceps-extension,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Standing Overhead Barbell Triceps Extension,standing-overhead-barbell-triceps-extension,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Standing Palm-In One-Arm Dumbbell Press,standing-palm-in-one-arm-dumbbell-press,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Standing Palms-In Dumbbell Press,standing-palms-in-dumbbell-press,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Standing Palms-Up Barbell Behind The Back Wrist Curl,standing-palms-up-barbell-behind-the-back-wrist-curl,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Standing Rope Crunch,standing-rope-crunch,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Standing Towel Triceps Extension,standing-towel-triceps-extension,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Step-up with Knee Raise,step-up-with-knee-raise,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Stiff Leg Barbell Good Morning,stiff-leg-barbell-good-morning,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Stiff-Legged Barbell Deadlift,stiff-legged-barbell-deadlift,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Stiff-Legged Dumbbell Deadlift,stiff-legged-dumbbell-deadlift,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Straight Bar Bench Mid Rows,straight-bar-bench-mid-rows,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Straight Raises on Incline Bench,straight-raises-on-incline-bench,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Straight-Arm Dumbbell Pullover,straight-arm-dumbbell-pullover,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Straight-Arm Pulldown,straight-arm-pulldown,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Sumo Deadlift,sumo-deadlift,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Svend Press,svend-press,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+T-Bar Row with Handle,t-bar-row-with-handle,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Tate Press,tate-press,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Thigh Abductor,thigh-abductor,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Thigh Adductor,thigh-adductor,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Trap Bar Deadlift,trap-bar-deadlift,BEGINNER,BEGINNER,[REVIEW_MANUAL] Loaded hip-hinge; BEGINNER is generous — consider INTERMEDIATE (though trap-bar is the most accessible DL),low
+Tricep Dumbbell Kickback,tricep-dumbbell-kickback,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Triceps Overhead Extension with Rope,triceps-overhead-extension-with-rope,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Triceps Pushdown,triceps-pushdown,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Triceps Pushdown - Rope Attachment,triceps-pushdown-rope-attachment,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Triceps Pushdown - V-Bar Attachment,triceps-pushdown-v-bar-attachment,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Tuck Crunch,tuck-crunch,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Two-Arm Dumbbell Preacher Curl,two-arm-dumbbell-preacher-curl,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Two-Arm Kettlebell Clean,two-arm-kettlebell-clean,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Two-Arm Kettlebell Jerk,two-arm-kettlebell-jerk,INTERMEDIATE,INTERMEDIATE,[REVIEW_MANUAL] Technical KB jerk — consider ADVANCED,low
+Two-Arm Kettlebell Military Press,two-arm-kettlebell-military-press,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Two-Arm Kettlebell Row,two-arm-kettlebell-row,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Underhand Cable Pulldowns,underhand-cable-pulldowns,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Upright Barbell Row,upright-barbell-row,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Upright Cable Row,upright-cable-row,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Upright Row - With Bands,upright-row-with-bands,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+V-Bar Pulldown,v-bar-pulldown,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+V-Bar Pullup,v-bar-pullup,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Weighted Ball Hyperextension,weighted-ball-hyperextension,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Weighted Ball Side Bend,weighted-ball-side-bend,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Weighted Bench Dip,weighted-bench-dip,INTERMEDIATE,INTERMEDIATE,"[REVIEW_MANUAL] Weighted calisthenic — INTERMEDIATE is borderline, consider ADVANCED",low
+Weighted Crunches,weighted-crunches,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Weighted Jump Squat,weighted-jump-squat,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Weighted Pull Ups,weighted-pull-ups,INTERMEDIATE,ADVANCED,[SHOULD_UPGRADE_LEVEL] Weighted calisthenic: requires a strong bodyweight pull-up plus added load — beyond intermediate,high
+Weighted Sissy Squat,weighted-sissy-squat,ADVANCED,ADVANCED,[KEEP] FED level appears reasonable for this movement,n/a
+Weighted Sit-Ups - With Bands,weighted-sit-ups-with-bands,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Wide Stance Barbell Squat,wide-stance-barbell-squat,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Wide-Grip Barbell Bench Press,wide-grip-barbell-bench-press,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Wide-Grip Decline Barbell Bench Press,wide-grip-decline-barbell-bench-press,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Wide-Grip Decline Barbell Pullover,wide-grip-decline-barbell-pullover,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Wide-Grip Lat Pulldown,wide-grip-lat-pulldown,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Wide-Grip Pulldown Behind The Neck,wide-grip-pulldown-behind-the-neck,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Wide-Grip Rear Pull-Up,wide-grip-rear-pull-up,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Wide-Grip Standing Barbell Curl,wide-grip-standing-barbell-curl,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Wind Sprints,wind-sprints,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Wrist Roller,wrist-roller,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Wrist Rotations with Straight Bar,wrist-rotations-with-straight-bar,BEGINNER,BEGINNER,[KEEP] FED level appears reasonable for this movement,n/a
+Zercher Squats,zercher-squats,ADVANCED,ADVANCED,[KEEP] FED level appears reasonable for this movement,n/a
+Zottman Curl,zottman-curl,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a
+Zottman Preacher Curl,zottman-preacher-curl,INTERMEDIATE,INTERMEDIATE,[KEEP] FED level appears reasonable for this movement,n/a

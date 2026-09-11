@@ -1,0 +1,311 @@
+{
+  "abstention_rules": {
+    "abstain_instead_of_coerce": true,
+    "primary_abstention_reasons": [
+      "NO_PO_SUGGESTION",
+      "TARGET_NOT_ATTEMPTED",
+      "TARGET_ATTEMPT_AMBIGUOUS",
+      "NO_PRIMARY_MUSCLE_MAPPING",
+      "FIRST_SET_LOW_CONFIDENCE",
+      "FIRST_SET_RULE_UNSUPPORTED",
+      "TRACKING_TYPE_UNSUPPORTED"
+    ],
+    "unsupported_tracking_types_are_secondary_only": true
+  },
+  "bootstrap": {
+    "confidence_level": 0.95,
+    "default_seed": 41701,
+    "one_subject_method": "MOVING_WORKOUT_BLOCK_BOOTSTRAP_V1",
+    "replicates": 2000,
+    "resample_exercise_rows_independently": false,
+    "workout_block_length": 5
+  },
+  "calibration": {
+    "mapping": "FOLD_TRAINED_RIDGE_LOGISTIC_V1",
+    "readiness_divided_by_100_is_probability": false,
+    "report_intercept_slope_on_out_of_fold_predictions": true,
+    "report_reliability_bins": 10,
+    "training_data_only": true
+  },
+  "comparator_models": [
+    {
+      "features": ["historical_attainment_count", "historical_failure_count"],
+      "id": "BASE_RATE_V1",
+      "probability_rule": "LAPLACE_SMOOTHED_PRIOR_TRAINING_ROWS_ONLY"
+    },
+    {
+      "features": ["last_prior_eligible_outcome_same_canonical_exercise", "last_outcome_missing"],
+      "id": "LAST_OUTCOME_V1",
+      "probability_rule": "FOLD_TRAINED_RIDGE_LOGISTIC_V1"
+    },
+    {
+      "features": ["log1p_hours_since_frozen_reference_session", "reference_time_missing"],
+      "id": "TIME_SINCE_TRAINED_V1",
+      "probability_rule": "FOLD_TRAINED_RIDGE_LOGISTIC_V1"
+    },
+    {
+      "features": [
+        "suggested_load_kg",
+        "suggested_min_reps",
+        "suggested_max_reps",
+        "target_sets_snapshot",
+        "suggestion_confidence",
+        "reference_load_kg",
+        "reference_reps",
+        "reference_rir",
+        "reference_performance_value",
+        "log1p_hours_since_frozen_reference_session",
+        "last_prior_eligible_outcome_same_canonical_exercise",
+        "numeric_missing_indicators"
+      ],
+      "id": "PO_HISTORY_ONLY_V1",
+      "probability_rule": "FOLD_TRAINED_RIDGE_LOGISTIC_V1"
+    },
+    {
+      "features": ["primary_readiness_min"],
+      "id": "MUSCLE_4B_ONLY_V1",
+      "probability_rule": "FOLD_TRAINED_RIDGE_LOGISTIC_V1"
+    },
+    {
+      "features": [
+        "suggested_load_kg",
+        "suggested_min_reps",
+        "suggested_max_reps",
+        "target_sets_snapshot",
+        "suggestion_confidence",
+        "reference_load_kg",
+        "reference_reps",
+        "reference_rir",
+        "reference_performance_value",
+        "log1p_hours_since_frozen_reference_session",
+        "last_prior_eligible_outcome_same_canonical_exercise",
+        "numeric_missing_indicators",
+        "primary_readiness_min"
+      ],
+      "id": "PO_PLUS_MUSCLE_4B_V1",
+      "probability_rule": "FOLD_TRAINED_RIDGE_LOGISTIC_V1"
+    }
+  ],
+  "conclusion_logic": {
+    "allowed_codes": [
+      "DATA_INTEGRITY_BLOCKED",
+      "INSUFFICIENT_DATA",
+      "NO_INCREMENTAL_SIGNAL",
+      "PROMISING_NOT_VALIDATED",
+      "BASELINE_SUPPORTED"
+    ],
+    "baseline_supported": {
+      "all_integrity_and_sample_gates_pass": true,
+      "combined_minus_po_brier_improvement_ci_lower_gt": 0.0,
+      "combined_minus_po_brier_improvement_min": 0.01,
+      "fold_improvement_proportion_min": 0.6,
+      "largest_canonical_exercise_share_max": 0.5,
+      "minimum_canonical_exercises_with_20_records": 3,
+      "minimum_exercises_with_nonnegative_incremental_brier": 2,
+      "readiness_underperformance_auroc_ci_lower_gt": 0.5,
+      "readiness_underperformance_auroc_min": 0.6,
+      "status_ordering_required": true
+    },
+    "data_integrity_blocked": "ANY_CRITICAL_INTEGRITY_GATE_FAILS",
+    "insufficient_data": "INTEGRITY_PASSES_AND_ANY_FULL_EVALUATION_SAMPLE_GATE_FAILS",
+    "no_incremental_signal": "FULL_EVALUATION_ALLOWED_AND_PROMISING_CRITERIA_FAIL",
+    "promising_not_validated": {
+      "combined_minus_po_brier_improvement_min": 0.01,
+      "full_evaluation_sample_gates_pass": true,
+      "readiness_underperformance_auroc_min": 0.55,
+      "support_gate_may_fail": true
+    },
+    "precedence": [
+      "DATA_INTEGRITY_BLOCKED",
+      "INSUFFICIENT_DATA",
+      "BASELINE_SUPPORTED",
+      "PROMISING_NOT_VALIDATED",
+      "NO_INCREMENTAL_SIGNAL"
+    ]
+  },
+  "data_integrity_gates": {
+    "allowed_export_schema_versions": [1],
+    "allowed_first_working_set_contract_versions": ["TRACKING_AWARE_FIRST_WORKING_SET_V1"],
+    "allowed_model_versions": {
+      "muscleHeatModelVersion": ["MUSCLE_HEAT_1_STIMULUS_QUALITY"],
+      "progressiveOverloadModelVersion": ["PROGRESSIVE_OVERLOAD_V3_11D"],
+      "recoveryModelVersion": ["MUSCLE_4B_BASELINE"]
+    },
+    "allowed_research_contract_versions": ["WEARABLE_1A_V1"],
+    "allowed_research_schema_versions": [1],
+    "allowed_room_schema_versions": [9],
+    "critical_conditions": [
+      "PROTOCOL_HASH_INVALID",
+      "EXPORT_SCHEMA_UNSUPPORTED",
+      "CONTRACT_VERSION_UNSUPPORTED",
+      "MODEL_VERSION_MISMATCH",
+      "PAYLOAD_HASH_INVALID",
+      "DUPLICATE_PREDICTION_ID",
+      "DUPLICATE_WORKOUT_ATTEMPT_ID",
+      "DUPLICATE_ENTITY_ID",
+      "BROKEN_INTERNAL_LINK",
+      "TIMESTAMP_INCONSISTENT",
+      "INPUT_MAX_AFTER_CUTOFF",
+      "MIXED_INCOMPATIBLE_MODEL_VERSIONS"
+    ],
+    "maximum_active_outcome_proportion": 0.1,
+    "maximum_outcome_linkage_failure_proportion": 0.02,
+    "maximum_unresolved_linkage_proportion": 0.02,
+    "payload_hash_mismatch_count_max": 0,
+    "raw_history_digest_reconstructable": false,
+    "total_capture_denominator_known": false
+  },
+  "eligibility": {
+    "allowed_terminal_outcomes": ["COMPLETED", "PARTIAL"],
+    "final_states": ["ELIGIBLE_PRIMARY", "ELIGIBLE_SECONDARY_ONLY", "EXCLUDED", "ABSTAINED", "UNRESOLVED"],
+    "primary_first_set_confidence": ["MODERATE", "HIGH"],
+    "primary_first_set_rules": ["MODAL_LOAD_TIE_HEAVIEST_V1"],
+    "primary_tracking_types": ["REPS_WEIGHT"],
+    "requires_canonical_exercise_identity": true,
+    "requires_frozen_prediction": true,
+    "requires_linked_exercise_outcome": true,
+    "requires_nonabstained_prediction_and_target": true,
+    "requires_primary_muscle_mapping": true,
+    "workout_is_indivisible": true
+  },
+  "evaluation_unit": {
+    "dependence_cluster": "targetWorkoutAttemptId",
+    "primary": "ONE_TARGET_EXERCISE_WITH_ONE_ELIGIBLE_LINKED_OUTCOME",
+    "subject_key": "subjectId"
+  },
+  "evaluator_version": "WEARABLE_1B_EVALUATOR_V1",
+  "exclusion_rules": [
+    "PREDICTION_NOT_FROZEN",
+    "INVALID_INPUT_CUTOFF",
+    "MODEL_VERSION_MISMATCH",
+    "NO_LINKED_OUTCOME",
+    "ACTIVE_OUTCOME",
+    "ABANDONED_WITHOUT_EVALUABLE_EXERCISE",
+    "OUTCOME_AMBIGUOUS",
+    "NO_PO_SUGGESTION",
+    "TARGET_NOT_ATTEMPTED",
+    "TARGET_ATTEMPT_AMBIGUOUS",
+    "NO_PRIMARY_MUSCLE_MAPPING",
+    "FIRST_SET_LOW_CONFIDENCE",
+    "FIRST_SET_RULE_UNSUPPORTED",
+    "TRACKING_TYPE_UNSUPPORTED",
+    "TIMESTAMP_INCONSISTENT",
+    "DUPLICATE_RECORD",
+    "DUPLICATE_CANONICAL_TARGET_IN_WORKOUT",
+    "PAYLOAD_HASH_INVALID",
+    "EXPORT_SCHEMA_UNSUPPORTED",
+    "CONTRACT_VERSION_UNSUPPORTED"
+  ],
+  "feature_processing": {
+    "categorical_features": [],
+    "imputation": "TRAINING_MEAN_AFTER_TRAINING_ONLY_STANDARDIZATION_WITH_MISSING_INDICATOR",
+    "logistic_fit": {
+      "gradient_tolerance": 1e-10,
+      "l2_penalty": 1.0,
+      "max_iterations": 200,
+      "method": "DETERMINISTIC_NEWTON_IRLS"
+    },
+    "normalization": "TRAINING_FOLD_MEAN_AND_POPULATION_SD_ONLY",
+    "outcome_coding": "TARGET_ATTAINED_EQUALS_1"
+  },
+  "folds": {
+    "minimum_history_workout_blocks": 30,
+    "order": ["inputDataCutoffAtMillis_ASC", "targetWorkoutAttemptId_ASC"],
+    "scheme": "EXPANDING_WINDOW_NEXT_WORKOUT_BLOCK_V1",
+    "test_blocks_per_fold": 1,
+    "workout_rows_may_split": false
+  },
+  "metrics": {
+    "calibration": ["BRIER_SCORE", "LOG_LOSS", "CALIBRATION_INTERCEPT", "CALIBRATION_SLOPE", "RELIABILITY_TABLE"],
+    "discrimination": ["AUROC_UNDERPERFORMANCE", "PR_AUC_UNDERPERFORMANCE"],
+    "incremental_primary": "BRIER_PO_HISTORY_ONLY_MINUS_BRIER_PO_PLUS_MUSCLE_4B",
+    "incremental_secondary": ["LOG_LOSS_DIFFERENCE", "AUROC_DIFFERENCE", "FOLD_IMPROVEMENT_PROPORTION"],
+    "readiness_thresholds": {
+      "false_not_ready_definition": "ATTAINED_AND_PRIMARY_READINESS_MIN_LT_72",
+      "false_ready_definition": "UNDERPERFORMED_AND_PRIMARY_READINESS_MIN_GTE_72",
+      "not_ready_below": 72
+    },
+    "status_order": ["OVERLOADED", "SORE", "RECOVERING", "PRIMED", "READY"]
+  },
+  "missing_data": {
+    "do_not_impute_identity_outcome_readiness_or_target": true,
+    "feature_missingness": "TRAINING_FOLD_ONLY_WITH_EXPLICIT_INDICATOR",
+    "null_unavailable_abstained_are_distinct": true,
+    "unsupported_values": "ABSTAIN_OR_EXCLUDE_WITH_LEDGER_REASON"
+  },
+  "modes": ["AUDIT_ONLY", "FULL_EVALUATION"],
+  "primary_outcome": {
+    "attained": "TARGET_ATTEMPTED_AND_ACHIEVED_REPS_GTE_SUGGESTED_MIN_REPS",
+    "name": "FROZEN_PO_FIRST_WORKING_SET_TARGET_ATTAINMENT",
+    "suggested_rir_evaluated": false,
+    "underperformed": "TARGET_ATTEMPTED_AND_ACHIEVED_REPS_LT_SUGGESTED_MIN_REPS"
+  },
+  "protocol_version": "WEARABLE_1B_EVALUATION_PROTOCOL_V1",
+  "readiness_mapping": {
+    "primary": "FROZEN_PRIMARY_READINESS_MIN",
+    "sensitivity": ["FROZEN_PRIMARY_READINESS_MEAN", "FROZEN_SECONDARY_READINESS_MIN_DESCRIPTIVE"],
+    "weighted_mapping_available": false
+  },
+  "release_gate": {
+    "health_connect_shadow_research_may_be_recommended_when": [
+      "BASELINE_SUPPORTED",
+      "INSUFFICIENT_DATA_WITH_VALID_ARCHITECTURE_AND_MORE_PROSPECTIVE_DATA_AS_ONLY_BLOCKER"
+    ],
+    "modifier_active": false,
+    "wearable_integration_allowed": false
+  },
+  "sample_size_gates": {
+    "evaluable_coverage_min": 0.7,
+    "minimum_canonical_exercises_with_20_records": 3,
+    "minimum_eligible_exercise_outcomes": 200,
+    "minimum_eligible_workout_blocks": 60,
+    "minimum_rolling_folds": 30,
+    "minimum_status_records_for_inferential_comparison": 20,
+    "minimum_target_attainment_successes": 100,
+    "minimum_underperformance_events": 100,
+    "threshold_classification": "AURON_SPECIFIC_CONSERVATIVE_ENGINEERING_GATE"
+  },
+  "secondary_outcomes": [
+    "ACTUAL_MINUS_SUGGESTED_LOAD",
+    "ACTUAL_MINUS_SUGGESTED_REPS",
+    "ACHIEVED_VERSUS_FROZEN_REP_RANGE",
+    "PERFORMANCE_CHANGE_VERSUS_FROZEN_REFERENCE",
+    "TARGET_SET_COMPLETION",
+    "EXERCISE_COMPLETION",
+    "OUTCOME_BY_MUSCLE_4B_STATUS",
+    "OUTCOME_BY_CANONICAL_EXERCISE",
+    "OUTCOME_BY_PRIMARY_MUSCLE_CODE",
+    "OUTCOME_BY_TRACKING_TYPE",
+    "OUTCOME_BY_FIRST_SET_CONFIDENCE",
+    "OUTCOME_BY_FIRST_SET_RULE",
+    "TIME_SINCE_FROZEN_REFERENCE_SESSION",
+    "COMPLETED_VERSUS_PARTIAL_WORKOUT_CONTEXT"
+  ],
+  "sensitivity_analyses": [
+    "PRIMARY_READINESS_MEAN_INSTEAD_OF_MIN",
+    "SECONDARY_READINESS_MIN_DESCRIPTIVE",
+    "REPEATED_STABLE_LOADING_PATTERN_SUBSET",
+    "BROADER_ATTEMPTED_PLUS_AMBIGUOUS_DESCRIPTIVE_ONLY",
+    "BY_FIRST_SET_CONFIDENCE",
+    "BY_FIRST_SET_RULE",
+    "MODAL_LOAD_HEURISTIC_REMOVAL_IF_AN_ALTERNATE_SUPPORTED_RULE_EXISTS"
+  ],
+  "target_attempt": {
+    "ambiguous": [
+      "BROKEN_TARGET_OUTCOME_LINK",
+      "DUPLICATE_CANONICAL_TARGET_IN_WORKOUT",
+      "MISSING_REQUIRED_ACTUAL_FIELD",
+      "CONTRADICTORY_MATCH_FLAGS"
+    ],
+    "classification_codes": ["TARGET_ATTEMPTED", "TARGET_NOT_ATTEMPTED", "TARGET_ATTEMPT_AMBIGUOUS"],
+    "load_tolerance_kg": 0.01,
+    "not_attempted": ["NO_MATCHING_SAVED_SET", "ACTUAL_LOAD_OUTSIDE_TOLERANCE"],
+    "strict_attempted": [
+      "CANONICAL_EXERCISE_MATCH",
+      "MATCHED_PLANNED_TARGET_TRUE",
+      "VALID_LINKED_FIRST_WORKING_SET",
+      "ABS_ACTUAL_MINUS_SUGGESTED_LOAD_LTE_0_01_KG",
+      "ACTUAL_REPS_GT_ZERO"
+    ]
+  }
+}

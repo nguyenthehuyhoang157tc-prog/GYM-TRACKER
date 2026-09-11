@@ -1,0 +1,608 @@
+current_slug,current_name,source_guess,mapped_fed_name,mapped_fed_folder,confidence,reason,mapping_class,recommended_action
+3-4-sit-up,3/4 Sit-Up,FED_IMPORTED,3/4 Sit-Up,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+ab-crunch-machine,Ab Crunch Machine,FED_IMPORTED,Ab Crunch Machine,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+advanced-kettlebell-windmill,Advanced Kettlebell Windmill,FED_IMPORTED,Advanced Kettlebell Windmill,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+air-bike,Air Bike,FED_IMPORTED,Air Bike,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+alternate-hammer-curl,Alternate Hammer Curl,FED_IMPORTED,Alternate Hammer Curl,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+alternate-heel-touchers,Alternate Heel Touchers,FED_IMPORTED,Alternate Heel Touchers,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+alternate-incline-dumbbell-curl,Alternate Incline Dumbbell Curl,FED_IMPORTED,Alternate Incline Dumbbell Curl,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+alternating-cable-shoulder-press,Alternating Cable Shoulder Press,FED_IMPORTED,Alternating Cable Shoulder Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+alternating-deltoid-raise,Alternating Deltoid Raise,FED_IMPORTED,Alternating Deltoid Raise,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+alternating-floor-press,Alternating Floor Press,FED_IMPORTED,Alternating Floor Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+alternating-hang-clean,Alternating Hang Clean,FED_IMPORTED,Alternating Hang Clean,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+alternating-kettlebell-press,Alternating Kettlebell Press,FED_IMPORTED,Alternating Kettlebell Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+alternating-kettlebell-row,Alternating Kettlebell Row,FED_IMPORTED,Alternating Kettlebell Row,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+alternating-renegade-row,Alternating Renegade Row,FED_IMPORTED,Alternating Renegade Row,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+anti-gravity-press,Anti-Gravity Press,FED_IMPORTED,Anti-Gravity Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+arnold-dumbbell-press,Arnold Dumbbell Press,FED_IMPORTED,Arnold Dumbbell Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+around-the-worlds,Around The Worlds,FED_IMPORTED,Around The Worlds,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+back-flyes-with-bands,Back Flyes - With Bands,FED_IMPORTED,Back Flyes - With Bands,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+ball-leg-curl,Ball Leg Curl,FED_IMPORTED,Ball Leg Curl,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+band-hip-adductions,Band Hip Adductions,FED_IMPORTED,Band Hip Adductions,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+band-pull-apart,Band Pull Apart,FED_IMPORTED,Band Pull Apart,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+band-skull-crusher,Band Skull Crusher,FED_IMPORTED,Band Skull Crusher,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+barbell-ab-rollout,Barbell Ab Rollout,FED_IMPORTED,Barbell Ab Rollout,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+barbell-ab-rollout-on-knees,Barbell Ab Rollout - On Knees,FED_IMPORTED,Barbell Ab Rollout - On Knees,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+barbell-bench-press-medium-grip,Barbell Bench Press - Medium Grip,FED_IMPORTED,Barbell Bench Press - Medium Grip,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+barbell-curls-lying-against-an-incline,Barbell Curls Lying Against An Incline,FED_IMPORTED,Barbell Curls Lying Against An Incline,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+barbell-full-squat,Barbell Full Squat,FED_IMPORTED,Barbell Full Squat,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+barbell-guillotine-bench-press,Barbell Guillotine Bench Press,FED_IMPORTED,Barbell Guillotine Bench Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+barbell-hack-squat,Barbell Hack Squat,FED_IMPORTED,Barbell Hack Squat,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+barbell-incline-bench-press-medium-grip,Barbell Incline Bench Press - Medium Grip,FED_IMPORTED,Barbell Incline Bench Press - Medium Grip,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+barbell-incline-shoulder-raise,Barbell Incline Shoulder Raise,FED_IMPORTED,Barbell Incline Shoulder Raise,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+barbell-lunge,Barbell Lunge,FED_IMPORTED,Barbell Lunge,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+barbell-rear-delt-row,Barbell Rear Delt Row,FED_IMPORTED,Barbell Rear Delt Row,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+barbell-rollout-from-bench,Barbell Rollout from Bench,FED_IMPORTED,Barbell Rollout from Bench,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+barbell-seated-calf-raise,Barbell Seated Calf Raise,FED_IMPORTED,Barbell Seated Calf Raise,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+barbell-shoulder-press,Barbell Shoulder Press,FED_IMPORTED,Barbell Shoulder Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+barbell-shrug-behind-the-back,Barbell Shrug Behind The Back,FED_IMPORTED,Barbell Shrug Behind The Back,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+barbell-side-bend,Barbell Side Bend,FED_IMPORTED,Barbell Side Bend,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+barbell-side-split-squat,Barbell Side Split Squat,FED_IMPORTED,Barbell Side Split Squat,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+barbell-squat-to-a-bench,Barbell Squat To A Bench,FED_IMPORTED,Barbell Squat To A Bench,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+barbell-step-ups,Barbell Step Ups,FED_IMPORTED,Barbell Step Ups,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+barbell-walking-lunge,Barbell Walking Lunge,FED_IMPORTED,Barbell Walking Lunge,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+bench-press-with-bands,Bench Press - With Bands,FED_IMPORTED,Bench Press - With Bands,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+bent-arm-barbell-pullover,Bent-Arm Barbell Pullover,FED_IMPORTED,Bent-Arm Barbell Pullover,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+bent-arm-dumbbell-pullover,Bent-Arm Dumbbell Pullover,FED_IMPORTED,Bent-Arm Dumbbell Pullover,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+bent-knee-hip-raise,Bent-Knee Hip Raise,FED_IMPORTED,Bent-Knee Hip Raise,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+bent-over-dumbbell-rear-delt-raise-with-head-on-bench,Bent Over Dumbbell Rear Delt Raise With Head On Bench,FED_IMPORTED,Bent Over Dumbbell Rear Delt Raise With Head On Bench,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+bent-over-low-pulley-side-lateral,Bent Over Low-Pulley Side Lateral,FED_IMPORTED,Bent Over Low-Pulley Side Lateral,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+bent-over-one-arm-long-bar-row,Bent Over One-Arm Long Bar Row,FED_IMPORTED,Bent Over One-Arm Long Bar Row,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+bent-over-two-arm-long-bar-row,Bent Over Two-Arm Long Bar Row,FED_IMPORTED,Bent Over Two-Arm Long Bar Row,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+bent-over-two-dumbbell-row,Bent Over Two-Dumbbell Row,FED_IMPORTED,Bent Over Two-Dumbbell Row,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+bent-over-two-dumbbell-row-with-palms-in,Bent Over Two-Dumbbell Row With Palms In,FED_IMPORTED,Bent Over Two-Dumbbell Row With Palms In,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+bent-press,Bent Press,FED_IMPORTED,Bent Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+body-up,Body-Up,FED_IMPORTED,Body-Up,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+body-tricep-press,Body Tricep Press,FED_IMPORTED,Body Tricep Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+bodyweight-flyes,Bodyweight Flyes,FED_IMPORTED,Bodyweight Flyes,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+bodyweight-squat,Bodyweight Squat,FED_IMPORTED,Bodyweight Squat,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+bosu-ball-cable-crunch-with-side-bends,Bosu Ball Cable Crunch With Side Bends,FED_IMPORTED,Bosu Ball Cable Crunch With Side Bends,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+bottoms-up-clean-from-the-hang-position,Bottoms-Up Clean From The Hang Position,FED_IMPORTED,Bottoms-Up Clean From The Hang Position,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+bottoms-up,Bottoms Up,FED_IMPORTED,Bottoms Up,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+box-squat-with-chains,Box Squat with Chains,FED_IMPORTED,Box Squat with Chains,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+bradford-rocky-presses,Bradford/Rocky Presses,FED_IMPORTED,Bradford/Rocky Presses,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+butt-ups,Butt-Ups,FED_IMPORTED,Butt-Ups,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+butt-lift-bridge,Butt Lift (Bridge),FED_IMPORTED,Butt Lift (Bridge),(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+butterfly,Butterfly,FED_IMPORTED,Butterfly,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+cable-chest-press,Cable Chest Press,FED_IMPORTED,Cable Chest Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+cable-deadlifts,Cable Deadlifts,FED_IMPORTED,Cable Deadlifts,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+cable-hammer-curls-rope-attachment,Cable Hammer Curls - Rope Attachment,FED_IMPORTED,Cable Hammer Curls - Rope Attachment,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+cable-hip-adduction,Cable Hip Adduction,FED_IMPORTED,Cable Hip Adduction,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+cable-incline-pushdown,Cable Incline Pushdown,FED_IMPORTED,Cable Incline Pushdown,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+cable-incline-triceps-extension,Cable Incline Triceps Extension,FED_IMPORTED,Cable Incline Triceps Extension,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+cable-internal-rotation,Cable Internal Rotation,FED_IMPORTED,Cable Internal Rotation,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+cable-iron-cross,Cable Iron Cross,FED_IMPORTED,Cable Iron Cross,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+cable-judo-flip,Cable Judo Flip,FED_IMPORTED,Cable Judo Flip,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+cable-lying-triceps-extension,Cable Lying Triceps Extension,FED_IMPORTED,Cable Lying Triceps Extension,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+cable-one-arm-tricep-extension,Cable One Arm Tricep Extension,FED_IMPORTED,Cable One Arm Tricep Extension,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+cable-preacher-curl,Cable Preacher Curl,FED_IMPORTED,Cable Preacher Curl,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+cable-rear-delt-fly,Cable Rear Delt Fly,FED_IMPORTED,Cable Rear Delt Fly,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+cable-reverse-crunch,Cable Reverse Crunch,FED_IMPORTED,Cable Reverse Crunch,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+cable-rope-overhead-triceps-extension,Cable Rope Overhead Triceps Extension,FED_IMPORTED,Cable Rope Overhead Triceps Extension,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+cable-rope-rear-delt-rows,Cable Rope Rear-Delt Rows,FED_IMPORTED,Cable Rope Rear-Delt Rows,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+cable-russian-twists,Cable Russian Twists,FED_IMPORTED,Cable Russian Twists,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+cable-seated-crunch,Cable Seated Crunch,FED_IMPORTED,Cable Seated Crunch,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+cable-seated-lateral-raise,Cable Seated Lateral Raise,FED_IMPORTED,Cable Seated Lateral Raise,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+cable-shoulder-press,Cable Shoulder Press,FED_IMPORTED,Cable Shoulder Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+cable-shrugs,Cable Shrugs,FED_IMPORTED,Cable Shrugs,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+cable-wrist-curl,Cable Wrist Curl,FED_IMPORTED,Cable Wrist Curl,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+calf-machine-shoulder-shrug,Calf-Machine Shoulder Shrug,FED_IMPORTED,Calf-Machine Shoulder Shrug,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+calf-press-on-the-leg-press-machine,Calf Press On The Leg Press Machine,FED_IMPORTED,Calf Press On The Leg Press Machine,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+calf-raise-on-a-dumbbell,Calf Raise On A Dumbbell,FED_IMPORTED,Calf Raise On A Dumbbell,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+calf-raises-with-bands,Calf Raises - With Bands,FED_IMPORTED,Calf Raises - With Bands,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+car-drivers,Car Drivers,FED_IMPORTED,Car Drivers,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+chair-squat,Chair Squat,FED_IMPORTED,Chair Squat,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+clean-and-press,Clean and Press,FED_IMPORTED,Clean and Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+clock-push-up,Clock Push-Up,FED_IMPORTED,Clock Push-Up,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+close-grip-barbell-bench-press,Close-Grip Barbell Bench Press,FED_IMPORTED,Close-Grip Barbell Bench Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+close-grip-dumbbell-press,Close-Grip Dumbbell Press,FED_IMPORTED,Close-Grip Dumbbell Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+close-grip-ez-bar-curl-with-band,Close-Grip EZ-Bar Curl with Band,FED_IMPORTED,Close-Grip EZ-Bar Curl with Band,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+close-grip-ez-bar-press,Close-Grip EZ-Bar Press,FED_IMPORTED,Close-Grip EZ-Bar Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+close-grip-ez-bar-curl,Close-Grip EZ Bar Curl,FED_IMPORTED,Close-Grip EZ Bar Curl,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+close-grip-front-lat-pulldown,Close-Grip Front Lat Pulldown,FED_IMPORTED,Close-Grip Front Lat Pulldown,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+close-grip-push-up-off-of-a-dumbbell,Close-Grip Push-Up off of a Dumbbell,FED_IMPORTED,Close-Grip Push-Up off of a Dumbbell,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+close-grip-standing-barbell-curl,Close-Grip Standing Barbell Curl,FED_IMPORTED,Close-Grip Standing Barbell Curl,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+cocoons,Cocoons,FED_IMPORTED,Cocoons,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+concentration-curls,Concentration Curls,FED_IMPORTED,Concentration Curls,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+cross-body-crunch,Cross-Body Crunch,FED_IMPORTED,Cross-Body Crunch,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+cross-over-with-bands,Cross Over - With Bands,FED_IMPORTED,Cross Over - With Bands,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+crunch-hands-overhead,Crunch - Hands Overhead,FED_IMPORTED,Crunch - Hands Overhead,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+crunch-legs-on-exercise-ball,Crunch - Legs On Exercise Ball,FED_IMPORTED,Crunch - Legs On Exercise Ball,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+crunches,Crunches,FED_IMPORTED,Crunches,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+cuban-press,Cuban Press,FED_IMPORTED,Cuban Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+decline-close-grip-bench-to-skull-crusher,Decline Close-Grip Bench To Skull Crusher,FED_IMPORTED,Decline Close-Grip Bench To Skull Crusher,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+decline-dumbbell-flyes,Decline Dumbbell Flyes,FED_IMPORTED,Decline Dumbbell Flyes,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+decline-dumbbell-triceps-extension,Decline Dumbbell Triceps Extension,FED_IMPORTED,Decline Dumbbell Triceps Extension,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+decline-ez-bar-triceps-extension,Decline EZ Bar Triceps Extension,FED_IMPORTED,Decline EZ Bar Triceps Extension,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+decline-oblique-crunch,Decline Oblique Crunch,FED_IMPORTED,Decline Oblique Crunch,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+decline-reverse-crunch,Decline Reverse Crunch,FED_IMPORTED,Decline Reverse Crunch,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+decline-smith-press,Decline Smith Press,FED_IMPORTED,Decline Smith Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+dip-machine,Dip Machine,FED_IMPORTED,Dip Machine,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+dips-triceps-version,Dips - Triceps Version,FED_IMPORTED,Dips - Triceps Version,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+double-kettlebell-alternating-hang-clean,Double Kettlebell Alternating Hang Clean,FED_IMPORTED,Double Kettlebell Alternating Hang Clean,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+double-kettlebell-jerk,Double Kettlebell Jerk,FED_IMPORTED,Double Kettlebell Jerk,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+double-kettlebell-push-press,Double Kettlebell Push Press,FED_IMPORTED,Double Kettlebell Push Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+double-kettlebell-snatch,Double Kettlebell Snatch,FED_IMPORTED,Double Kettlebell Snatch,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+downward-facing-balance,Downward Facing Balance,FED_IMPORTED,Downward Facing Balance,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+dumbbell-bench-press-with-neutral-grip,Dumbbell Bench Press with Neutral Grip,FED_IMPORTED,Dumbbell Bench Press with Neutral Grip,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+dumbbell-bicep-curl,Dumbbell Bicep Curl,FED_IMPORTED,Dumbbell Bicep Curl,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+dumbbell-clean,Dumbbell Clean,FED_IMPORTED,Dumbbell Clean,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+dumbbell-flyes,Dumbbell Flyes,FED_IMPORTED,Dumbbell Flyes,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+dumbbell-incline-row,Dumbbell Incline Row,FED_IMPORTED,Dumbbell Incline Row,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+dumbbell-incline-shoulder-raise,Dumbbell Incline Shoulder Raise,FED_IMPORTED,Dumbbell Incline Shoulder Raise,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+dumbbell-lunges,Dumbbell Lunges,FED_IMPORTED,Dumbbell Lunges,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+dumbbell-lying-one-arm-rear-lateral-raise,Dumbbell Lying One-Arm Rear Lateral Raise,FED_IMPORTED,Dumbbell Lying One-Arm Rear Lateral Raise,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+dumbbell-lying-pronation,Dumbbell Lying Pronation,FED_IMPORTED,Dumbbell Lying Pronation,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+dumbbell-lying-rear-lateral-raise,Dumbbell Lying Rear Lateral Raise,FED_IMPORTED,Dumbbell Lying Rear Lateral Raise,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+dumbbell-lying-supination,Dumbbell Lying Supination,FED_IMPORTED,Dumbbell Lying Supination,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+dumbbell-one-arm-shoulder-press,Dumbbell One-Arm Shoulder Press,FED_IMPORTED,Dumbbell One-Arm Shoulder Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+dumbbell-one-arm-triceps-extension,Dumbbell One-Arm Triceps Extension,FED_IMPORTED,Dumbbell One-Arm Triceps Extension,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+dumbbell-one-arm-upright-row,Dumbbell One-Arm Upright Row,FED_IMPORTED,Dumbbell One-Arm Upright Row,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+dumbbell-prone-incline-curl,Dumbbell Prone Incline Curl,FED_IMPORTED,Dumbbell Prone Incline Curl,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+dumbbell-raise,Dumbbell Raise,FED_IMPORTED,Dumbbell Raise,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+dumbbell-rear-lunge,Dumbbell Rear Lunge,FED_IMPORTED,Dumbbell Rear Lunge,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+dumbbell-scaption,Dumbbell Scaption,FED_IMPORTED,Dumbbell Scaption,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+dumbbell-seated-one-leg-calf-raise,Dumbbell Seated One-Leg Calf Raise,FED_IMPORTED,Dumbbell Seated One-Leg Calf Raise,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+dumbbell-side-bend,Dumbbell Side Bend,FED_IMPORTED,Dumbbell Side Bend,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+dumbbell-squat,Dumbbell Squat,FED_IMPORTED,Dumbbell Squat,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+dumbbell-squat-to-a-bench,Dumbbell Squat To A Bench,FED_IMPORTED,Dumbbell Squat To A Bench,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+dumbbell-step-ups,Dumbbell Step Ups,FED_IMPORTED,Dumbbell Step Ups,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+dumbbell-tricep-extension-pronated-grip,Dumbbell Tricep Extension -Pronated Grip,FED_IMPORTED,Dumbbell Tricep Extension -Pronated Grip,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+ez-bar-skullcrusher,EZ-Bar Skullcrusher,FED_IMPORTED,EZ-Bar Skullcrusher,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+elbow-to-knee,Elbow to Knee,FED_IMPORTED,Elbow to Knee,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+elevated-back-lunge,Elevated Back Lunge,FED_IMPORTED,Elevated Back Lunge,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+elevated-cable-rows,Elevated Cable Rows,FED_IMPORTED,Elevated Cable Rows,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+exercise-ball-crunch,Exercise Ball Crunch,FED_IMPORTED,Exercise Ball Crunch,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+exercise-ball-pull-in,Exercise Ball Pull-In,FED_IMPORTED,Exercise Ball Pull-In,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+extended-range-one-arm-kettlebell-floor-press,Extended Range One-Arm Kettlebell Floor Press,FED_IMPORTED,Extended Range One-Arm Kettlebell Floor Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+external-rotation,External Rotation,FED_IMPORTED,External Rotation,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+external-rotation-with-band,External Rotation with Band,FED_IMPORTED,External Rotation with Band,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+external-rotation-with-cable,External Rotation with Cable,FED_IMPORTED,External Rotation with Cable,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+finger-curls,Finger Curls,FED_IMPORTED,Finger Curls,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+flat-bench-cable-flyes,Flat Bench Cable Flyes,FED_IMPORTED,Flat Bench Cable Flyes,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+flat-bench-leg-pull-in,Flat Bench Leg Pull-In,FED_IMPORTED,Flat Bench Leg Pull-In,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+flat-bench-lying-leg-raise,Flat Bench Lying Leg Raise,FED_IMPORTED,Flat Bench Lying Leg Raise,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+flexor-incline-dumbbell-curls,Flexor Incline Dumbbell Curls,FED_IMPORTED,Flexor Incline Dumbbell Curls,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+freehand-jump-squat,Freehand Jump Squat,FED_IMPORTED,Freehand Jump Squat,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+frog-sit-ups,Frog Sit-Ups,FED_IMPORTED,Frog Sit-Ups,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+front-barbell-squat-to-a-bench,Front Barbell Squat To A Bench,FED_IMPORTED,Front Barbell Squat To A Bench,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+front-cable-raise,Front Cable Raise,FED_IMPORTED,Front Cable Raise,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+front-incline-dumbbell-raise,Front Incline Dumbbell Raise,FED_IMPORTED,Front Incline Dumbbell Raise,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+front-raise-and-pullover,Front Raise And Pullover,FED_IMPORTED,Front Raise And Pullover,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+front-squat-clean-grip,Front Squat (Clean Grip),FED_IMPORTED,Front Squat (Clean Grip),(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+front-squats-with-two-kettlebells,Front Squats With Two Kettlebells,FED_IMPORTED,Front Squats With Two Kettlebells,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+front-two-dumbbell-raise,Front Two-Dumbbell Raise,FED_IMPORTED,Front Two-Dumbbell Raise,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+full-range-of-motion-lat-pulldown,Full Range-Of-Motion Lat Pulldown,FED_IMPORTED,Full Range-Of-Motion Lat Pulldown,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+gorilla-chin-crunch,Gorilla Chin/Crunch,FED_IMPORTED,Gorilla Chin/Crunch,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+hammer-curls,Hammer Curls,FED_IMPORTED,Hammer Curls,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+hammer-grip-incline-db-bench-press,Hammer Grip Incline DB Bench Press,FED_IMPORTED,Hammer Grip Incline DB Bench Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+handstand-push-ups,Handstand Push-Ups,FED_IMPORTED,Handstand Push-Ups,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+hanging-pike,Hanging Pike,FED_IMPORTED,Hanging Pike,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+high-cable-curls,High Cable Curls,FED_IMPORTED,High Cable Curls,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+hip-extension-with-bands,Hip Extension with Bands,FED_IMPORTED,Hip Extension with Bands,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+hip-flexion-with-band,Hip Flexion with Band,FED_IMPORTED,Hip Flexion with Band,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+hyperextensions-with-no-hyperextension-bench,Hyperextensions With No Hyperextension Bench,FED_IMPORTED,Hyperextensions With No Hyperextension Bench,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+incline-barbell-triceps-extension,Incline Barbell Triceps Extension,FED_IMPORTED,Incline Barbell Triceps Extension,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+incline-bench-pull,Incline Bench Pull,FED_IMPORTED,Incline Bench Pull,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+incline-cable-chest-press,Incline Cable Chest Press,FED_IMPORTED,Incline Cable Chest Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+incline-cable-flye,Incline Cable Flye,FED_IMPORTED,Incline Cable Flye,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+incline-dumbbell-bench-with-palms-facing-in,Incline Dumbbell Bench With Palms Facing In,FED_IMPORTED,Incline Dumbbell Bench With Palms Facing In,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+incline-dumbbell-flyes,Incline Dumbbell Flyes,FED_IMPORTED,Incline Dumbbell Flyes,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+incline-dumbbell-flyes-with-a-twist,Incline Dumbbell Flyes - With A Twist,FED_IMPORTED,Incline Dumbbell Flyes - With A Twist,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+incline-hammer-curls,Incline Hammer Curls,FED_IMPORTED,Incline Hammer Curls,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+incline-push-up-close-grip,Incline Push-Up Close-Grip,FED_IMPORTED,Incline Push-Up Close-Grip,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+incline-push-up-medium,Incline Push-Up Medium,FED_IMPORTED,Incline Push-Up Medium,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+incline-push-up-reverse-grip,Incline Push-Up Reverse Grip,FED_IMPORTED,Incline Push-Up Reverse Grip,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+incline-push-up-wide,Incline Push-Up Wide,FED_IMPORTED,Incline Push-Up Wide,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+iron-cross,Iron Cross,FED_IMPORTED,Iron Cross,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+isometric-wipers,Isometric Wipers,FED_IMPORTED,Isometric Wipers,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+jackknife-sit-up,Jackknife Sit-Up,FED_IMPORTED,Jackknife Sit-Up,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+janda-sit-up,Janda Sit-Up,FED_IMPORTED,Janda Sit-Up,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+jefferson-squats,Jefferson Squats,FED_IMPORTED,Jefferson Squats,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+kettlebell-arnold-press,Kettlebell Arnold Press,FED_IMPORTED,Kettlebell Arnold Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+kettlebell-dead-clean,Kettlebell Dead Clean,FED_IMPORTED,Kettlebell Dead Clean,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+kettlebell-hang-clean,Kettlebell Hang Clean,FED_IMPORTED,Kettlebell Hang Clean,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+kettlebell-one-legged-deadlift,Kettlebell One-Legged Deadlift,FED_IMPORTED,Kettlebell One-Legged Deadlift,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+kettlebell-pass-between-the-legs,Kettlebell Pass Between The Legs,FED_IMPORTED,Kettlebell Pass Between The Legs,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+kettlebell-pirate-ships,Kettlebell Pirate Ships,FED_IMPORTED,Kettlebell Pirate Ships,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+kettlebell-pistol-squat,Kettlebell Pistol Squat,FED_IMPORTED,Kettlebell Pistol Squat,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+kettlebell-seated-press,Kettlebell Seated Press,FED_IMPORTED,Kettlebell Seated Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+kettlebell-seesaw-press,Kettlebell Seesaw Press,FED_IMPORTED,Kettlebell Seesaw Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+kettlebell-sumo-high-pull,Kettlebell Sumo High Pull,FED_IMPORTED,Kettlebell Sumo High Pull,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+kettlebell-thruster,Kettlebell Thruster,FED_IMPORTED,Kettlebell Thruster,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+kettlebell-turkish-get-up-lunge-style,Kettlebell Turkish Get-Up (Lunge style),FED_IMPORTED,Kettlebell Turkish Get-Up (Lunge style),(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+kettlebell-turkish-get-up-squat-style,Kettlebell Turkish Get-Up (Squat style),FED_IMPORTED,Kettlebell Turkish Get-Up (Squat style),(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+kettlebell-windmill,Kettlebell Windmill,FED_IMPORTED,Kettlebell Windmill,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+kneeling-cable-crunch-with-alternating-oblique-twists,Kneeling Cable Crunch With Alternating Oblique Twists,FED_IMPORTED,Kneeling Cable Crunch With Alternating Oblique Twists,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+kneeling-cable-triceps-extension,Kneeling Cable Triceps Extension,FED_IMPORTED,Kneeling Cable Triceps Extension,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+kneeling-high-pulley-row,Kneeling High Pulley Row,FED_IMPORTED,Kneeling High Pulley Row,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+kneeling-single-arm-high-pulley-row,Kneeling Single-Arm High Pulley Row,FED_IMPORTED,Kneeling Single-Arm High Pulley Row,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+landmine-180s,Landmine 180's,FED_IMPORTED,Landmine 180's,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+landmine-linear-jammer,Landmine Linear Jammer,FED_IMPORTED,Landmine Linear Jammer,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+lateral-raise-with-bands,Lateral Raise - With Bands,FED_IMPORTED,Lateral Raise - With Bands,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+leg-over-floor-press,Leg-Over Floor Press,FED_IMPORTED,Leg-Over Floor Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+leg-lift,Leg Lift,FED_IMPORTED,Leg Lift,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+leg-pull-in,Leg Pull-In,FED_IMPORTED,Leg Pull-In,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+leverage-chest-press,Leverage Chest Press,FED_IMPORTED,Leverage Chest Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+leverage-deadlift,Leverage Deadlift,FED_IMPORTED,Leverage Deadlift,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+leverage-decline-chest-press,Leverage Decline Chest Press,FED_IMPORTED,Leverage Decline Chest Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+leverage-high-row,Leverage High Row,FED_IMPORTED,Leverage High Row,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+leverage-incline-chest-press,Leverage Incline Chest Press,FED_IMPORTED,Leverage Incline Chest Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+leverage-iso-row,Leverage Iso Row,FED_IMPORTED,Leverage Iso Row,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+leverage-shoulder-press,Leverage Shoulder Press,FED_IMPORTED,Leverage Shoulder Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+leverage-shrug,Leverage Shrug,FED_IMPORTED,Leverage Shrug,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+low-cable-crossover,Low Cable Crossover,FED_IMPORTED,Low Cable Crossover,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+low-cable-triceps-extension,Low Cable Triceps Extension,FED_IMPORTED,Low Cable Triceps Extension,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+low-pulley-row-to-neck,Low Pulley Row To Neck,FED_IMPORTED,Low Pulley Row To Neck,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+lunge-pass-through,Lunge Pass Through,FED_IMPORTED,Lunge Pass Through,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+lunge-sprint,Lunge Sprint,FED_IMPORTED,Lunge Sprint,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+lying-cable-curl,Lying Cable Curl,FED_IMPORTED,Lying Cable Curl,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+lying-cambered-barbell-row,Lying Cambered Barbell Row,FED_IMPORTED,Lying Cambered Barbell Row,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+lying-close-grip-bar-curl-on-high-pulley,Lying Close-Grip Bar Curl On High Pulley,FED_IMPORTED,Lying Close-Grip Bar Curl On High Pulley,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+lying-close-grip-barbell-triceps-extension-behind-the-head,Lying Close-Grip Barbell Triceps Extension Behind The Head,FED_IMPORTED,Lying Close-Grip Barbell Triceps Extension Behind The Head,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+lying-close-grip-barbell-triceps-press-to-chin,Lying Close-Grip Barbell Triceps Press To Chin,FED_IMPORTED,Lying Close-Grip Barbell Triceps Press To Chin,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+lying-dumbbell-tricep-extension,Lying Dumbbell Tricep Extension,FED_IMPORTED,Lying Dumbbell Tricep Extension,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+lying-high-bench-barbell-curl,Lying High Bench Barbell Curl,FED_IMPORTED,Lying High Bench Barbell Curl,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+lying-leg-curls,Lying Leg Curls,FED_IMPORTED,Lying Leg Curls,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+lying-machine-squat,Lying Machine Squat,FED_IMPORTED,Lying Machine Squat,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+lying-one-arm-lateral-raise,Lying One-Arm Lateral Raise,FED_IMPORTED,Lying One-Arm Lateral Raise,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+lying-rear-delt-raise,Lying Rear Delt Raise,FED_IMPORTED,Lying Rear Delt Raise,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+lying-supine-dumbbell-curl,Lying Supine Dumbbell Curl,FED_IMPORTED,Lying Supine Dumbbell Curl,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+lying-t-bar-row,Lying T-Bar Row,FED_IMPORTED,Lying T-Bar Row,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+lying-triceps-press,Lying Triceps Press,FED_IMPORTED,Lying Triceps Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+machine-bench-press,Machine Bench Press,FED_IMPORTED,Machine Bench Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+machine-bicep-curl,Machine Bicep Curl,FED_IMPORTED,Machine Bicep Curl,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+machine-preacher-curls,Machine Preacher Curls,FED_IMPORTED,Machine Preacher Curls,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+machine-shoulder-military-press,Machine Shoulder (Military) Press,FED_IMPORTED,Machine Shoulder (Military) Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+machine-triceps-extension,Machine Triceps Extension,FED_IMPORTED,Machine Triceps Extension,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+middle-back-shrug,Middle Back Shrug,FED_IMPORTED,Middle Back Shrug,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+monster-walk,Monster Walk,FED_IMPORTED,Monster Walk,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+narrow-stance-hack-squats,Narrow Stance Hack Squats,FED_IMPORTED,Narrow Stance Hack Squats,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+narrow-stance-leg-press,Narrow Stance Leg Press,FED_IMPORTED,Narrow Stance Leg Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+narrow-stance-squats,Narrow Stance Squats,FED_IMPORTED,Narrow Stance Squats,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+natural-glute-ham-raise,Natural Glute Ham Raise,FED_IMPORTED,Natural Glute Ham Raise,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+neck-press,Neck Press,FED_IMPORTED,Neck Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+oblique-crunches,Oblique Crunches,FED_IMPORTED,Oblique Crunches,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+oblique-crunches-on-the-floor,Oblique Crunches - On The Floor,FED_IMPORTED,Oblique Crunches - On The Floor,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+one-arm-flat-bench-dumbbell-flye,One-Arm Flat Bench Dumbbell Flye,FED_IMPORTED,One-Arm Flat Bench Dumbbell Flye,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+one-arm-high-pulley-cable-side-bends,One-Arm High-Pulley Cable Side Bends,FED_IMPORTED,One-Arm High-Pulley Cable Side Bends,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+one-arm-incline-lateral-raise,One-Arm Incline Lateral Raise,FED_IMPORTED,One-Arm Incline Lateral Raise,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+one-arm-kettlebell-clean,One-Arm Kettlebell Clean,FED_IMPORTED,One-Arm Kettlebell Clean,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+one-arm-kettlebell-clean-and-jerk,One-Arm Kettlebell Clean and Jerk,FED_IMPORTED,One-Arm Kettlebell Clean and Jerk,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+one-arm-kettlebell-floor-press,One-Arm Kettlebell Floor Press,FED_IMPORTED,One-Arm Kettlebell Floor Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+one-arm-kettlebell-jerk,One-Arm Kettlebell Jerk,FED_IMPORTED,One-Arm Kettlebell Jerk,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+one-arm-kettlebell-military-press-to-the-side,One-Arm Kettlebell Military Press To The Side,FED_IMPORTED,One-Arm Kettlebell Military Press To The Side,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+one-arm-kettlebell-para-press,One-Arm Kettlebell Para Press,FED_IMPORTED,One-Arm Kettlebell Para Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+one-arm-kettlebell-push-press,One-Arm Kettlebell Push Press,FED_IMPORTED,One-Arm Kettlebell Push Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+one-arm-kettlebell-row,One-Arm Kettlebell Row,FED_IMPORTED,One-Arm Kettlebell Row,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+one-arm-kettlebell-snatch,One-Arm Kettlebell Snatch,FED_IMPORTED,One-Arm Kettlebell Snatch,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+one-arm-kettlebell-split-jerk,One-Arm Kettlebell Split Jerk,FED_IMPORTED,One-Arm Kettlebell Split Jerk,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+one-arm-kettlebell-split-snatch,One-Arm Kettlebell Split Snatch,FED_IMPORTED,One-Arm Kettlebell Split Snatch,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+one-arm-kettlebell-swings,One-Arm Kettlebell Swings,FED_IMPORTED,One-Arm Kettlebell Swings,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+one-arm-long-bar-row,One-Arm Long Bar Row,FED_IMPORTED,One-Arm Long Bar Row,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+one-arm-medicine-ball-slam,One-Arm Medicine Ball Slam,FED_IMPORTED,One-Arm Medicine Ball Slam,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+one-arm-open-palm-kettlebell-clean,One-Arm Open Palm Kettlebell Clean,FED_IMPORTED,One-Arm Open Palm Kettlebell Clean,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+one-arm-overhead-kettlebell-squats,One-Arm Overhead Kettlebell Squats,FED_IMPORTED,One-Arm Overhead Kettlebell Squats,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+one-arm-side-deadlift,One-Arm Side Deadlift,FED_IMPORTED,One-Arm Side Deadlift,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+one-arm-side-laterals,One-Arm Side Laterals,FED_IMPORTED,One-Arm Side Laterals,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+one-legged-cable-kickback,One-Legged Cable Kickback,FED_IMPORTED,One-Legged Cable Kickback,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+one-arm-dumbbell-bench-press,One Arm Dumbbell Bench Press,FED_IMPORTED,One Arm Dumbbell Bench Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+one-arm-dumbbell-preacher-curl,One Arm Dumbbell Preacher Curl,FED_IMPORTED,One Arm Dumbbell Preacher Curl,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+one-arm-floor-press,One Arm Floor Press,FED_IMPORTED,One Arm Floor Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+one-arm-lat-pulldown,One Arm Lat Pulldown,FED_IMPORTED,One Arm Lat Pulldown,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+one-arm-pronated-dumbbell-triceps-extension,One Arm Pronated Dumbbell Triceps Extension,FED_IMPORTED,One Arm Pronated Dumbbell Triceps Extension,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+one-arm-supinated-dumbbell-triceps-extension,One Arm Supinated Dumbbell Triceps Extension,FED_IMPORTED,One Arm Supinated Dumbbell Triceps Extension,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+one-leg-barbell-squat,One Leg Barbell Squat,FED_IMPORTED,One Leg Barbell Squat,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+open-palm-kettlebell-clean,Open Palm Kettlebell Clean,FED_IMPORTED,Open Palm Kettlebell Clean,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+overhead-cable-curl,Overhead Cable Curl,FED_IMPORTED,Overhead Cable Curl,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+pallof-press-with-rotation,Pallof Press With Rotation,FED_IMPORTED,Pallof Press With Rotation,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+palms-down-dumbbell-wrist-curl-over-a-bench,Palms-Down Dumbbell Wrist Curl Over A Bench,FED_IMPORTED,Palms-Down Dumbbell Wrist Curl Over A Bench,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+palms-down-wrist-curl-over-a-bench,Palms-Down Wrist Curl Over A Bench,FED_IMPORTED,Palms-Down Wrist Curl Over A Bench,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+palms-up-barbell-wrist-curl-over-a-bench,Palms-Up Barbell Wrist Curl Over A Bench,FED_IMPORTED,Palms-Up Barbell Wrist Curl Over A Bench,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+palms-up-dumbbell-wrist-curl-over-a-bench,Palms-Up Dumbbell Wrist Curl Over A Bench,FED_IMPORTED,Palms-Up Dumbbell Wrist Curl Over A Bench,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+physioball-hip-bridge,Physioball Hip Bridge,FED_IMPORTED,Physioball Hip Bridge,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+plie-dumbbell-squat,Plie Dumbbell Squat,FED_IMPORTED,Plie Dumbbell Squat,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+plyo-kettlebell-pushups,Plyo Kettlebell Pushups,FED_IMPORTED,Plyo Kettlebell Pushups,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+power-clean,Power Clean,FED_IMPORTED,Power Clean,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+power-partials,Power Partials,FED_IMPORTED,Power Partials,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+preacher-hammer-dumbbell-curl,Preacher Hammer Dumbbell Curl,FED_IMPORTED,Preacher Hammer Dumbbell Curl,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+press-sit-up,Press Sit-Up,FED_IMPORTED,Press Sit-Up,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+push-ups-close-triceps-position,Push-Ups - Close Triceps Position,FED_IMPORTED,Push-Ups - Close Triceps Position,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+push-ups-with-feet-elevated,Push-Ups With Feet Elevated,FED_IMPORTED,Push-Ups With Feet Elevated,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+push-ups-with-feet-on-an-exercise-ball,Push-Ups With Feet On An Exercise Ball,FED_IMPORTED,Push-Ups With Feet On An Exercise Ball,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+push-up-to-side-plank,Push Up to Side Plank,FED_IMPORTED,Push Up to Side Plank,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+pushups-close-and-wide-hand-positions,Pushups (Close and Wide Hand Positions),FED_IMPORTED,Pushups (Close and Wide Hand Positions),(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+reverse-barbell-preacher-curls,Reverse Barbell Preacher Curls,FED_IMPORTED,Reverse Barbell Preacher Curls,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+reverse-cable-curl,Reverse Cable Curl,FED_IMPORTED,Reverse Cable Curl,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+reverse-flyes,Reverse Flyes,FED_IMPORTED,Reverse Flyes,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+reverse-flyes-with-external-rotation,Reverse Flyes With External Rotation,FED_IMPORTED,Reverse Flyes With External Rotation,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+reverse-grip-bent-over-rows,Reverse Grip Bent-Over Rows,FED_IMPORTED,Reverse Grip Bent-Over Rows,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+reverse-machine-flyes,Reverse Machine Flyes,FED_IMPORTED,Reverse Machine Flyes,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+reverse-triceps-bench-press,Reverse Triceps Bench Press,FED_IMPORTED,Reverse Triceps Bench Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+rocking-standing-calf-raise,Rocking Standing Calf Raise,FED_IMPORTED,Rocking Standing Calf Raise,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+rope-straight-arm-pulldown,Rope Straight-Arm Pulldown,FED_IMPORTED,Rope Straight-Arm Pulldown,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+seated-barbell-military-press,Seated Barbell Military Press,FED_IMPORTED,Seated Barbell Military Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+seated-barbell-twist,Seated Barbell Twist,FED_IMPORTED,Seated Barbell Twist,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+seated-bent-over-one-arm-dumbbell-triceps-extension,Seated Bent-Over One-Arm Dumbbell Triceps Extension,FED_IMPORTED,Seated Bent-Over One-Arm Dumbbell Triceps Extension,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+seated-bent-over-rear-delt-raise,Seated Bent-Over Rear Delt Raise,FED_IMPORTED,Seated Bent-Over Rear Delt Raise,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+seated-bent-over-two-arm-dumbbell-triceps-extension,Seated Bent-Over Two-Arm Dumbbell Triceps Extension,FED_IMPORTED,Seated Bent-Over Two-Arm Dumbbell Triceps Extension,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+seated-cable-rows,Seated Cable Rows,FED_IMPORTED,Seated Cable Rows,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+seated-cable-shoulder-press,Seated Cable Shoulder Press,FED_IMPORTED,Seated Cable Shoulder Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+seated-close-grip-concentration-barbell-curl,Seated Close-Grip Concentration Barbell Curl,FED_IMPORTED,Seated Close-Grip Concentration Barbell Curl,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+seated-dumbbell-curl,Seated Dumbbell Curl,FED_IMPORTED,Seated Dumbbell Curl,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+seated-dumbbell-inner-biceps-curl,Seated Dumbbell Inner Biceps Curl,FED_IMPORTED,Seated Dumbbell Inner Biceps Curl,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+seated-dumbbell-palms-down-wrist-curl,Seated Dumbbell Palms-Down Wrist Curl,FED_IMPORTED,Seated Dumbbell Palms-Down Wrist Curl,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+seated-dumbbell-palms-up-wrist-curl,Seated Dumbbell Palms-Up Wrist Curl,FED_IMPORTED,Seated Dumbbell Palms-Up Wrist Curl,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+seated-flat-bench-leg-pull-in,Seated Flat Bench Leg Pull-In,FED_IMPORTED,Seated Flat Bench Leg Pull-In,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+seated-leg-tucks,Seated Leg Tucks,FED_IMPORTED,Seated Leg Tucks,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+seated-one-arm-dumbbell-palms-down-wrist-curl,Seated One-Arm Dumbbell Palms-Down Wrist Curl,FED_IMPORTED,Seated One-Arm Dumbbell Palms-Down Wrist Curl,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+seated-one-arm-dumbbell-palms-up-wrist-curl,Seated One-Arm Dumbbell Palms-Up Wrist Curl,FED_IMPORTED,Seated One-Arm Dumbbell Palms-Up Wrist Curl,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+seated-one-arm-cable-pulley-rows,Seated One-arm Cable Pulley Rows,FED_IMPORTED,Seated One-arm Cable Pulley Rows,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+seated-palm-up-barbell-wrist-curl,Seated Palm-Up Barbell Wrist Curl,FED_IMPORTED,Seated Palm-Up Barbell Wrist Curl,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+seated-palms-down-barbell-wrist-curl,Seated Palms-Down Barbell Wrist Curl,FED_IMPORTED,Seated Palms-Down Barbell Wrist Curl,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+seated-side-lateral-raise,Seated Side Lateral Raise,FED_IMPORTED,Seated Side Lateral Raise,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+seated-triceps-press,Seated Triceps Press,FED_IMPORTED,Seated Triceps Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+seated-two-arm-palms-up-low-pulley-wrist-curl,Seated Two-Arm Palms-Up Low-Pulley Wrist Curl,FED_IMPORTED,Seated Two-Arm Palms-Up Low-Pulley Wrist Curl,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+see-saw-press-alternating-side-press,See-Saw Press (Alternating Side Press),FED_IMPORTED,See-Saw Press (Alternating Side Press),(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+shotgun-row,Shotgun Row,FED_IMPORTED,Shotgun Row,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+shoulder-press-with-bands,Shoulder Press - With Bands,FED_IMPORTED,Shoulder Press - With Bands,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+side-jackknife,Side Jackknife,FED_IMPORTED,Side Jackknife,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+side-lateral-raise,Side Lateral Raise,FED_IMPORTED,Side Lateral Raise,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+side-laterals-to-front-raise,Side Laterals to Front Raise,FED_IMPORTED,Side Laterals to Front Raise,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+single-arm-cable-crossover,Single-Arm Cable Crossover,FED_IMPORTED,Single-Arm Cable Crossover,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+single-arm-linear-jammer,Single-Arm Linear Jammer,FED_IMPORTED,Single-Arm Linear Jammer,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+single-arm-push-up,Single-Arm Push-Up,FED_IMPORTED,Single-Arm Push-Up,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+single-leg-leg-extension,Single-Leg Leg Extension,FED_IMPORTED,Single-Leg Leg Extension,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+single-leg-glute-bridge,Single Leg Glute Bridge,FED_IMPORTED,Single Leg Glute Bridge,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+sit-up,Sit-Up,FED_IMPORTED,Sit-Up,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+smith-incline-shoulder-raise,Smith Incline Shoulder Raise,FED_IMPORTED,Smith Incline Shoulder Raise,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+smith-machine-behind-the-back-shrug,Smith Machine Behind the Back Shrug,FED_IMPORTED,Smith Machine Behind the Back Shrug,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+smith-machine-bent-over-row,Smith Machine Bent Over Row,FED_IMPORTED,Smith Machine Bent Over Row,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+smith-machine-calf-raise,Smith Machine Calf Raise,FED_IMPORTED,Smith Machine Calf Raise,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+smith-machine-close-grip-bench-press,Smith Machine Close-Grip Bench Press,FED_IMPORTED,Smith Machine Close-Grip Bench Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+smith-machine-hang-power-clean,Smith Machine Hang Power Clean,FED_IMPORTED,Smith Machine Hang Power Clean,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+smith-machine-hip-raise,Smith Machine Hip Raise,FED_IMPORTED,Smith Machine Hip Raise,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+smith-machine-incline-bench-press,Smith Machine Incline Bench Press,FED_IMPORTED,Smith Machine Incline Bench Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+smith-machine-leg-press,Smith Machine Leg Press,FED_IMPORTED,Smith Machine Leg Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+smith-machine-one-arm-upright-row,Smith Machine One-Arm Upright Row,FED_IMPORTED,Smith Machine One-Arm Upright Row,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+smith-machine-overhead-shoulder-press,Smith Machine Overhead Shoulder Press,FED_IMPORTED,Smith Machine Overhead Shoulder Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+smith-machine-pistol-squat,Smith Machine Pistol Squat,FED_IMPORTED,Smith Machine Pistol Squat,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+smith-machine-reverse-calf-raises,Smith Machine Reverse Calf Raises,FED_IMPORTED,Smith Machine Reverse Calf Raises,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+smith-machine-stiff-legged-deadlift,Smith Machine Stiff-Legged Deadlift,FED_IMPORTED,Smith Machine Stiff-Legged Deadlift,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+smith-machine-upright-row,Smith Machine Upright Row,FED_IMPORTED,Smith Machine Upright Row,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+smith-single-leg-split-squat,Smith Single-Leg Split Squat,FED_IMPORTED,Smith Single-Leg Split Squat,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+snatch-pull,Snatch Pull,FED_IMPORTED,Snatch Pull,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+speed-band-overhead-triceps,Speed Band Overhead Triceps,FED_IMPORTED,Speed Band Overhead Triceps,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+speed-squats,Speed Squats,FED_IMPORTED,Speed Squats,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+spell-caster,Spell Caster,FED_IMPORTED,Spell Caster,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+spider-crawl,Spider Crawl,FED_IMPORTED,Spider Crawl,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+split-squat-with-dumbbells,Split Squat with Dumbbells,FED_IMPORTED,Split Squat with Dumbbells,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+squat-jerk,Squat Jerk,FED_IMPORTED,Squat Jerk,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+squat-with-plate-movers,Squat with Plate Movers,FED_IMPORTED,Squat with Plate Movers,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+squats-with-bands,Squats - With Bands,FED_IMPORTED,Squats - With Bands,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+standing-alternating-dumbbell-press,Standing Alternating Dumbbell Press,FED_IMPORTED,Standing Alternating Dumbbell Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+standing-barbell-calf-raise,Standing Barbell Calf Raise,FED_IMPORTED,Standing Barbell Calf Raise,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+standing-barbell-press-behind-neck,Standing Barbell Press Behind Neck,FED_IMPORTED,Standing Barbell Press Behind Neck,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+standing-bent-over-one-arm-dumbbell-triceps-extension,Standing Bent-Over One-Arm Dumbbell Triceps Extension,FED_IMPORTED,Standing Bent-Over One-Arm Dumbbell Triceps Extension,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+standing-bent-over-two-arm-dumbbell-triceps-extension,Standing Bent-Over Two-Arm Dumbbell Triceps Extension,FED_IMPORTED,Standing Bent-Over Two-Arm Dumbbell Triceps Extension,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+standing-biceps-cable-curl,Standing Biceps Cable Curl,FED_IMPORTED,Standing Biceps Cable Curl,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+standing-bradford-press,Standing Bradford Press,FED_IMPORTED,Standing Bradford Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+standing-cable-chest-press,Standing Cable Chest Press,FED_IMPORTED,Standing Cable Chest Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+standing-cable-lift,Standing Cable Lift,FED_IMPORTED,Standing Cable Lift,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+standing-cable-wood-chop,Standing Cable Wood Chop,FED_IMPORTED,Standing Cable Wood Chop,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+standing-calf-raises,Standing Calf Raises,FED_IMPORTED,Standing Calf Raises,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+standing-concentration-curl,Standing Concentration Curl,FED_IMPORTED,Standing Concentration Curl,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+standing-dumbbell-calf-raise,Standing Dumbbell Calf Raise,FED_IMPORTED,Standing Dumbbell Calf Raise,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+standing-dumbbell-press,Standing Dumbbell Press,FED_IMPORTED,Standing Dumbbell Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+standing-dumbbell-reverse-curl,Standing Dumbbell Reverse Curl,FED_IMPORTED,Standing Dumbbell Reverse Curl,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+standing-dumbbell-straight-arm-front-delt-raise-above-head,Standing Dumbbell Straight-Arm Front Delt Raise Above Head,FED_IMPORTED,Standing Dumbbell Straight-Arm Front Delt Raise Above Head,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+standing-dumbbell-triceps-extension,Standing Dumbbell Triceps Extension,FED_IMPORTED,Standing Dumbbell Triceps Extension,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+standing-dumbbell-upright-row,Standing Dumbbell Upright Row,FED_IMPORTED,Standing Dumbbell Upright Row,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+standing-front-barbell-raise-over-head,Standing Front Barbell Raise Over Head,FED_IMPORTED,Standing Front Barbell Raise Over Head,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+standing-inner-biceps-curl,Standing Inner-Biceps Curl,FED_IMPORTED,Standing Inner-Biceps Curl,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+standing-leg-curl,Standing Leg Curl,FED_IMPORTED,Standing Leg Curl,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+standing-low-pulley-deltoid-raise,Standing Low-Pulley Deltoid Raise,FED_IMPORTED,Standing Low-Pulley Deltoid Raise,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+standing-low-pulley-one-arm-triceps-extension,Standing Low-Pulley One-Arm Triceps Extension,FED_IMPORTED,Standing Low-Pulley One-Arm Triceps Extension,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+standing-military-press,Standing Military Press,FED_IMPORTED,Standing Military Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+standing-one-arm-cable-curl,Standing One-Arm Cable Curl,FED_IMPORTED,Standing One-Arm Cable Curl,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+standing-one-arm-dumbbell-curl-over-incline-bench,Standing One-Arm Dumbbell Curl Over Incline Bench,FED_IMPORTED,Standing One-Arm Dumbbell Curl Over Incline Bench,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+standing-one-arm-dumbbell-triceps-extension,Standing One-Arm Dumbbell Triceps Extension,FED_IMPORTED,Standing One-Arm Dumbbell Triceps Extension,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+standing-overhead-barbell-triceps-extension,Standing Overhead Barbell Triceps Extension,FED_IMPORTED,Standing Overhead Barbell Triceps Extension,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+standing-palm-in-one-arm-dumbbell-press,Standing Palm-In One-Arm Dumbbell Press,FED_IMPORTED,Standing Palm-In One-Arm Dumbbell Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+standing-palms-in-dumbbell-press,Standing Palms-In Dumbbell Press,FED_IMPORTED,Standing Palms-In Dumbbell Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+standing-palms-up-barbell-behind-the-back-wrist-curl,Standing Palms-Up Barbell Behind The Back Wrist Curl,FED_IMPORTED,Standing Palms-Up Barbell Behind The Back Wrist Curl,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+standing-rope-crunch,Standing Rope Crunch,FED_IMPORTED,Standing Rope Crunch,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+standing-towel-triceps-extension,Standing Towel Triceps Extension,FED_IMPORTED,Standing Towel Triceps Extension,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+step-up-with-knee-raise,Step-up with Knee Raise,FED_IMPORTED,Step-up with Knee Raise,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+stiff-legged-barbell-deadlift,Stiff-Legged Barbell Deadlift,FED_IMPORTED,Stiff-Legged Barbell Deadlift,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+stiff-legged-dumbbell-deadlift,Stiff-Legged Dumbbell Deadlift,FED_IMPORTED,Stiff-Legged Dumbbell Deadlift,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+stiff-leg-barbell-good-morning,Stiff Leg Barbell Good Morning,FED_IMPORTED,Stiff Leg Barbell Good Morning,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+straight-arm-dumbbell-pullover,Straight-Arm Dumbbell Pullover,FED_IMPORTED,Straight-Arm Dumbbell Pullover,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+straight-bar-bench-mid-rows,Straight Bar Bench Mid Rows,FED_IMPORTED,Straight Bar Bench Mid Rows,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+straight-raises-on-incline-bench,Straight Raises on Incline Bench,FED_IMPORTED,Straight Raises on Incline Bench,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+t-bar-row-with-handle,T-Bar Row with Handle,FED_IMPORTED,T-Bar Row with Handle,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+tricep-dumbbell-kickback,Tricep Dumbbell Kickback,FED_IMPORTED,Tricep Dumbbell Kickback,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+triceps-overhead-extension-with-rope,Triceps Overhead Extension with Rope,FED_IMPORTED,Triceps Overhead Extension with Rope,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+triceps-pushdown-rope-attachment,Triceps Pushdown - Rope Attachment,FED_IMPORTED,Triceps Pushdown - Rope Attachment,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+triceps-pushdown-v-bar-attachment,Triceps Pushdown - V-Bar Attachment,FED_IMPORTED,Triceps Pushdown - V-Bar Attachment,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+tuck-crunch,Tuck Crunch,FED_IMPORTED,Tuck Crunch,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+two-arm-dumbbell-preacher-curl,Two-Arm Dumbbell Preacher Curl,FED_IMPORTED,Two-Arm Dumbbell Preacher Curl,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+two-arm-kettlebell-clean,Two-Arm Kettlebell Clean,FED_IMPORTED,Two-Arm Kettlebell Clean,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+two-arm-kettlebell-jerk,Two-Arm Kettlebell Jerk,FED_IMPORTED,Two-Arm Kettlebell Jerk,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+two-arm-kettlebell-military-press,Two-Arm Kettlebell Military Press,FED_IMPORTED,Two-Arm Kettlebell Military Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+two-arm-kettlebell-row,Two-Arm Kettlebell Row,FED_IMPORTED,Two-Arm Kettlebell Row,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+underhand-cable-pulldowns,Underhand Cable Pulldowns,FED_IMPORTED,Underhand Cable Pulldowns,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+upright-cable-row,Upright Cable Row,FED_IMPORTED,Upright Cable Row,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+upright-row-with-bands,Upright Row - With Bands,FED_IMPORTED,Upright Row - With Bands,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+v-bar-pullup,V-Bar Pullup,FED_IMPORTED,V-Bar Pullup,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+weighted-ball-hyperextension,Weighted Ball Hyperextension,FED_IMPORTED,Weighted Ball Hyperextension,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+weighted-ball-side-bend,Weighted Ball Side Bend,FED_IMPORTED,Weighted Ball Side Bend,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+weighted-crunches,Weighted Crunches,FED_IMPORTED,Weighted Crunches,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+weighted-jump-squat,Weighted Jump Squat,FED_IMPORTED,Weighted Jump Squat,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+weighted-sissy-squat,Weighted Sissy Squat,FED_IMPORTED,Weighted Sissy Squat,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+wide-grip-barbell-bench-press,Wide-Grip Barbell Bench Press,FED_IMPORTED,Wide-Grip Barbell Bench Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+wide-grip-decline-barbell-bench-press,Wide-Grip Decline Barbell Bench Press,FED_IMPORTED,Wide-Grip Decline Barbell Bench Press,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+wide-grip-decline-barbell-pullover,Wide-Grip Decline Barbell Pullover,FED_IMPORTED,Wide-Grip Decline Barbell Pullover,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+wide-grip-pulldown-behind-the-neck,Wide-Grip Pulldown Behind The Neck,FED_IMPORTED,Wide-Grip Pulldown Behind The Neck,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+wide-grip-rear-pull-up,Wide-Grip Rear Pull-Up,FED_IMPORTED,Wide-Grip Rear Pull-Up,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+wide-grip-standing-barbell-curl,Wide-Grip Standing Barbell Curl,FED_IMPORTED,Wide-Grip Standing Barbell Curl,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+wide-stance-barbell-squat,Wide Stance Barbell Squat,FED_IMPORTED,Wide Stance Barbell Squat,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+wind-sprints,Wind Sprints,FED_IMPORTED,Wind Sprints,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+wrist-rotations-with-straight-bar,Wrist Rotations with Straight Bar,FED_IMPORTED,Wrist Rotations with Straight Bar,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+zercher-squats,Zercher Squats,FED_IMPORTED,Zercher Squats,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+zottman-preacher-curl,Zottman Preacher Curl,FED_IMPORTED,Zottman Preacher Curl,(self),high,imported from FED,ALREADY_FED_IMPORTED,KEEP_AS_FED
+barbell-flat-bench-press,Barbell Flat Bench Press,AURON_ENRICHED,Barbell Guillotine Bench Press,Barbell_Guillotine_Bench_Press,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+dumbbell-flat-bench-press,Dumbbell Flat Bench Press,AURON_ENRICHED,Dumbbell Bench Press,Dumbbell_Bench_Press,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+barbell-incline-bench-press,Barbell Incline Bench Press,AURON_ENRICHED,Barbell Incline Bench Press - Medium Grip,Barbell_Incline_Bench_Press_-_Medium_Grip,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+dumbbell-incline-bench-press,Dumbbell Incline Bench Press,AURON_ENRICHED,Dumbbell Bench Press,Dumbbell_Bench_Press,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+barbell-decline-bench-press,Barbell Decline Bench Press,AURON_ENRICHED,Decline Barbell Bench Press,Decline_Barbell_Bench_Press,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+dumbbell-decline-bench-press,Dumbbell Decline Bench Press,AURON_ENRICHED,Decline Dumbbell Bench Press,Decline_Dumbbell_Bench_Press,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+push-up,Push-Up,AURON_ENRICHED,Pushups,Pushups,high,exact name + equipment,FED_EXACT,REPLACE_WITH_FED
+flat-dumbbell-fly,Flat Dumbbell Fly,AURON_ENRICHED,Dumbbell Flyes,Dumbbell_Flyes,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+incline-dumbbell-fly,Incline Dumbbell Fly,AURON_ENRICHED,Incline Dumbbell Flyes,Incline_Dumbbell_Flyes,high,exact name + equipment,FED_EXACT,REPLACE_WITH_FED
+decline-dumbbell-fly,Decline Dumbbell Fly,AURON_ENRICHED,Decline Dumbbell Flyes,Decline_Dumbbell_Flyes,high,exact name + equipment,FED_EXACT,REPLACE_WITH_FED
+cable-crossover,Cable Crossover,AURON_ENRICHED,Cable Crossover,Cable_Crossover,high,exact name + equipment,FED_EXACT,REPLACE_WITH_FED
+low-to-high-cable-fly,Low to High Cable Fly,AURON_CURATED,High Cable Curls,High_Cable_Curls,-,no FED equivalent,AURON_ONLY_NO_FED,DELETE_OR_KEEP_OVERRIDE
+high-to-low-cable-fly,High to Low Cable Fly,AURON_CURATED,High Cable Curls,High_Cable_Curls,-,no FED equivalent,AURON_ONLY_NO_FED,DELETE_OR_KEEP_OVERRIDE
+pec-deck-machine-fly,Pec Deck Machine Fly,AURON_CURATED,Reverse Machine Flyes,Reverse_Machine_Flyes,low,variant keyword differs,FED_CONFLICT,REVIEW_MANUAL
+seated-machine-chest-press,Seated Machine Chest Press,AURON_CURATED,Cable Chest Press,Cable_Chest_Press,low,equip differs,FED_CONFLICT,REVIEW_MANUAL
+incline-machine-chest-press,Incline Machine Chest Press,AURON_CURATED,Incline Cable Chest Press,Incline_Cable_Chest_Press,low,equip differs,FED_CONFLICT,REVIEW_MANUAL
+chest-dip,Chest Dip,AURON_ENRICHED,Dip Machine,Dip_Machine,-,no FED equivalent,AURON_ONLY_NO_FED,DELETE_OR_KEEP_OVERRIDE
+smith-machine-bench-press,Smith Machine Bench Press,AURON_ENRICHED,Smith Machine Bench Press,Smith_Machine_Bench_Press,high,exact name + equipment,FED_EXACT,REPLACE_WITH_FED
+smith-machine-incline-press,Smith Machine Incline Press,AURON_ENRICHED,Smith Machine Incline Bench Press,Smith_Machine_Incline_Bench_Press,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+dumbbell-pullover,Dumbbell Pullover,AURON_CURATED,Bent-Arm Dumbbell Pullover,Bent-Arm_Dumbbell_Pullover,low,weak match,FED_CONFLICT,REVIEW_MANUAL
+barbell-floor-press,Barbell Floor Press,AURON_ENRICHED,Floor Press,Floor_Press,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+dumbbell-floor-press,Dumbbell Floor Press,AURON_ENRICHED,Dumbbell Floor Press,Dumbbell_Floor_Press,high,exact name + equipment,FED_EXACT,REPLACE_WITH_FED
+wide-grip-push-up,Wide-Grip Push-Up,AURON_ENRICHED,Push-Up Wide,Push-Up_Wide,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+incline-push-up,Incline Push-Up,AURON_ENRICHED,Incline Push-Up,Incline_Push-Up,high,exact name + equipment,FED_EXACT,REPLACE_WITH_FED
+decline-push-up,Decline Push-Up,AURON_ENRICHED,Decline Push-Up,Decline_Push-Up,low,equip differs,FED_CONFLICT,REVIEW_MANUAL
+conventional-barbell-deadlift,Conventional Barbell Deadlift,AURON_ENRICHED,Barbell Deadlift,Barbell_Deadlift,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+barbell-bent-over-row,Barbell Bent-Over Row,AURON_ENRICHED,Bent Over Barbell Row,Bent_Over_Barbell_Row,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+wide-grip-pull-up,Wide-Grip Pull-Up,AURON_ENRICHED,Wide-Grip Rear Pull-Up,Wide-Grip_Rear_Pull-Up,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+chin-up,Chin-Up,AURON_ENRICHED,Chin-Up,Chin-Up,high,exact name + equipment,FED_EXACT,REPLACE_WITH_FED
+wide-grip-lat-pulldown,Wide-Grip Lat Pulldown,AURON_ENRICHED,Wide-Grip Lat Pulldown,Wide-Grip_Lat_Pulldown,high,exact name + equipment,FED_EXACT,REPLACE_WITH_FED
+close-grip-lat-pulldown,Close-Grip Lat Pulldown,AURON_ENRICHED,Close-Grip Front Lat Pulldown,Close-Grip_Front_Lat_Pulldown,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+seated-cable-row,Seated Cable Row,AURON_ENRICHED,Seated Cable Rows,Seated_Cable_Rows,high,exact name + equipment,FED_EXACT,REPLACE_WITH_FED
+one-arm-dumbbell-row,One-Arm Dumbbell Row,AURON_ENRICHED,One-Arm Dumbbell Row,One-Arm_Dumbbell_Row,high,exact name + equipment,FED_EXACT,REPLACE_WITH_FED
+t-bar-row,T-Bar Row,AURON_CURATED,Lying T-Bar Row,Lying_T-Bar_Row,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+inverted-row,Inverted Row,AURON_ENRICHED,Inverted Row,Inverted_Row,low,equip differs,FED_CONFLICT,REVIEW_MANUAL
+chest-supported-dumbbell-row,Chest-Supported Dumbbell Row,AURON_CURATED,Dumbbell Incline Row,Dumbbell_Incline_Row,low,weak match,FED_CONFLICT,REVIEW_MANUAL
+barbell-shrug,Barbell Shrug,AURON_ENRICHED,Barbell Shrug,Barbell_Shrug,high,exact name + equipment,FED_EXACT,REPLACE_WITH_FED
+dumbbell-shrug,Dumbbell Shrug,AURON_ENRICHED,Dumbbell Shrug,Dumbbell_Shrug,high,exact name + equipment,FED_EXACT,REPLACE_WITH_FED
+straight-arm-cable-pulldown,Straight-Arm Cable Pulldown,AURON_ENRICHED,Straight-Arm Pulldown,Straight-Arm_Pulldown,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+barbell-rack-pull,Barbell Rack Pull,AURON_CURATED,Rack Pull with Bands,Rack_Pull_with_Bands,low,weak match,FED_CONFLICT,REVIEW_MANUAL
+back-extension,Back Extension,AURON_CURATED,Hyperextensions (Back Extensions),Hyperextensions_Back_Extensions,low,equip differs,FED_CONFLICT,REVIEW_MANUAL
+cable-face-pull,Cable Face Pull,AURON_ENRICHED,Face Pull,Face_Pull,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+dumbbell-rear-delt-fly,Dumbbell Rear Delt Fly,AURON_CURATED,Cable Rear Delt Fly,Cable_Rear_Delt_Fly,low,equip differs,FED_CONFLICT,REVIEW_MANUAL
+meadows-row,Meadows Row,AURON_CURATED,Inverted Row,Inverted_Row,-,no FED equivalent,AURON_ONLY_NO_FED,DELETE_OR_KEEP_OVERRIDE
+dumbbell-renegade-row,Dumbbell Renegade Row,AURON_CURATED,Alternating Renegade Row,Alternating_Renegade_Row,low,equip differs,FED_CONFLICT,REVIEW_MANUAL
+plate-loaded-lat-pulldown-machine,Plate-Loaded Lat Pulldown Machine,AURON_CURATED,One Arm Lat Pulldown,One_Arm_Lat_Pulldown,-,no FED equivalent,AURON_ONLY_NO_FED,DELETE_OR_KEEP_OVERRIDE
+plate-loaded-seated-row-machine,Plate-Loaded Seated Row Machine,AURON_CURATED,Seated Cable Rows,Seated_Cable_Rows,-,no FED equivalent,AURON_ONLY_NO_FED,DELETE_OR_KEEP_OVERRIDE
+superman,Superman,AURON_ENRICHED,Superman,Superman,high,exact name + equipment,FED_EXACT,REPLACE_WITH_FED
+barbell-good-morning,Barbell Good Morning,AURON_ENRICHED,Good Morning,Good_Morning,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+dumbbell-kelso-shrug,Dumbbell Kelso Shrug,AURON_CURATED,Dumbbell Shrug,Dumbbell_Shrug,low,variant keyword differs,FED_CONFLICT,REVIEW_MANUAL
+barbell-bicep-curl,Barbell Bicep Curl,AURON_ENRICHED,Barbell Curl,Barbell_Curl,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+dumbbell-alternate-bicep-curl,Dumbbell Alternate Bicep Curl,AURON_ENRICHED,Dumbbell Alternate Bicep Curl,Dumbbell_Alternate_Bicep_Curl,high,exact name + equipment,FED_EXACT,REPLACE_WITH_FED
+ez-bar-preacher-curl,EZ-Bar Preacher Curl,AURON_ENRICHED,EZ-Bar Curl,EZ-Bar_Curl,low,variant keyword differs,FED_CONFLICT,REVIEW_MANUAL
+incline-dumbbell-curl,Incline Dumbbell Curl,AURON_ENRICHED,Incline Dumbbell Curl,Incline_Dumbbell_Curl,high,exact name + equipment,FED_EXACT,REPLACE_WITH_FED
+dumbbell-hammer-curl,Dumbbell Hammer Curl,AURON_CURATED,Preacher Hammer Dumbbell Curl,Preacher_Hammer_Dumbbell_Curl,low,variant keyword differs,FED_CONFLICT,REVIEW_MANUAL
+cable-bicep-curl,Cable Bicep Curl,AURON_CURATED,Cable Preacher Curl,Cable_Preacher_Curl,low,variant keyword differs,FED_CONFLICT,REVIEW_MANUAL
+concentration-curl,Concentration Curl,AURON_ENRICHED,Concentration Curls,Concentration_Curls,high,exact name + equipment,FED_EXACT,REPLACE_WITH_FED
+reverse-barbell-curl,Reverse Barbell Curl,AURON_ENRICHED,Reverse Barbell Curl,Reverse_Barbell_Curl,high,exact name + equipment,FED_EXACT,REPLACE_WITH_FED
+high-pulley-cable-curl,High Pulley Cable Curl,AURON_CURATED,High Cable Curls,High_Cable_Curls,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+spider-curl,Spider Curl,AURON_ENRICHED,Spider Curl,Spider_Curl,low,equip differs,FED_CONFLICT,REVIEW_MANUAL
+zottman-curl,Zottman Curl,AURON_ENRICHED,Zottman Curl,Zottman_Curl,high,exact name + equipment,FED_EXACT,REPLACE_WITH_FED
+machine-preacher-curl,Machine Preacher Curl,AURON_CURATED,Machine Preacher Curls,Machine_Preacher_Curls,high,exact name + equipment,FED_EXACT,REPLACE_WITH_FED
+cross-body-hammer-curl,Cross-Body Hammer Curl,AURON_ENRICHED,Cross Body Hammer Curl,Cross_Body_Hammer_Curl,high,exact name + equipment,FED_EXACT,REPLACE_WITH_FED
+cable-rope-hammer-curl,Cable Rope Hammer Curl,AURON_ENRICHED,Cable Hammer Curls - Rope Attachment,Cable_Hammer_Curls_-_Rope_Attachment,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+drag-curl,Drag Curl,AURON_ENRICHED,Drag Curl,Drag_Curl,high,exact name + equipment,FED_EXACT,REPLACE_WITH_FED
+triceps-pushdown,Triceps Pushdown,AURON_ENRICHED,Triceps Pushdown,Triceps_Pushdown,high,exact name + equipment,FED_EXACT,REPLACE_WITH_FED
+lying-triceps-extension,Lying Triceps Extension (Skullcrusher),AURON_CURATED,Cable Lying Triceps Extension,Cable_Lying_Triceps_Extension,low,equip differs,FED_CONFLICT,REVIEW_MANUAL
+close-grip-bench-press,Close-Grip Bench Press,AURON_ENRICHED,Close-Grip Barbell Bench Press,Close-Grip_Barbell_Bench_Press,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+overhead-dumbbell-triceps-extension,Overhead Dumbbell Triceps Extension,AURON_CURATED,Decline Dumbbell Triceps Extension,Decline_Dumbbell_Triceps_Extension,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+triceps-kickback,Triceps Kickback,AURON_CURATED,Glute Kickback,Glute_Kickback,-,no FED equivalent,AURON_ONLY_NO_FED,DELETE_OR_KEEP_OVERRIDE
+parallel-bar-triceps-dip,Parallel Bar Triceps Dip,AURON_ENRICHED,Parallel Bar Dip,Parallel_Bar_Dip,low,equip differs,FED_CONFLICT,REVIEW_MANUAL
+bench-dip,Bench Dip,AURON_ENRICHED,Weighted Bench Dip,Weighted_Bench_Dip,low,equip differs,FED_CONFLICT,REVIEW_MANUAL
+cable-overhead-triceps-extension,Cable Overhead Triceps Extension,AURON_ENRICHED,Cable Rope Overhead Triceps Extension,Cable_Rope_Overhead_Triceps_Extension,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+reverse-grip-triceps-pushdown,Reverse-Grip Triceps Pushdown,AURON_ENRICHED,Reverse Grip Triceps Pushdown,Reverse_Grip_Triceps_Pushdown,high,exact name + equipment,FED_EXACT,REPLACE_WITH_FED
+diamond-push-up,Diamond Push-Up,AURON_CURATED,Pushups,Pushups,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+jm-press,JM Press,AURON_ENRICHED,JM Press,JM_Press,high,exact name + equipment,FED_EXACT,REPLACE_WITH_FED
+single-arm-dumbbell-overhead-extension,Single-Arm Dumbbell Overhead Extension,AURON_CURATED,Dumbbell One-Arm Triceps Extension,Dumbbell_One-Arm_Triceps_Extension,low,variant keyword differs,FED_CONFLICT,REVIEW_MANUAL
+tate-press,Tate Press,AURON_ENRICHED,Tate Press,Tate_Press,high,exact name + equipment,FED_EXACT,REPLACE_WITH_FED
+cable-kickback,Cable Kickback,AURON_CURATED,One-Legged Cable Kickback,One-Legged_Cable_Kickback,low,variant keyword differs,FED_CONFLICT,REVIEW_MANUAL
+machine-triceps-dip,Machine Triceps Dip,AURON_CURATED,Dip Machine,Dip_Machine,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+barbell-back-squat,Barbell Back Squat,AURON_ENRICHED,Barbell Squat,Barbell_Squat,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+barbell-front-squat,Barbell Front Squat,AURON_ENRICHED,Front Barbell Squat,Front_Barbell_Squat,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+hack-squat-machine,Hack Squat Machine,AURON_ENRICHED,Hack Squat,Hack_Squat,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+leg-press,Leg Press,AURON_ENRICHED,Leg Press,Leg_Press,high,exact name + equipment,FED_EXACT,REPLACE_WITH_FED
+bulgarian-split-squat,Bulgarian Split Squat,AURON_CURATED,Suspended Split Squat,Suspended_Split_Squat,low,equip differs,FED_CONFLICT,REVIEW_MANUAL
+dumbbell-goblet-squat,Dumbbell Goblet Squat,AURON_ENRICHED,Dumbbell Squat,Dumbbell_Squat,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+leg-extension,Leg Extension,AURON_ENRICHED,Leg Extensions,Leg_Extensions,high,exact name + equipment,FED_EXACT,REPLACE_WITH_FED
+walking-lunge,Walking Lunge,AURON_CURATED,Barbell Walking Lunge,Barbell_Walking_Lunge,low,equip differs,FED_CONFLICT,REVIEW_MANUAL
+smith-machine-squat,Smith Machine Squat,AURON_ENRICHED,Smith Machine Squat,Smith_Machine_Squat,high,exact name + equipment,FED_EXACT,REPLACE_WITH_FED
+dumbbell-step-up,Dumbbell Step-Up,AURON_ENRICHED,Dumbbell Step Ups,Dumbbell_Step_Ups,high,exact name + equipment,FED_EXACT,REPLACE_WITH_FED
+bodyweight-sissy-squat,Bodyweight Sissy Squat,AURON_CURATED,Bodyweight Squat,Bodyweight_Squat,low,variant keyword differs,FED_CONFLICT,REVIEW_MANUAL
+zercher-squat,Zercher Squat,AURON_CURATED,Barbell Squat,Barbell_Squat,-,no FED equivalent,AURON_ONLY_NO_FED,DELETE_OR_KEEP_OVERRIDE
+pistol-squat,Pistol Squat,AURON_CURATED,Kettlebell Pistol Squat,Kettlebell_Pistol_Squat,low,equip differs,FED_CONFLICT,REVIEW_MANUAL
+wall-sit,Wall Sit,AURON_CURATED,Sit-Up,Sit-Up,-,no FED equivalent,AURON_ONLY_NO_FED,DELETE_OR_KEEP_OVERRIDE
+cyclist-squat,Cyclist Squat,AURON_CURATED,Barbell Squat,Barbell_Squat,-,no FED equivalent,AURON_ONLY_NO_FED,DELETE_OR_KEEP_OVERRIDE
+romanian-deadlift,Romanian Deadlift,AURON_ENRICHED,Romanian Deadlift,Romanian_Deadlift,high,exact name + equipment,FED_EXACT,REPLACE_WITH_FED
+seated-leg-curl,Seated Leg Curl,AURON_ENRICHED,Seated Leg Curl,Seated_Leg_Curl,high,exact name + equipment,FED_EXACT,REPLACE_WITH_FED
+lying-leg-curl,Lying Leg Curl,AURON_ENRICHED,Lying Leg Curls,Lying_Leg_Curls,high,exact name + equipment,FED_EXACT,REPLACE_WITH_FED
+sumo-deadlift,Sumo Deadlift,AURON_ENRICHED,Sumo Deadlift,Sumo_Deadlift,high,exact name + equipment,FED_EXACT,REPLACE_WITH_FED
+glute-ham-raise,Glute-Ham Raise,AURON_ENRICHED,Glute Ham Raise,Glute_Ham_Raise,low,equip differs,FED_CONFLICT,REVIEW_MANUAL
+single-leg-romanian-deadlift,Single-Leg Romanian Deadlift,AURON_CURATED,Romanian Deadlift,Romanian_Deadlift,low,equip differs,FED_CONFLICT,REVIEW_MANUAL
+dumbbell-slider-leg-curl,Dumbbell Slider Leg Curl,AURON_CURATED,Ball Leg Curl,Ball_Leg_Curl,low,equip differs,FED_CONFLICT,REVIEW_MANUAL
+deficit-deadlift,Deficit Deadlift,AURON_ENRICHED,Deficit Deadlift,Deficit_Deadlift,high,exact name + equipment,FED_EXACT,REPLACE_WITH_FED
+nordic-hamstring-curl,Nordic Hamstring Curl,AURON_CURATED,Seated Band Hamstring Curl,Seated_Band_Hamstring_Curl,low,equip differs,FED_CONFLICT,REVIEW_MANUAL
+cable-pull-through,Cable Pull-Through,AURON_ENRICHED,Pull Through,Pull_Through,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+trap-bar-deadlift,Trap Bar Deadlift,AURON_ENRICHED,Trap Bar Deadlift,Trap_Bar_Deadlift,low,equip differs,FED_CONFLICT,REVIEW_MANUAL
+barbell-hip-thrust,Barbell Hip Thrust,AURON_ENRICHED,Barbell Hip Thrust,Barbell_Hip_Thrust,high,exact name + equipment,FED_EXACT,REPLACE_WITH_FED
+cable-glute-kickback,Cable Glute Kickback,AURON_ENRICHED,Glute Kickback,Glute_Kickback,low,equip differs,FED_CONFLICT,REVIEW_MANUAL
+machine-thigh-abductor,Machine Thigh Abductor,AURON_ENRICHED,Thigh Abductor,Thigh_Abductor,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+machine-thigh-adductor,Machine Thigh Adductor,AURON_ENRICHED,Thigh Adductor,Thigh_Adductor,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+frog-pump,Frog Pump,AURON_CURATED,Frog Hops,Frog_Hops,-,no FED equivalent,AURON_ONLY_NO_FED,DELETE_OR_KEEP_OVERRIDE
+curtsy-lunge,Curtsy Lunge,AURON_CURATED,Barbell Lunge,Barbell_Lunge,-,no FED equivalent,AURON_ONLY_NO_FED,DELETE_OR_KEEP_OVERRIDE
+reverse-lunge,Reverse Lunge,AURON_CURATED,Crossover Reverse Lunge,Crossover_Reverse_Lunge,low,equip differs,FED_CONFLICT,REVIEW_MANUAL
+cossack-squat,Cossack Squat,AURON_CURATED,Barbell Squat,Barbell_Squat,-,no FED equivalent,AURON_ONLY_NO_FED,DELETE_OR_KEEP_OVERRIDE
+standing-calf-raise,Standing Calf Raise,AURON_CURATED,Standing Calf Raises,Standing_Calf_Raises,high,exact name + equipment,FED_EXACT,REPLACE_WITH_FED
+seated-calf-raise,Seated Calf Raise,AURON_ENRICHED,Seated Calf Raise,Seated_Calf_Raise,high,exact name + equipment,FED_EXACT,REPLACE_WITH_FED
+leg-press-calf-raise,Leg Press Calf Raise,AURON_ENRICHED,Calf Press,Calf_Press,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+donkey-calf-raise,Donkey Calf Raise,AURON_CURATED,Donkey Calf Raises,Donkey_Calf_Raises,low,equip differs,FED_CONFLICT,REVIEW_MANUAL
+smith-machine-reverse-calf-raise,Smith Machine Reverse Calf Raise,AURON_ENRICHED,Smith Machine Reverse Calf Raises,Smith_Machine_Reverse_Calf_Raises,high,exact name + equipment,FED_EXACT,REPLACE_WITH_FED
+barbell-overhead-press,Barbell Overhead Press (OHP),AURON_CURATED,Barbell Shoulder Press,Barbell_Shoulder_Press,low,weak match,FED_CONFLICT,REVIEW_MANUAL
+seated-dumbbell-shoulder-press,Seated Dumbbell Shoulder Press,AURON_ENRICHED,Dumbbell Shoulder Press,Dumbbell_Shoulder_Press,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+dumbbell-seated-lateral-raise,Dumbbell Seated Lateral Raise,AURON_CURATED,Cable Seated Lateral Raise,Cable_Seated_Lateral_Raise,low,equip differs,FED_CONFLICT,REVIEW_MANUAL
+cable-lateral-raise,Cable Lateral Raise,AURON_CURATED,Cable Seated Lateral Raise,Cable_Seated_Lateral_Raise,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+arnold-press,Arnold Press,AURON_ENRICHED,Arnold Dumbbell Press,Arnold_Dumbbell_Press,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+dumbbell-front-raise,Dumbbell Front Raise,AURON_ENRICHED,Front Dumbbell Raise,Front_Dumbbell_Raise,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+smith-machine-overhead-press,Smith Machine Overhead Press,AURON_ENRICHED,Smith Machine Overhead Shoulder Press,Smith_Machine_Overhead_Shoulder_Press,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+machine-shoulder-press,Machine Shoulder Press,AURON_ENRICHED,Machine Shoulder (Military) Press,Machine_Shoulder_Military_Press,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+barbell-upright-row,Barbell Upright Row,AURON_ENRICHED,Upright Barbell Row,Upright_Barbell_Row,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+dumbbell-incline-rear-delt-row,Dumbbell Incline Rear Delt Row,AURON_CURATED,Dumbbell Incline Row,Dumbbell_Incline_Row,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+leaning-dumbbell-lateral-raise,Leaning Dumbbell Lateral Raise,AURON_CURATED,Dumbbell Lying Rear Lateral Raise,Dumbbell_Lying_Rear_Lateral_Raise,low,weak match,FED_CONFLICT,REVIEW_MANUAL
+plate-front-raise,Plate Front Raise,AURON_ENRICHED,Front Plate Raise,Front_Plate_Raise,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+barbell-behind-the-neck-press,Barbell Behind-the-Neck Press,AURON_CURATED,Push Press - Behind the Neck,Push_Press_-_Behind_the_Neck,low,variant keyword differs,FED_CONFLICT,REVIEW_MANUAL
+pike-push-up,Pike Push-Up,AURON_CURATED,Pushups,Pushups,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+barbell-front-raise,Barbell Front Raise,AURON_CURATED,Front Barbell Squat,Front_Barbell_Squat,low,weak match,FED_CONFLICT,REVIEW_MANUAL
+dumbbell-cub-press,Dumbbell Cub Press,AURON_CURATED,Arnold Dumbbell Press,Arnold_Dumbbell_Press,low,weak match,FED_CONFLICT,REVIEW_MANUAL
+hanging-leg-raise,Hanging Leg Raise,AURON_ENRICHED,Hanging Leg Raise,Hanging_Leg_Raise,high,exact name + equipment,FED_EXACT,REPLACE_WITH_FED
+decline-bench-crunch,Decline Bench Crunch,AURON_ENRICHED,Decline Crunch,Decline_Crunch,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+cable-crunch,Cable Crunch,AURON_ENRICHED,Cable Crunch,Cable_Crunch,high,exact name + equipment,FED_EXACT,REPLACE_WITH_FED
+ab-wheel-rollout,Ab Wheel Rollout,AURON_CURATED,Barbell Ab Rollout,Barbell_Ab_Rollout,low,equip differs,FED_CONFLICT,REVIEW_MANUAL
+forearm-plank,Forearm Plank,AURON_ENRICHED,Plank,Plank,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+side-plank,Side Plank,AURON_ENRICHED,Plank,Plank,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+russian-twist,Russian Twist,AURON_ENRICHED,Russian Twist,Russian_Twist,low,equip differs,FED_CONFLICT,REVIEW_MANUAL
+bicycle-crunch,Bicycle Crunch,AURON_CURATED,Cable Crunch,Cable_Crunch,-,no FED equivalent,AURON_ONLY_NO_FED,DELETE_OR_KEEP_OVERRIDE
+lying-reverse-crunch,Lying Reverse Crunch,AURON_ENRICHED,Reverse Crunch,Reverse_Crunch,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+deadbug,Deadbug,AURON_ENRICHED,3/4 Sit-Up,3_4_Sit-Up,med,"same movement, FED name differs",FED_RENAME,RENAME_TO_FED
+captains-chair-leg-raise,Captain's Chair Leg Raise,AURON_CURATED,Front Leg Raises,Front_Leg_Raises,-,no FED equivalent,AURON_ONLY_NO_FED,DELETE_OR_KEEP_OVERRIDE
+pallof-press,Pallof Press,AURON_ENRICHED,Pallof Press,Pallof_Press,high,exact name + equipment,FED_EXACT,REPLACE_WITH_FED
+cable-woodchopper,Cable Woodchopper,AURON_CURATED,Cable Crossover,Cable_Crossover,-,no FED equivalent,AURON_ONLY_NO_FED,DELETE_OR_KEEP_OVERRIDE
+bird-dog,Bird Dog,AURON_CURATED,3/4 Sit-Up,3_4_Sit-Up,-,no FED equivalent,AURON_ONLY_NO_FED,DELETE_OR_KEEP_OVERRIDE
+l-sit,L-Sit,AURON_CURATED,Sit-Up,Sit-Up,-,no FED equivalent,AURON_ONLY_NO_FED,DELETE_OR_KEEP_OVERRIDE
+mountain-climber,Mountain Climber,AURON_ENRICHED,Mountain Climbers,Mountain_Climbers,-,no FED equivalent,AURON_ONLY_NO_FED,DELETE_OR_KEEP_OVERRIDE
+flutter-kicks,Flutter Kicks,AURON_ENRICHED,Flutter Kicks,Flutter_Kicks,high,exact name + equipment,FED_EXACT,REPLACE_WITH_FED
+dragon-flag,Dragon Flag,AURON_CURATED,3/4 Sit-Up,3_4_Sit-Up,-,no FED equivalent,AURON_ONLY_NO_FED,DELETE_OR_KEEP_OVERRIDE
+hanging-knee-raise,Hanging Knee Raise,AURON_CURATED,Hanging Leg Raise,Hanging_Leg_Raise,low,weak match,FED_CONFLICT,REVIEW_MANUAL
+toe-touch-crunch,Toe Touch Crunch,AURON_CURATED,Cable Crunch,Cable_Crunch,-,no FED equivalent,AURON_ONLY_NO_FED,DELETE_OR_KEEP_OVERRIDE

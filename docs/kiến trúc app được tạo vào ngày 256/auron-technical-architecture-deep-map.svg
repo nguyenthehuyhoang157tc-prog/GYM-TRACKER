@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="1480" viewBox="0 0 1900 1480" role="img" aria-labelledby="title desc">
+  <title id="title">AURON Technical Architecture Deep Map</title>
+  <desc id="desc">Deep technical architecture for AURON showing entry points, navigation, screens, ViewModels, repositories, Room database, domain engines, tests, and future integration boundaries.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#42515f"/>
+    </marker>
+    <style>
+      .bg { fill: #f6f8fb; }
+      .title { font: 700 30px Arial, sans-serif; fill: #14212b; }
+      .subtitle { font: 400 15px Arial, sans-serif; fill: #52616f; }
+      .group { fill: #ffffff; stroke: #c5cbd3; stroke-width: 1.2; rx: 18; }
+      .groupTitle { font: 700 16px Arial, sans-serif; fill: #14212b; }
+      .ui { fill: #f8fbff; stroke: #52616f; stroke-width: 1.3; rx: 12; }
+      .state { fill: #eef2ff; stroke: #4f46e5; stroke-width: 1.3; rx: 12; }
+      .domain { fill: #f3e8ff; stroke: #7e22ce; stroke-width: 1.3; rx: 12; }
+      .data { fill: #fff7e6; stroke: #b7791f; stroke-width: 1.3; rx: 12; }
+      .store { fill: #ecfeff; stroke: #0e7490; stroke-width: 1.3; rx: 12; }
+      .test { fill: #ecfdf5; stroke: #059669; stroke-width: 1.3; rx: 12; }
+      .future { fill: #ffffff; stroke: #7b8794; stroke-width: 1.3; stroke-dasharray: 8 6; rx: 12; }
+      .label { font: 700 13px Arial, sans-serif; fill: #14212b; text-anchor: middle; }
+      .small { font: 400 11px Arial, sans-serif; fill: #52616f; text-anchor: middle; }
+      .edge { stroke: #42515f; stroke-width: 1.4; fill: none; marker-end: url(#arrow); }
+      .edgeFuture { stroke: #6b7280; stroke-width: 1.4; fill: none; stroke-dasharray: 7 6; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1900" height="1480"/>
+  <text class="title" x="40" y="48">AURON Technical Architecture Deep Map</text>
+  <text class="subtitle" x="40" y="73">Entry, routes, Compose surfaces, ViewModels, domain engines, data/storage, tests, and future integration boundaries.</text>
+
+  <rect class="group" x="40" y="105" width="400" height="180"/>
+  <text class="groupTitle" x="60" y="132">App entry and dependency creation</text>
+  <rect class="ui" x="70" y="155" width="150" height="58"/><text class="label" x="145" y="178">MainActivity</text><text class="small" x="145" y="196">Compose host</text>
+  <rect class="ui" x="250" y="155" width="160" height="58"/><text class="label" x="330" y="178">Application</text><text class="small" x="330" y="196">DB + repos</text>
+  <rect class="ui" x="160" y="225" width="160" height="42"/><text class="label" x="240" y="251">VM Factory</text>
+
+  <rect class="group" x="470" y="105" width="520" height="180"/>
+  <text class="groupTitle" x="490" y="132">Navigation graph</text>
+  <rect class="ui" x="500" y="155" width="170" height="58"/><text class="label" x="585" y="178">GymTrackerApp</text><text class="small" x="585" y="196">NavHost + gate</text>
+  <rect class="ui" x="700" y="145" width="90" height="36"/><text class="label" x="745" y="168">home</text>
+  <rect class="ui" x="805" y="145" width="90" height="36"/><text class="label" x="850" y="168">plan</text>
+  <rect class="ui" x="700" y="195" width="90" height="36"/><text class="label" x="745" y="218">history</text>
+  <rect class="ui" x="805" y="195" width="90" height="36"/><text class="label" x="850" y="218">settings</text>
+  <rect class="ui" x="700" y="245" width="125" height="36"/><text class="small" x="762" y="268">detail/log</text>
+  <rect class="ui" x="840" y="245" width="125" height="36"/><text class="small" x="902" y="268">catalog/exercise</text>
+
+  <rect class="group" x="1020" y="105" width="820" height="180"/>
+  <text class="groupTitle" x="1040" y="132">Screens / Composables</text>
+  <rect class="ui" x="1050" y="150" width="135" height="42"/><text class="label" x="1117" y="176">Onboarding</text>
+  <rect class="ui" x="1200" y="150" width="135" height="42"/><text class="label" x="1267" y="176">Home</text>
+  <rect class="ui" x="1350" y="150" width="145" height="42"/><text class="small" x="1422" y="174">Weekly Hub</text>
+  <rect class="ui" x="1510" y="150" width="145" height="42"/><text class="small" x="1582" y="174">Daily Boost</text>
+  <rect class="ui" x="1670" y="150" width="135" height="42"/><text class="label" x="1737" y="176">Plan</text>
+  <rect class="ui" x="1050" y="210" width="135" height="42"/><text class="label" x="1117" y="236">Catalog</text>
+  <rect class="ui" x="1200" y="210" width="135" height="42"/><text class="small" x="1267" y="234">Detail Sheet</text>
+  <rect class="ui" x="1350" y="210" width="145" height="42"/><text class="label" x="1422" y="236">Workout Detail</text>
+  <rect class="ui" x="1510" y="210" width="145" height="42"/><text class="label" x="1582" y="236">Log Workout</text>
+  <rect class="ui" x="1670" y="210" width="135" height="42"/><text class="label" x="1737" y="236">Settings</text>
+  <rect class="ui" x="1050" y="265" width="135" height="42"/><text class="label" x="1117" y="291">History</text>
+  <rect class="ui" x="1200" y="265" width="135" height="42"/><text class="small" x="1267" y="289">Exercise Detail</text>
+  <rect class="ui" x="1350" y="265" width="305" height="42"/><text class="small" x="1502" y="289">Shared UI components + theme</text>
+
+  <rect class="group" x="40" y="330" width="1800" height="190"/>
+  <text class="groupTitle" x="60" y="358">ViewModels and UI state</text>
+  <rect class="state" x="70" y="385" width="180" height="58"/><text class="label" x="160" y="408">OnboardingVM</text><text class="small" x="160" y="426">OnboardingUiState</text>
+  <rect class="state" x="270" y="385" width="210" height="58"/><text class="label" x="375" y="408">HomeViewModel</text><text class="small" x="375" y="426">Home, Hub, Boost state</text>
+  <rect class="state" x="500" y="385" width="180" height="58"/><text class="label" x="590" y="408">PlanVM</text><text class="small" x="590" y="426">plan StateFlow</text>
+  <rect class="state" x="700" y="385" width="190" height="58"/><text class="label" x="795" y="408">CatalogPickerVM</text><text class="small" x="795" y="426">CatalogPickerUiState</text>
+  <rect class="state" x="910" y="385" width="190" height="58"/><text class="label" x="1005" y="408">WorkoutDetailVM</text><text class="small" x="1005" y="426">read-only day</text>
+  <rect class="state" x="1120" y="385" width="210" height="58"/><text class="label" x="1225" y="408">LogWorkoutVM</text><text class="small" x="1225" y="426">draft, save, engine</text>
+  <rect class="state" x="1350" y="385" width="190" height="58"/><text class="label" x="1445" y="408">HistoryVM</text><text class="small" x="1445" y="426">weekly groups</text>
+  <rect class="state" x="1560" y="385" width="190" height="58"/><text class="label" x="1655" y="408">SettingsVM</text><text class="small" x="1655" y="426">settings/import</text>
+  <rect class="state" x="780" y="460" width="210" height="42"/><text class="label" x="885" y="486">ExerciseDetailVM</text>
+
+  <rect class="group" x="40" y="560" width="850" height="220"/>
+  <text class="groupTitle" x="60" y="588">Domain / use cases / engines</text>
+  <rect class="domain" x="70" y="615" width="210" height="70"/><text class="label" x="175" y="640">Progression Engine</text><text class="small" x="175" y="660">V3.7A trend overlay</text>
+  <rect class="domain" x="310" y="615" width="180" height="58"/><text class="label" x="400" y="638">DailyBoostExercise</text><text class="small" x="400" y="656">fixed enum</text>
+  <rect class="domain" x="520" y="615" width="150" height="58"/><text class="label" x="595" y="638">SeedData</text><text class="small" x="595" y="656">default split</text>
+  <rect class="domain" x="700" y="615" width="160" height="70"/><text class="label" x="780" y="640">Import / Export</text><text class="small" x="780" y="660">local JSON</text>
+  <rect class="domain" x="310" y="705" width="250" height="58"/><text class="label" x="435" y="728">PlanNameMigration</text><text class="small" x="435" y="746">FED-canonical plan names</text>
+
+  <rect class="group" x="930" y="560" width="910" height="420"/>
+  <text class="groupTitle" x="950" y="588">Repositories and storage</text>
+  <rect class="data" x="960" y="615" width="190" height="70"/><text class="label" x="1055" y="640">GymRepository</text><text class="small" x="1055" y="660">plan/save/history/PR</text>
+  <rect class="data" x="1180" y="615" width="210" height="70"/><text class="label" x="1285" y="640">PreferencesRepo</text><text class="small" x="1285" y="660">theme, onboarding, boost</text>
+  <rect class="data" x="1420" y="615" width="190" height="70"/><text class="label" x="1515" y="640">DraftRepo</text><text class="small" x="1515" y="660">per-day draft JSON</text>
+  <rect class="data" x="1635" y="615" width="175" height="70"/><text class="label" x="1722" y="640">CatalogRepo</text><text class="small" x="1722" y="660">seed/search/find</text>
+  <rect class="data" x="960" y="730" width="200" height="70"/><text class="label" x="1060" y="755">AppDatabase</text><text class="small" x="1060" y="775">Room v4 migrations</text>
+  <rect class="data" x="1190" y="730" width="150" height="58"/><text class="label" x="1265" y="753">GymDao</text>
+  <rect class="data" x="1365" y="730" width="150" height="58"/><text class="label" x="1440" y="753">CatalogDao</text>
+  <rect class="data" x="1540" y="730" width="270" height="58"/><text class="label" x="1675" y="753">Catalog JSON + loader/search</text>
+  <rect class="data" x="960" y="840" width="250" height="58"/><text class="label" x="1085" y="863">User entities</text><text class="small" x="1085" y="880">days, exercises, sessions, sets</text>
+  <rect class="data" x="1240" y="840" width="230" height="58"/><text class="label" x="1355" y="863">CatalogExerciseEntity</text><text class="small" x="1355" y="880">catalog_exercises</text>
+  <rect class="store" x="1510" y="840" width="140" height="58"/><text class="label" x="1580" y="863">SQLite Room</text>
+  <rect class="store" x="1670" y="840" width="140" height="58"/><text class="label" x="1740" y="863">Preferences</text>
+
+  <rect class="group" x="40" y="1020" width="900" height="220"/>
+  <text class="groupTitle" x="60" y="1048">Tests and schema evidence</text>
+  <rect class="test" x="70" y="1080" width="220" height="70"/><text class="label" x="180" y="1105">Engine tests</text><text class="small" x="180" y="1125">70 cases incl V3.7A</text>
+  <rect class="test" x="320" y="1080" width="240" height="70"/><text class="label" x="440" y="1105">CatalogSearchTest</text><text class="small" x="440" y="1125">568 catalog + images</text>
+  <rect class="test" x="590" y="1080" width="160" height="70"/><text class="label" x="670" y="1105">Thumbnail tests</text>
+  <rect class="test" x="770" y="1080" width="140" height="70"/><text class="label" x="840" y="1105">Readiness</text>
+  <rect class="test" x="320" y="1165" width="240" height="50"/><text class="label" x="440" y="1195">Room schema JSON v2-v4</text>
+
+  <rect class="group" x="990" y="1020" width="850" height="220" style="stroke-dasharray:8 6"/>
+  <text class="groupTitle" x="1010" y="1048">Future integration boundaries (dashed)</text>
+  <rect class="future" x="1030" y="1080" width="220" height="70"/><text class="label" x="1140" y="1105">Muscle Recovery</text><text class="small" x="1140" y="1125">read-only aggregate first</text>
+  <rect class="future" x="1290" y="1080" width="220" height="70"/><text class="label" x="1400" y="1105">AI Coach boundary</text><text class="small" x="1400" y="1125">provider adapter + DTOs</text>
+  <rect class="future" x="1550" y="1080" width="240" height="70"/><text class="label" x="1670" y="1105">Firebase sync boundary</text><text class="small" x="1670" y="1125">accounts + conflict policy</text>
+
+  <path class="edge" d="M220 184 L250 184"/>
+  <path class="edge" d="M410 184 L500 184"/>
+  <path class="edge" d="M585 213 L585 330"/>
+  <path class="edge" d="M1117 192 L160 385"/>
+  <path class="edge" d="M1267 192 L375 385"/>
+  <path class="edge" d="M1737 192 L590 385"/>
+  <path class="edge" d="M1117 252 L795 385"/>
+  <path class="edge" d="M1422 252 L1005 385"/>
+  <path class="edge" d="M1582 252 L1225 385"/>
+  <path class="edge" d="M1117 307 L1445 385"/>
+  <path class="edge" d="M1737 252 L1655 385"/>
+  <path class="edge" d="M1267 307 L885 460"/>
+  <path class="edge" d="M1225 443 L175 615"/>
+  <path class="edge" d="M885 502 L175 615"/>
+  <path class="edge" d="M375 443 L400 615"/>
+  <path class="edge" d="M590 443 L1055 615"/>
+  <path class="edge" d="M1225 443 L1055 615"/>
+  <path class="edge" d="M1225 443 L1515 615"/>
+  <path class="edge" d="M1225 443 L1722 615"/>
+  <path class="edge" d="M1655 443 L780 615"/>
+  <path class="edge" d="M1055 685 L1265 730"/>
+  <path class="edge" d="M1722 685 L1440 730"/>
+  <path class="edge" d="M1060 800 L1085 840"/>
+  <path class="edge" d="M1060 800 L1355 840"/>
+  <path class="edge" d="M1265 788 L1580 840"/>
+  <path class="edge" d="M1440 788 L1580 840"/>
+  <path class="edge" d="M1285 685 L1740 840"/>
+  <path class="edge" d="M1515 685 L1740 840"/>
+  <path class="edge" d="M1675 730 L1722 685"/>
+  <path class="edge" d="M435 705 L1265 730"/>
+  <path class="edge" d="M180 1080 L175 685"/>
+  <path class="edge" d="M440 1080 L1675 788"/>
+  <path class="edge" d="M670 1080 L1675 788"/>
+  <path class="edge" d="M840 1080 L780 685"/>
+  <path class="edge" d="M440 1165 L1060 800"/>
+  <path class="edgeFuture" d="M1140 1080 L1055 685"/>
+  <path class="edgeFuture" d="M1400 1080 L175 685"/>
+  <path class="edgeFuture" d="M1670 1080 L1580 898"/>
+  <path class="edgeFuture" d="M1670 1080 L1740 898"/>
+</svg>

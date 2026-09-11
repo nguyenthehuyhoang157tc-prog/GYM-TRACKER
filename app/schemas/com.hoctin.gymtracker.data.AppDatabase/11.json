@@ -1,0 +1,2966 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 11,
+    "identityHash": "881e2f1165035925aefc8f7663f7d58d",
+    "entities": [
+      {
+        "tableName": "workout_days",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT NOT NULL, `sortOrder` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sortOrder",
+            "columnName": "sortOrder",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "exercises",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `dayId` INTEGER NOT NULL, `name` TEXT NOT NULL, `targetSets` INTEGER NOT NULL, `targetMinReps` INTEGER NOT NULL, `targetMaxReps` INTEGER NOT NULL, `sortOrder` INTEGER NOT NULL, FOREIGN KEY(`dayId`) REFERENCES `workout_days`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dayId",
+            "columnName": "dayId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "targetSets",
+            "columnName": "targetSets",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "targetMinReps",
+            "columnName": "targetMinReps",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "targetMaxReps",
+            "columnName": "targetMaxReps",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sortOrder",
+            "columnName": "sortOrder",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_exercises_dayId",
+            "unique": false,
+            "columnNames": [
+              "dayId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_exercises_dayId` ON `${TABLE_NAME}` (`dayId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "workout_days",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "dayId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "workout_sessions",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `dayId` INTEGER, `dayNameSnapshot` TEXT NOT NULL, `dateEpochDay` INTEGER NOT NULL, `startedAtMillis` INTEGER NOT NULL, `notes` TEXT, `readiness` TEXT, `durationSeconds` INTEGER, `customTitle` TEXT, `sourceType` TEXT NOT NULL DEFAULT 'ROUTINE', `savedWorkoutId` INTEGER)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dayId",
+            "columnName": "dayId",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "dayNameSnapshot",
+            "columnName": "dayNameSnapshot",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dateEpochDay",
+            "columnName": "dateEpochDay",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "startedAtMillis",
+            "columnName": "startedAtMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "notes",
+            "columnName": "notes",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "readiness",
+            "columnName": "readiness",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "durationSeconds",
+            "columnName": "durationSeconds",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "customTitle",
+            "columnName": "customTitle",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "sourceType",
+            "columnName": "sourceType",
+            "affinity": "TEXT",
+            "notNull": true,
+            "defaultValue": "'ROUTINE'"
+          },
+          {
+            "fieldPath": "savedWorkoutId",
+            "columnName": "savedWorkoutId",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_workout_sessions_dayId",
+            "unique": false,
+            "columnNames": [
+              "dayId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_workout_sessions_dayId` ON `${TABLE_NAME}` (`dayId`)"
+          },
+          {
+            "name": "index_workout_sessions_dateEpochDay",
+            "unique": false,
+            "columnNames": [
+              "dateEpochDay"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_workout_sessions_dateEpochDay` ON `${TABLE_NAME}` (`dateEpochDay`)"
+          },
+          {
+            "name": "index_workout_sessions_startedAtMillis",
+            "unique": false,
+            "columnNames": [
+              "startedAtMillis"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_workout_sessions_startedAtMillis` ON `${TABLE_NAME}` (`startedAtMillis`)"
+          },
+          {
+            "name": "index_workout_sessions_sourceType",
+            "unique": false,
+            "columnNames": [
+              "sourceType"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_workout_sessions_sourceType` ON `${TABLE_NAME}` (`sourceType`)"
+          },
+          {
+            "name": "index_workout_sessions_savedWorkoutId",
+            "unique": false,
+            "columnNames": [
+              "savedWorkoutId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_workout_sessions_savedWorkoutId` ON `${TABLE_NAME}` (`savedWorkoutId`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "logged_sets",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `sessionId` INTEGER NOT NULL, `exerciseId` INTEGER, `exerciseNameSnapshot` TEXT NOT NULL, `setNumber` INTEGER NOT NULL, `weight` REAL NOT NULL, `reps` INTEGER NOT NULL, `rir` INTEGER NOT NULL, `notes` TEXT, `isPrWeight` INTEGER NOT NULL, `isPrReps` INTEGER NOT NULL, `durationSeconds` INTEGER, `distanceMeters` REAL, `canonicalExerciseKey` TEXT, FOREIGN KEY(`sessionId`) REFERENCES `workout_sessions`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sessionId",
+            "columnName": "sessionId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "exerciseId",
+            "columnName": "exerciseId",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "exerciseNameSnapshot",
+            "columnName": "exerciseNameSnapshot",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "setNumber",
+            "columnName": "setNumber",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "weight",
+            "columnName": "weight",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "reps",
+            "columnName": "reps",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rir",
+            "columnName": "rir",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "notes",
+            "columnName": "notes",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isPrWeight",
+            "columnName": "isPrWeight",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isPrReps",
+            "columnName": "isPrReps",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "durationSeconds",
+            "columnName": "durationSeconds",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "distanceMeters",
+            "columnName": "distanceMeters",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "canonicalExerciseKey",
+            "columnName": "canonicalExerciseKey",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_logged_sets_sessionId",
+            "unique": false,
+            "columnNames": [
+              "sessionId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_logged_sets_sessionId` ON `${TABLE_NAME}` (`sessionId`)"
+          },
+          {
+            "name": "index_logged_sets_exerciseId",
+            "unique": false,
+            "columnNames": [
+              "exerciseId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_logged_sets_exerciseId` ON `${TABLE_NAME}` (`exerciseId`)"
+          },
+          {
+            "name": "index_logged_sets_canonicalExerciseKey",
+            "unique": false,
+            "columnNames": [
+              "canonicalExerciseKey"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_logged_sets_canonicalExerciseKey` ON `${TABLE_NAME}` (`canonicalExerciseKey`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "workout_sessions",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "sessionId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "saved_workouts",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT NOT NULL, `createdAtMillis` INTEGER NOT NULL, `updatedAtMillis` INTEGER NOT NULL, `sortOrder` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAtMillis",
+            "columnName": "createdAtMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAtMillis",
+            "columnName": "updatedAtMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sortOrder",
+            "columnName": "sortOrder",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "saved_workout_exercises",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `savedWorkoutId` INTEGER NOT NULL, `catalogSlug` TEXT, `canonicalExerciseKey` TEXT NOT NULL, `exerciseNameSnapshot` TEXT NOT NULL, `targetSets` INTEGER NOT NULL, `targetMinReps` INTEGER NOT NULL, `targetMaxReps` INTEGER NOT NULL, `sortOrder` INTEGER NOT NULL, FOREIGN KEY(`savedWorkoutId`) REFERENCES `saved_workouts`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "savedWorkoutId",
+            "columnName": "savedWorkoutId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "catalogSlug",
+            "columnName": "catalogSlug",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "canonicalExerciseKey",
+            "columnName": "canonicalExerciseKey",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "exerciseNameSnapshot",
+            "columnName": "exerciseNameSnapshot",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "targetSets",
+            "columnName": "targetSets",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "targetMinReps",
+            "columnName": "targetMinReps",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "targetMaxReps",
+            "columnName": "targetMaxReps",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sortOrder",
+            "columnName": "sortOrder",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_saved_workout_exercises_savedWorkoutId",
+            "unique": false,
+            "columnNames": [
+              "savedWorkoutId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_saved_workout_exercises_savedWorkoutId` ON `${TABLE_NAME}` (`savedWorkoutId`)"
+          },
+          {
+            "name": "index_saved_workout_exercises_canonicalExerciseKey",
+            "unique": false,
+            "columnNames": [
+              "canonicalExerciseKey"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_saved_workout_exercises_canonicalExerciseKey` ON `${TABLE_NAME}` (`canonicalExerciseKey`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "saved_workouts",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "savedWorkoutId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "catalog_exercises",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`slug` TEXT NOT NULL, `name` TEXT NOT NULL, `equipment` TEXT NOT NULL, `primaryMuscles` TEXT NOT NULL, `secondaryMuscles` TEXT NOT NULL, `level` TEXT NOT NULL, `force` TEXT NOT NULL, `category` TEXT NOT NULL, `progressionType` TEXT NOT NULL, `defaultSets` INTEGER NOT NULL, `defaultMinReps` INTEGER NOT NULL, `defaultMaxReps` INTEGER NOT NULL, `defaultIncrementKg` REAL NOT NULL, `sessionsRequiredBeforeIncrease` INTEGER NOT NULL, `isBodyweight` INTEGER NOT NULL, `isUnilateral` INTEGER NOT NULL, `aliases` TEXT NOT NULL, `instructions` TEXT NOT NULL, `tips` TEXT NOT NULL, `imageRefs` TEXT NOT NULL, `trackingType` TEXT NOT NULL, PRIMARY KEY(`slug`))",
+        "fields": [
+          {
+            "fieldPath": "slug",
+            "columnName": "slug",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "equipment",
+            "columnName": "equipment",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "primaryMuscles",
+            "columnName": "primaryMuscles",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "secondaryMuscles",
+            "columnName": "secondaryMuscles",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "level",
+            "columnName": "level",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "force",
+            "columnName": "force",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "category",
+            "columnName": "category",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "progressionType",
+            "columnName": "progressionType",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "defaultSets",
+            "columnName": "defaultSets",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "defaultMinReps",
+            "columnName": "defaultMinReps",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "defaultMaxReps",
+            "columnName": "defaultMaxReps",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "defaultIncrementKg",
+            "columnName": "defaultIncrementKg",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sessionsRequiredBeforeIncrease",
+            "columnName": "sessionsRequiredBeforeIncrease",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isBodyweight",
+            "columnName": "isBodyweight",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isUnilateral",
+            "columnName": "isUnilateral",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "aliases",
+            "columnName": "aliases",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "instructions",
+            "columnName": "instructions",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tips",
+            "columnName": "tips",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "imageRefs",
+            "columnName": "imageRefs",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "trackingType",
+            "columnName": "trackingType",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "slug"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "recovery_research_consent",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`subjectId` TEXT NOT NULL, `stateCode` TEXT NOT NULL, `contractVersion` TEXT NOT NULL, `createdAtMillis` INTEGER NOT NULL, `grantedAtMillis` INTEGER, `revokedAtMillis` INTEGER, PRIMARY KEY(`subjectId`))",
+        "fields": [
+          {
+            "fieldPath": "subjectId",
+            "columnName": "subjectId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "stateCode",
+            "columnName": "stateCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "contractVersion",
+            "columnName": "contractVersion",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAtMillis",
+            "columnName": "createdAtMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "grantedAtMillis",
+            "columnName": "grantedAtMillis",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "revokedAtMillis",
+            "columnName": "revokedAtMillis",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "subjectId"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_recovery_research_consent_stateCode",
+            "unique": false,
+            "columnNames": [
+              "stateCode"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_recovery_research_consent_stateCode` ON `${TABLE_NAME}` (`stateCode`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "recovery_research_predictions",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`predictionId` TEXT NOT NULL, `targetWorkoutAttemptId` TEXT NOT NULL, `subjectId` TEXT NOT NULL, `sourceCode` TEXT NOT NULL, `workoutCreatedAtMillis` INTEGER NOT NULL, `workoutStartedAtMillis` INTEGER NOT NULL, `predictionGeneratedAtMillis` INTEGER NOT NULL, `inputDataCutoffAtMillis` INTEGER NOT NULL, `frozenAtMillis` INTEGER NOT NULL, `recoveryModelVersion` TEXT NOT NULL, `muscleHeatModelVersion` TEXT NOT NULL, `progressiveOverloadModelVersion` TEXT NOT NULL, `researchContractVersion` TEXT NOT NULL, `researchSchemaVersion` INTEGER NOT NULL, `firstWorkingSetRuleVersion` TEXT NOT NULL, `catalogContentVersion` INTEGER NOT NULL, `planDayIdSnapshot` INTEGER, `planDayNameSnapshot` TEXT NOT NULL, `overallReadiness` INTEGER NOT NULL, `overallStatusCode` TEXT NOT NULL, `inputSessionIdsJson` TEXT NOT NULL, `inputSessionMaxTimestampMillis` INTEGER, `inputDigestSha256` TEXT NOT NULL, `dataCompletenessCode` TEXT NOT NULL, `abstained` INTEGER NOT NULL, `abstentionReasonCode` TEXT, `payloadSha256` TEXT NOT NULL, PRIMARY KEY(`predictionId`), FOREIGN KEY(`subjectId`) REFERENCES `recovery_research_consent`(`subjectId`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "predictionId",
+            "columnName": "predictionId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "targetWorkoutAttemptId",
+            "columnName": "targetWorkoutAttemptId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "subjectId",
+            "columnName": "subjectId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sourceCode",
+            "columnName": "sourceCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "workoutCreatedAtMillis",
+            "columnName": "workoutCreatedAtMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "workoutStartedAtMillis",
+            "columnName": "workoutStartedAtMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "predictionGeneratedAtMillis",
+            "columnName": "predictionGeneratedAtMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "inputDataCutoffAtMillis",
+            "columnName": "inputDataCutoffAtMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "frozenAtMillis",
+            "columnName": "frozenAtMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recoveryModelVersion",
+            "columnName": "recoveryModelVersion",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "muscleHeatModelVersion",
+            "columnName": "muscleHeatModelVersion",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "progressiveOverloadModelVersion",
+            "columnName": "progressiveOverloadModelVersion",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "researchContractVersion",
+            "columnName": "researchContractVersion",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "researchSchemaVersion",
+            "columnName": "researchSchemaVersion",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "firstWorkingSetRuleVersion",
+            "columnName": "firstWorkingSetRuleVersion",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "catalogContentVersion",
+            "columnName": "catalogContentVersion",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "planDayIdSnapshot",
+            "columnName": "planDayIdSnapshot",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "planDayNameSnapshot",
+            "columnName": "planDayNameSnapshot",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "overallReadiness",
+            "columnName": "overallReadiness",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "overallStatusCode",
+            "columnName": "overallStatusCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "inputSessionIdsJson",
+            "columnName": "inputSessionIdsJson",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "inputSessionMaxTimestampMillis",
+            "columnName": "inputSessionMaxTimestampMillis",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "inputDigestSha256",
+            "columnName": "inputDigestSha256",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dataCompletenessCode",
+            "columnName": "dataCompletenessCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "abstained",
+            "columnName": "abstained",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "abstentionReasonCode",
+            "columnName": "abstentionReasonCode",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "payloadSha256",
+            "columnName": "payloadSha256",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "predictionId"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_recovery_research_predictions_targetWorkoutAttemptId",
+            "unique": true,
+            "columnNames": [
+              "targetWorkoutAttemptId"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_recovery_research_predictions_targetWorkoutAttemptId` ON `${TABLE_NAME}` (`targetWorkoutAttemptId`)"
+          },
+          {
+            "name": "index_recovery_research_predictions_subjectId",
+            "unique": false,
+            "columnNames": [
+              "subjectId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_recovery_research_predictions_subjectId` ON `${TABLE_NAME}` (`subjectId`)"
+          },
+          {
+            "name": "index_recovery_research_predictions_predictionGeneratedAtMillis",
+            "unique": false,
+            "columnNames": [
+              "predictionGeneratedAtMillis"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_recovery_research_predictions_predictionGeneratedAtMillis` ON `${TABLE_NAME}` (`predictionGeneratedAtMillis`)"
+          },
+          {
+            "name": "index_recovery_research_predictions_inputDataCutoffAtMillis",
+            "unique": false,
+            "columnNames": [
+              "inputDataCutoffAtMillis"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_recovery_research_predictions_inputDataCutoffAtMillis` ON `${TABLE_NAME}` (`inputDataCutoffAtMillis`)"
+          },
+          {
+            "name": "index_recovery_research_predictions_recoveryModelVersion_predictionGeneratedAtMillis",
+            "unique": false,
+            "columnNames": [
+              "recoveryModelVersion",
+              "predictionGeneratedAtMillis"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_recovery_research_predictions_recoveryModelVersion_predictionGeneratedAtMillis` ON `${TABLE_NAME}` (`recoveryModelVersion`, `predictionGeneratedAtMillis`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "recovery_research_consent",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "subjectId"
+            ],
+            "referencedColumns": [
+              "subjectId"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "recovery_research_prediction_groups",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`predictionId` TEXT NOT NULL, `groupCode` TEXT NOT NULL, `readiness` INTEGER NOT NULL, `statusCode` TEXT NOT NULL, `trained` INTEGER NOT NULL, PRIMARY KEY(`predictionId`, `groupCode`), FOREIGN KEY(`predictionId`) REFERENCES `recovery_research_predictions`(`predictionId`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "predictionId",
+            "columnName": "predictionId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "groupCode",
+            "columnName": "groupCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "readiness",
+            "columnName": "readiness",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "statusCode",
+            "columnName": "statusCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "trained",
+            "columnName": "trained",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "predictionId",
+            "groupCode"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_recovery_research_prediction_groups_groupCode",
+            "unique": false,
+            "columnNames": [
+              "groupCode"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_recovery_research_prediction_groups_groupCode` ON `${TABLE_NAME}` (`groupCode`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "recovery_research_predictions",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "predictionId"
+            ],
+            "referencedColumns": [
+              "predictionId"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "recovery_research_prediction_muscles",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`predictionId` TEXT NOT NULL, `muscleCode` TEXT NOT NULL, `readiness` INTEGER NOT NULL, `fatigueScore` REAL NOT NULL, `acuteResidual` REAL NOT NULL, `structuralResidual` REAL NOT NULL, `statusCode` TEXT NOT NULL, `colorSemanticCode` TEXT NOT NULL, `soreWindow` INTEGER NOT NULL, `grindCarried` INTEGER NOT NULL, `lastTrainedAtMillis` INTEGER, PRIMARY KEY(`predictionId`, `muscleCode`), FOREIGN KEY(`predictionId`) REFERENCES `recovery_research_predictions`(`predictionId`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "predictionId",
+            "columnName": "predictionId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "muscleCode",
+            "columnName": "muscleCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "readiness",
+            "columnName": "readiness",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fatigueScore",
+            "columnName": "fatigueScore",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "acuteResidual",
+            "columnName": "acuteResidual",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "structuralResidual",
+            "columnName": "structuralResidual",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "statusCode",
+            "columnName": "statusCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "colorSemanticCode",
+            "columnName": "colorSemanticCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "soreWindow",
+            "columnName": "soreWindow",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "grindCarried",
+            "columnName": "grindCarried",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastTrainedAtMillis",
+            "columnName": "lastTrainedAtMillis",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "predictionId",
+            "muscleCode"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_recovery_research_prediction_muscles_muscleCode",
+            "unique": false,
+            "columnNames": [
+              "muscleCode"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_recovery_research_prediction_muscles_muscleCode` ON `${TABLE_NAME}` (`muscleCode`)"
+          },
+          {
+            "name": "index_recovery_research_prediction_muscles_lastTrainedAtMillis",
+            "unique": false,
+            "columnNames": [
+              "lastTrainedAtMillis"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_recovery_research_prediction_muscles_lastTrainedAtMillis` ON `${TABLE_NAME}` (`lastTrainedAtMillis`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "recovery_research_predictions",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "predictionId"
+            ],
+            "referencedColumns": [
+              "predictionId"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "recovery_research_target_exercises",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`targetExerciseId` TEXT NOT NULL, `predictionId` TEXT NOT NULL, `targetOrdinal` INTEGER NOT NULL, `planExerciseIdSnapshot` INTEGER, `exerciseNameSnapshot` TEXT NOT NULL, `canonicalExerciseKey` TEXT NOT NULL, `trackingTypeCode` TEXT NOT NULL, `targetSetsSnapshot` INTEGER NOT NULL, `targetMinRepsSnapshot` INTEGER NOT NULL, `targetMaxRepsSnapshot` INTEGER NOT NULL, `primaryMuscleCodesJson` TEXT NOT NULL, `secondaryMuscleCodesJson` TEXT NOT NULL, `primaryReadinessMin` INTEGER, `primaryReadinessMean` REAL, `secondaryReadinessMin` INTEGER, `suggestedLoadKg` REAL, `suggestedMinReps` INTEGER, `suggestedMaxReps` INTEGER, `suggestedRir` INTEGER, `suggestionActionCode` TEXT, `progressionTypeCode` TEXT, `suggestionStrategyCode` TEXT, `suggestionTargetText` TEXT, `suggestionReasonText` TEXT, `suggestionTitleText` TEXT, `suggestionDetailText` TEXT, `suggestionConfidence` INTEGER, `sessionQualityCode` TEXT, `coachInsightCode` TEXT, `referenceSessionId` INTEGER, `referenceSessionStartedAtMillis` INTEGER, `referenceSetNumber` INTEGER, `referenceLoadKg` REAL, `referenceReps` INTEGER, `referenceRir` INTEGER, `referenceDurationSeconds` INTEGER, `referenceDistanceMeters` REAL, `referencePerformanceValue` REAL, `dataCompletenessCode` TEXT NOT NULL, `abstained` INTEGER NOT NULL, `abstentionReasonCode` TEXT, PRIMARY KEY(`targetExerciseId`), FOREIGN KEY(`predictionId`) REFERENCES `recovery_research_predictions`(`predictionId`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "targetExerciseId",
+            "columnName": "targetExerciseId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "predictionId",
+            "columnName": "predictionId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "targetOrdinal",
+            "columnName": "targetOrdinal",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "planExerciseIdSnapshot",
+            "columnName": "planExerciseIdSnapshot",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "exerciseNameSnapshot",
+            "columnName": "exerciseNameSnapshot",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "canonicalExerciseKey",
+            "columnName": "canonicalExerciseKey",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "trackingTypeCode",
+            "columnName": "trackingTypeCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "targetSetsSnapshot",
+            "columnName": "targetSetsSnapshot",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "targetMinRepsSnapshot",
+            "columnName": "targetMinRepsSnapshot",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "targetMaxRepsSnapshot",
+            "columnName": "targetMaxRepsSnapshot",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "primaryMuscleCodesJson",
+            "columnName": "primaryMuscleCodesJson",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "secondaryMuscleCodesJson",
+            "columnName": "secondaryMuscleCodesJson",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "primaryReadinessMin",
+            "columnName": "primaryReadinessMin",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "primaryReadinessMean",
+            "columnName": "primaryReadinessMean",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "secondaryReadinessMin",
+            "columnName": "secondaryReadinessMin",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "suggestedLoadKg",
+            "columnName": "suggestedLoadKg",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "suggestedMinReps",
+            "columnName": "suggestedMinReps",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "suggestedMaxReps",
+            "columnName": "suggestedMaxReps",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "suggestedRir",
+            "columnName": "suggestedRir",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "suggestionActionCode",
+            "columnName": "suggestionActionCode",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "progressionTypeCode",
+            "columnName": "progressionTypeCode",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "suggestionStrategyCode",
+            "columnName": "suggestionStrategyCode",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "suggestionTargetText",
+            "columnName": "suggestionTargetText",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "suggestionReasonText",
+            "columnName": "suggestionReasonText",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "suggestionTitleText",
+            "columnName": "suggestionTitleText",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "suggestionDetailText",
+            "columnName": "suggestionDetailText",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "suggestionConfidence",
+            "columnName": "suggestionConfidence",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "sessionQualityCode",
+            "columnName": "sessionQualityCode",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "coachInsightCode",
+            "columnName": "coachInsightCode",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "referenceSessionId",
+            "columnName": "referenceSessionId",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "referenceSessionStartedAtMillis",
+            "columnName": "referenceSessionStartedAtMillis",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "referenceSetNumber",
+            "columnName": "referenceSetNumber",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "referenceLoadKg",
+            "columnName": "referenceLoadKg",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "referenceReps",
+            "columnName": "referenceReps",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "referenceRir",
+            "columnName": "referenceRir",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "referenceDurationSeconds",
+            "columnName": "referenceDurationSeconds",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "referenceDistanceMeters",
+            "columnName": "referenceDistanceMeters",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "referencePerformanceValue",
+            "columnName": "referencePerformanceValue",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "dataCompletenessCode",
+            "columnName": "dataCompletenessCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "abstained",
+            "columnName": "abstained",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "abstentionReasonCode",
+            "columnName": "abstentionReasonCode",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "targetExerciseId"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_recovery_research_target_exercises_predictionId_targetOrdinal",
+            "unique": true,
+            "columnNames": [
+              "predictionId",
+              "targetOrdinal"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_recovery_research_target_exercises_predictionId_targetOrdinal` ON `${TABLE_NAME}` (`predictionId`, `targetOrdinal`)"
+          },
+          {
+            "name": "index_recovery_research_target_exercises_canonicalExerciseKey",
+            "unique": false,
+            "columnNames": [
+              "canonicalExerciseKey"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_recovery_research_target_exercises_canonicalExerciseKey` ON `${TABLE_NAME}` (`canonicalExerciseKey`)"
+          },
+          {
+            "name": "index_recovery_research_target_exercises_planExerciseIdSnapshot",
+            "unique": false,
+            "columnNames": [
+              "planExerciseIdSnapshot"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_recovery_research_target_exercises_planExerciseIdSnapshot` ON `${TABLE_NAME}` (`planExerciseIdSnapshot`)"
+          },
+          {
+            "name": "index_recovery_research_target_exercises_referenceSessionId",
+            "unique": false,
+            "columnNames": [
+              "referenceSessionId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_recovery_research_target_exercises_referenceSessionId` ON `${TABLE_NAME}` (`referenceSessionId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "recovery_research_predictions",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "predictionId"
+            ],
+            "referencedColumns": [
+              "predictionId"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "recovery_research_set_observations",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`setObservationId` TEXT NOT NULL, `predictionId` TEXT NOT NULL, `targetWorkoutAttemptId` TEXT NOT NULL, `planExerciseIdSnapshot` INTEGER NOT NULL, `canonicalExerciseKey` TEXT NOT NULL, `draftSetKey` TEXT NOT NULL, `draftSetOrdinal` INTEGER NOT NULL, `firstValidAtMillis` INTEGER NOT NULL, PRIMARY KEY(`setObservationId`), FOREIGN KEY(`predictionId`) REFERENCES `recovery_research_predictions`(`predictionId`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "setObservationId",
+            "columnName": "setObservationId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "predictionId",
+            "columnName": "predictionId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "targetWorkoutAttemptId",
+            "columnName": "targetWorkoutAttemptId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "planExerciseIdSnapshot",
+            "columnName": "planExerciseIdSnapshot",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "canonicalExerciseKey",
+            "columnName": "canonicalExerciseKey",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "draftSetKey",
+            "columnName": "draftSetKey",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "draftSetOrdinal",
+            "columnName": "draftSetOrdinal",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "firstValidAtMillis",
+            "columnName": "firstValidAtMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "setObservationId"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_recovery_research_set_observations_predictionId_planExerciseIdSnapshot_draftSetKey",
+            "unique": true,
+            "columnNames": [
+              "predictionId",
+              "planExerciseIdSnapshot",
+              "draftSetKey"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_recovery_research_set_observations_predictionId_planExerciseIdSnapshot_draftSetKey` ON `${TABLE_NAME}` (`predictionId`, `planExerciseIdSnapshot`, `draftSetKey`)"
+          },
+          {
+            "name": "index_recovery_research_set_observations_targetWorkoutAttemptId",
+            "unique": false,
+            "columnNames": [
+              "targetWorkoutAttemptId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_recovery_research_set_observations_targetWorkoutAttemptId` ON `${TABLE_NAME}` (`targetWorkoutAttemptId`)"
+          },
+          {
+            "name": "index_recovery_research_set_observations_canonicalExerciseKey",
+            "unique": false,
+            "columnNames": [
+              "canonicalExerciseKey"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_recovery_research_set_observations_canonicalExerciseKey` ON `${TABLE_NAME}` (`canonicalExerciseKey`)"
+          },
+          {
+            "name": "index_recovery_research_set_observations_firstValidAtMillis",
+            "unique": false,
+            "columnNames": [
+              "firstValidAtMillis"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_recovery_research_set_observations_firstValidAtMillis` ON `${TABLE_NAME}` (`firstValidAtMillis`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "recovery_research_predictions",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "predictionId"
+            ],
+            "referencedColumns": [
+              "predictionId"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "recovery_research_outcomes",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`outcomeId` TEXT NOT NULL, `predictionId` TEXT NOT NULL, `targetWorkoutAttemptId` TEXT NOT NULL, `sessionId` INTEGER, `statusCode` TEXT NOT NULL, `statusReasonCode` TEXT, `workoutCompletedAtMillis` INTEGER, `workoutAbandonedAtMillis` INTEGER, `firstValidSetObservedAtMillis` INTEGER, `firstWorkingSetLoggedAtMillis` INTEGER, `outcomeCapturedAtMillis` INTEGER, `dataCompletenessCode` TEXT NOT NULL, `validForEvaluation` INTEGER NOT NULL, `exclusionReasonCode` TEXT, PRIMARY KEY(`outcomeId`), FOREIGN KEY(`predictionId`) REFERENCES `recovery_research_predictions`(`predictionId`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "outcomeId",
+            "columnName": "outcomeId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "predictionId",
+            "columnName": "predictionId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "targetWorkoutAttemptId",
+            "columnName": "targetWorkoutAttemptId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sessionId",
+            "columnName": "sessionId",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "statusCode",
+            "columnName": "statusCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "statusReasonCode",
+            "columnName": "statusReasonCode",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "workoutCompletedAtMillis",
+            "columnName": "workoutCompletedAtMillis",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "workoutAbandonedAtMillis",
+            "columnName": "workoutAbandonedAtMillis",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "firstValidSetObservedAtMillis",
+            "columnName": "firstValidSetObservedAtMillis",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "firstWorkingSetLoggedAtMillis",
+            "columnName": "firstWorkingSetLoggedAtMillis",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "outcomeCapturedAtMillis",
+            "columnName": "outcomeCapturedAtMillis",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "dataCompletenessCode",
+            "columnName": "dataCompletenessCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "validForEvaluation",
+            "columnName": "validForEvaluation",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "exclusionReasonCode",
+            "columnName": "exclusionReasonCode",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "outcomeId"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_recovery_research_outcomes_predictionId",
+            "unique": true,
+            "columnNames": [
+              "predictionId"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_recovery_research_outcomes_predictionId` ON `${TABLE_NAME}` (`predictionId`)"
+          },
+          {
+            "name": "index_recovery_research_outcomes_targetWorkoutAttemptId",
+            "unique": true,
+            "columnNames": [
+              "targetWorkoutAttemptId"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_recovery_research_outcomes_targetWorkoutAttemptId` ON `${TABLE_NAME}` (`targetWorkoutAttemptId`)"
+          },
+          {
+            "name": "index_recovery_research_outcomes_sessionId",
+            "unique": true,
+            "columnNames": [
+              "sessionId"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_recovery_research_outcomes_sessionId` ON `${TABLE_NAME}` (`sessionId`)"
+          },
+          {
+            "name": "index_recovery_research_outcomes_statusCode",
+            "unique": false,
+            "columnNames": [
+              "statusCode"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_recovery_research_outcomes_statusCode` ON `${TABLE_NAME}` (`statusCode`)"
+          },
+          {
+            "name": "index_recovery_research_outcomes_outcomeCapturedAtMillis",
+            "unique": false,
+            "columnNames": [
+              "outcomeCapturedAtMillis"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_recovery_research_outcomes_outcomeCapturedAtMillis` ON `${TABLE_NAME}` (`outcomeCapturedAtMillis`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "recovery_research_predictions",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "predictionId"
+            ],
+            "referencedColumns": [
+              "predictionId"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "recovery_research_exercise_outcomes",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`exerciseOutcomeId` TEXT NOT NULL, `outcomeId` TEXT NOT NULL, `targetExerciseId` TEXT NOT NULL, `canonicalExerciseKey` TEXT NOT NULL, `exerciseNameSnapshot` TEXT NOT NULL, `exerciseSequence` INTEGER NOT NULL, `trackingTypeCode` TEXT NOT NULL, `firstWorkingSetId` INTEGER, `firstWorkingSetSetNumber` INTEGER, `firstWorkingSetRuleVersion` TEXT NOT NULL, `firstWorkingSetObservedAtMillis` INTEGER, `achievedLoadKg` REAL, `achievedReps` INTEGER, `achievedRir` INTEGER, `achievedDurationSeconds` INTEGER, `achievedDistanceMeters` REAL, `suggestedLoadDeltaKg` REAL, `suggestedRepsDelta` INTEGER, `loadReduced` INTEGER, `repsUnexpectedlyUnderperformed` INTEGER, `completedValidSets` INTEGER NOT NULL, `targetSetsSnapshot` INTEGER NOT NULL, `exerciseCompleted` INTEGER NOT NULL, `sessionQualityCode` TEXT, `matchedPlannedTarget` INTEGER NOT NULL, `firstWorkingSetConfidenceCode` TEXT NOT NULL, `validForEvaluation` INTEGER NOT NULL, `exclusionReasonCode` TEXT, `outcomeCapturedAtMillis` INTEGER NOT NULL, PRIMARY KEY(`exerciseOutcomeId`), FOREIGN KEY(`outcomeId`) REFERENCES `recovery_research_outcomes`(`outcomeId`) ON UPDATE NO ACTION ON DELETE CASCADE , FOREIGN KEY(`targetExerciseId`) REFERENCES `recovery_research_target_exercises`(`targetExerciseId`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "exerciseOutcomeId",
+            "columnName": "exerciseOutcomeId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "outcomeId",
+            "columnName": "outcomeId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "targetExerciseId",
+            "columnName": "targetExerciseId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "canonicalExerciseKey",
+            "columnName": "canonicalExerciseKey",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "exerciseNameSnapshot",
+            "columnName": "exerciseNameSnapshot",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "exerciseSequence",
+            "columnName": "exerciseSequence",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "trackingTypeCode",
+            "columnName": "trackingTypeCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "firstWorkingSetId",
+            "columnName": "firstWorkingSetId",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "firstWorkingSetSetNumber",
+            "columnName": "firstWorkingSetSetNumber",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "firstWorkingSetRuleVersion",
+            "columnName": "firstWorkingSetRuleVersion",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "firstWorkingSetObservedAtMillis",
+            "columnName": "firstWorkingSetObservedAtMillis",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "achievedLoadKg",
+            "columnName": "achievedLoadKg",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "achievedReps",
+            "columnName": "achievedReps",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "achievedRir",
+            "columnName": "achievedRir",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "achievedDurationSeconds",
+            "columnName": "achievedDurationSeconds",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "achievedDistanceMeters",
+            "columnName": "achievedDistanceMeters",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "suggestedLoadDeltaKg",
+            "columnName": "suggestedLoadDeltaKg",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "suggestedRepsDelta",
+            "columnName": "suggestedRepsDelta",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "loadReduced",
+            "columnName": "loadReduced",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "repsUnexpectedlyUnderperformed",
+            "columnName": "repsUnexpectedlyUnderperformed",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "completedValidSets",
+            "columnName": "completedValidSets",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "targetSetsSnapshot",
+            "columnName": "targetSetsSnapshot",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "exerciseCompleted",
+            "columnName": "exerciseCompleted",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sessionQualityCode",
+            "columnName": "sessionQualityCode",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "matchedPlannedTarget",
+            "columnName": "matchedPlannedTarget",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "firstWorkingSetConfidenceCode",
+            "columnName": "firstWorkingSetConfidenceCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "validForEvaluation",
+            "columnName": "validForEvaluation",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "exclusionReasonCode",
+            "columnName": "exclusionReasonCode",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "outcomeCapturedAtMillis",
+            "columnName": "outcomeCapturedAtMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "exerciseOutcomeId"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_recovery_research_exercise_outcomes_outcomeId",
+            "unique": false,
+            "columnNames": [
+              "outcomeId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_recovery_research_exercise_outcomes_outcomeId` ON `${TABLE_NAME}` (`outcomeId`)"
+          },
+          {
+            "name": "index_recovery_research_exercise_outcomes_targetExerciseId",
+            "unique": false,
+            "columnNames": [
+              "targetExerciseId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_recovery_research_exercise_outcomes_targetExerciseId` ON `${TABLE_NAME}` (`targetExerciseId`)"
+          },
+          {
+            "name": "index_recovery_research_exercise_outcomes_canonicalExerciseKey",
+            "unique": false,
+            "columnNames": [
+              "canonicalExerciseKey"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_recovery_research_exercise_outcomes_canonicalExerciseKey` ON `${TABLE_NAME}` (`canonicalExerciseKey`)"
+          },
+          {
+            "name": "index_recovery_research_exercise_outcomes_firstWorkingSetId",
+            "unique": false,
+            "columnNames": [
+              "firstWorkingSetId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_recovery_research_exercise_outcomes_firstWorkingSetId` ON `${TABLE_NAME}` (`firstWorkingSetId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "recovery_research_outcomes",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "outcomeId"
+            ],
+            "referencedColumns": [
+              "outcomeId"
+            ]
+          },
+          {
+            "table": "recovery_research_target_exercises",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "targetExerciseId"
+            ],
+            "referencedColumns": [
+              "targetExerciseId"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "wearable_shadow_settings",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`subjectId` TEXT NOT NULL, `contractVersion` TEXT NOT NULL, `schemaVersion` INTEGER NOT NULL, `syncEnabled` INTEGER NOT NULL, `lastAvailabilityCode` TEXT NOT NULL, `grantedTypeMask` TEXT NOT NULL, `createdAtMillis` INTEGER NOT NULL, `updatedAtMillis` INTEGER NOT NULL, PRIMARY KEY(`subjectId`), FOREIGN KEY(`subjectId`) REFERENCES `recovery_research_consent`(`subjectId`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "subjectId",
+            "columnName": "subjectId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "contractVersion",
+            "columnName": "contractVersion",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "schemaVersion",
+            "columnName": "schemaVersion",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "syncEnabled",
+            "columnName": "syncEnabled",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastAvailabilityCode",
+            "columnName": "lastAvailabilityCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "grantedTypeMask",
+            "columnName": "grantedTypeMask",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAtMillis",
+            "columnName": "createdAtMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAtMillis",
+            "columnName": "updatedAtMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "subjectId"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": [
+          {
+            "table": "recovery_research_consent",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "subjectId"
+            ],
+            "referencedColumns": [
+              "subjectId"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "wearable_shadow_sync_state",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`subjectId` TEXT NOT NULL, `recordTypeCode` TEXT NOT NULL, `changesToken` TEXT, `initialSyncComplete` INTEGER NOT NULL, `permissionGranted` INTEGER NOT NULL, `statusCode` TEXT NOT NULL, `errorCode` TEXT NOT NULL, `lastAttemptAtMillis` INTEGER, `lastSuccessfulSyncAtMillis` INTEGER, `rejectedRecordCount` INTEGER NOT NULL, `updatedAtMillis` INTEGER NOT NULL, PRIMARY KEY(`subjectId`, `recordTypeCode`), FOREIGN KEY(`subjectId`) REFERENCES `recovery_research_consent`(`subjectId`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "subjectId",
+            "columnName": "subjectId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recordTypeCode",
+            "columnName": "recordTypeCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "changesToken",
+            "columnName": "changesToken",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "initialSyncComplete",
+            "columnName": "initialSyncComplete",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "permissionGranted",
+            "columnName": "permissionGranted",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "statusCode",
+            "columnName": "statusCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "errorCode",
+            "columnName": "errorCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastAttemptAtMillis",
+            "columnName": "lastAttemptAtMillis",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "lastSuccessfulSyncAtMillis",
+            "columnName": "lastSuccessfulSyncAtMillis",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "rejectedRecordCount",
+            "columnName": "rejectedRecordCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAtMillis",
+            "columnName": "updatedAtMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "subjectId",
+            "recordTypeCode"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_wearable_shadow_sync_state_subjectId",
+            "unique": false,
+            "columnNames": [
+              "subjectId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_wearable_shadow_sync_state_subjectId` ON `${TABLE_NAME}` (`subjectId`)"
+          },
+          {
+            "name": "index_wearable_shadow_sync_state_lastSuccessfulSyncAtMillis",
+            "unique": false,
+            "columnNames": [
+              "lastSuccessfulSyncAtMillis"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_wearable_shadow_sync_state_lastSuccessfulSyncAtMillis` ON `${TABLE_NAME}` (`lastSuccessfulSyncAtMillis`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "recovery_research_consent",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "subjectId"
+            ],
+            "referencedColumns": [
+              "subjectId"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "wearable_shadow_access_events",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`accessEventId` TEXT NOT NULL, `subjectId` TEXT NOT NULL, `occurredAtMillis` INTEGER NOT NULL, `syncEnabled` INTEGER NOT NULL, `availabilityCode` TEXT NOT NULL, `grantedTypeMask` TEXT NOT NULL, `reasonCode` TEXT NOT NULL, PRIMARY KEY(`accessEventId`), FOREIGN KEY(`subjectId`) REFERENCES `recovery_research_consent`(`subjectId`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "accessEventId",
+            "columnName": "accessEventId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "subjectId",
+            "columnName": "subjectId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "occurredAtMillis",
+            "columnName": "occurredAtMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "syncEnabled",
+            "columnName": "syncEnabled",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "availabilityCode",
+            "columnName": "availabilityCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "grantedTypeMask",
+            "columnName": "grantedTypeMask",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "reasonCode",
+            "columnName": "reasonCode",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "accessEventId"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_wearable_shadow_access_events_subjectId",
+            "unique": false,
+            "columnNames": [
+              "subjectId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_wearable_shadow_access_events_subjectId` ON `${TABLE_NAME}` (`subjectId`)"
+          },
+          {
+            "name": "index_wearable_shadow_access_events_occurredAtMillis",
+            "unique": false,
+            "columnNames": [
+              "occurredAtMillis"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_wearable_shadow_access_events_occurredAtMillis` ON `${TABLE_NAME}` (`occurredAtMillis`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "recovery_research_consent",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "subjectId"
+            ],
+            "referencedColumns": [
+              "subjectId"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "wearable_shadow_record_revisions",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`revisionId` TEXT NOT NULL, `subjectId` TEXT NOT NULL, `contractVersion` TEXT NOT NULL, `schemaVersion` INTEGER NOT NULL, `recordTypeCode` TEXT NOT NULL, `healthConnectRecordId` TEXT NOT NULL, `lifecycleEpoch` INTEGER NOT NULL, `dataOriginPackageName` TEXT NOT NULL, `dataOriginDisplayName` TEXT, `sourceLastModifiedAtMillis` INTEGER NOT NULL, `clientRecordId` TEXT, `clientRecordVersion` INTEGER NOT NULL, `recordingMethod` INTEGER NOT NULL, `deviceType` INTEGER, `deviceManufacturer` TEXT, `deviceModel` TEXT, `payloadHash` TEXT NOT NULL, `startTimeMillis` INTEGER, `endTimeMillis` INTEGER, `measurementTimeMillis` INTEGER, `effectiveTimeMillis` INTEGER NOT NULL, `startZoneOffsetSeconds` INTEGER, `endZoneOffsetSeconds` INTEGER, `measurementZoneOffsetSeconds` INTEGER, `sessionDurationMillis` INTEGER, `knownSleepDurationMillis` INTEGER, `awakeDurationMillis` INTEGER, `lightDurationMillis` INTEGER, `deepDurationMillis` INTEGER, `remDurationMillis` INTEGER, `unspecifiedSleepDurationMillis` INTEGER, `unknownStageDurationMillis` INTEGER, `uncoveredStageDurationMillis` INTEGER, `stageCoverage` REAL, `sleepEfficiency` REAL, `stageTimelineStatusCode` TEXT, `metricValue` REAL, `metricUnitCode` TEXT, `firstSeenAtMillis` INTEGER NOT NULL, `lastSeenAtMillis` INTEGER NOT NULL, `supersededAtMillis` INTEGER, `deletedAtMillis` INTEGER, PRIMARY KEY(`revisionId`), FOREIGN KEY(`subjectId`) REFERENCES `recovery_research_consent`(`subjectId`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "revisionId",
+            "columnName": "revisionId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "subjectId",
+            "columnName": "subjectId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "contractVersion",
+            "columnName": "contractVersion",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "schemaVersion",
+            "columnName": "schemaVersion",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recordTypeCode",
+            "columnName": "recordTypeCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "healthConnectRecordId",
+            "columnName": "healthConnectRecordId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lifecycleEpoch",
+            "columnName": "lifecycleEpoch",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dataOriginPackageName",
+            "columnName": "dataOriginPackageName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dataOriginDisplayName",
+            "columnName": "dataOriginDisplayName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "sourceLastModifiedAtMillis",
+            "columnName": "sourceLastModifiedAtMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "clientRecordId",
+            "columnName": "clientRecordId",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "clientRecordVersion",
+            "columnName": "clientRecordVersion",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recordingMethod",
+            "columnName": "recordingMethod",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "deviceType",
+            "columnName": "deviceType",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "deviceManufacturer",
+            "columnName": "deviceManufacturer",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "deviceModel",
+            "columnName": "deviceModel",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "payloadHash",
+            "columnName": "payloadHash",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "startTimeMillis",
+            "columnName": "startTimeMillis",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "endTimeMillis",
+            "columnName": "endTimeMillis",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "measurementTimeMillis",
+            "columnName": "measurementTimeMillis",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "effectiveTimeMillis",
+            "columnName": "effectiveTimeMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "startZoneOffsetSeconds",
+            "columnName": "startZoneOffsetSeconds",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "endZoneOffsetSeconds",
+            "columnName": "endZoneOffsetSeconds",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "measurementZoneOffsetSeconds",
+            "columnName": "measurementZoneOffsetSeconds",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "sessionDurationMillis",
+            "columnName": "sessionDurationMillis",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "knownSleepDurationMillis",
+            "columnName": "knownSleepDurationMillis",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "awakeDurationMillis",
+            "columnName": "awakeDurationMillis",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "lightDurationMillis",
+            "columnName": "lightDurationMillis",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "deepDurationMillis",
+            "columnName": "deepDurationMillis",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "remDurationMillis",
+            "columnName": "remDurationMillis",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "unspecifiedSleepDurationMillis",
+            "columnName": "unspecifiedSleepDurationMillis",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "unknownStageDurationMillis",
+            "columnName": "unknownStageDurationMillis",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "uncoveredStageDurationMillis",
+            "columnName": "uncoveredStageDurationMillis",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "stageCoverage",
+            "columnName": "stageCoverage",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "sleepEfficiency",
+            "columnName": "sleepEfficiency",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "stageTimelineStatusCode",
+            "columnName": "stageTimelineStatusCode",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "metricValue",
+            "columnName": "metricValue",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "metricUnitCode",
+            "columnName": "metricUnitCode",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "firstSeenAtMillis",
+            "columnName": "firstSeenAtMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastSeenAtMillis",
+            "columnName": "lastSeenAtMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "supersededAtMillis",
+            "columnName": "supersededAtMillis",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "deletedAtMillis",
+            "columnName": "deletedAtMillis",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "revisionId"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_wearable_shadow_record_revisions_subjectId",
+            "unique": false,
+            "columnNames": [
+              "subjectId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_wearable_shadow_record_revisions_subjectId` ON `${TABLE_NAME}` (`subjectId`)"
+          },
+          {
+            "name": "index_wearable_shadow_record_revisions_recordTypeCode",
+            "unique": false,
+            "columnNames": [
+              "recordTypeCode"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_wearable_shadow_record_revisions_recordTypeCode` ON `${TABLE_NAME}` (`recordTypeCode`)"
+          },
+          {
+            "name": "index_wearable_shadow_record_revisions_healthConnectRecordId",
+            "unique": false,
+            "columnNames": [
+              "healthConnectRecordId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_wearable_shadow_record_revisions_healthConnectRecordId` ON `${TABLE_NAME}` (`healthConnectRecordId`)"
+          },
+          {
+            "name": "index_wearable_shadow_record_revisions_recordTypeCode_healthConnectRecordId",
+            "unique": false,
+            "columnNames": [
+              "recordTypeCode",
+              "healthConnectRecordId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_wearable_shadow_record_revisions_recordTypeCode_healthConnectRecordId` ON `${TABLE_NAME}` (`recordTypeCode`, `healthConnectRecordId`)"
+          },
+          {
+            "name": "index_wearable_shadow_record_revisions_recordTypeCode_healthConnectRecordId_lifecycleEpoch",
+            "unique": true,
+            "columnNames": [
+              "recordTypeCode",
+              "healthConnectRecordId",
+              "lifecycleEpoch"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_wearable_shadow_record_revisions_recordTypeCode_healthConnectRecordId_lifecycleEpoch` ON `${TABLE_NAME}` (`recordTypeCode`, `healthConnectRecordId`, `lifecycleEpoch`)"
+          },
+          {
+            "name": "index_wearable_shadow_record_revisions_effectiveTimeMillis",
+            "unique": false,
+            "columnNames": [
+              "effectiveTimeMillis"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_wearable_shadow_record_revisions_effectiveTimeMillis` ON `${TABLE_NAME}` (`effectiveTimeMillis`)"
+          },
+          {
+            "name": "index_wearable_shadow_record_revisions_firstSeenAtMillis",
+            "unique": false,
+            "columnNames": [
+              "firstSeenAtMillis"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_wearable_shadow_record_revisions_firstSeenAtMillis` ON `${TABLE_NAME}` (`firstSeenAtMillis`)"
+          },
+          {
+            "name": "index_wearable_shadow_record_revisions_dataOriginPackageName",
+            "unique": false,
+            "columnNames": [
+              "dataOriginPackageName"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_wearable_shadow_record_revisions_dataOriginPackageName` ON `${TABLE_NAME}` (`dataOriginPackageName`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "recovery_research_consent",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "subjectId"
+            ],
+            "referencedColumns": [
+              "subjectId"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "wearable_shadow_sleep_stages",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`stageId` TEXT NOT NULL, `revisionId` TEXT NOT NULL, `ordinal` INTEGER NOT NULL, `stageTypeCode` TEXT NOT NULL, `sourceStartTimeMillis` INTEGER NOT NULL, `sourceEndTimeMillis` INTEGER NOT NULL, `normalizedStartTimeMillis` INTEGER, `normalizedEndTimeMillis` INTEGER, `durationMillis` INTEGER, `wasClipped` INTEGER NOT NULL, `isValid` INTEGER NOT NULL, PRIMARY KEY(`stageId`), FOREIGN KEY(`revisionId`) REFERENCES `wearable_shadow_record_revisions`(`revisionId`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "stageId",
+            "columnName": "stageId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "revisionId",
+            "columnName": "revisionId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ordinal",
+            "columnName": "ordinal",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "stageTypeCode",
+            "columnName": "stageTypeCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sourceStartTimeMillis",
+            "columnName": "sourceStartTimeMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sourceEndTimeMillis",
+            "columnName": "sourceEndTimeMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "normalizedStartTimeMillis",
+            "columnName": "normalizedStartTimeMillis",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "normalizedEndTimeMillis",
+            "columnName": "normalizedEndTimeMillis",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "durationMillis",
+            "columnName": "durationMillis",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "wasClipped",
+            "columnName": "wasClipped",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isValid",
+            "columnName": "isValid",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "stageId"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_wearable_shadow_sleep_stages_revisionId",
+            "unique": false,
+            "columnNames": [
+              "revisionId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_wearable_shadow_sleep_stages_revisionId` ON `${TABLE_NAME}` (`revisionId`)"
+          },
+          {
+            "name": "index_wearable_shadow_sleep_stages_stageTypeCode",
+            "unique": false,
+            "columnNames": [
+              "stageTypeCode"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_wearable_shadow_sleep_stages_stageTypeCode` ON `${TABLE_NAME}` (`stageTypeCode`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "wearable_shadow_record_revisions",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "revisionId"
+            ],
+            "referencedColumns": [
+              "revisionId"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "wearable_context_snapshots",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`snapshotId` TEXT NOT NULL, `predictionId` TEXT NOT NULL, `targetWorkoutAttemptId` TEXT NOT NULL, `contractVersion` TEXT NOT NULL, `schemaVersion` INTEGER NOT NULL, `cutoffAtMillis` INTEGER NOT NULL, `createdAtMillis` INTEGER NOT NULL, `statusCode` TEXT NOT NULL, `accessEventId` TEXT, `availabilityCode` TEXT NOT NULL, `grantedTypeMask` TEXT NOT NULL, `includedRecordCount` INTEGER NOT NULL, `includedSourceCount` INTEGER NOT NULL, `primarySleepRevisionId` TEXT, `recentHrvRevisionId` TEXT, `recentRestingHeartRateRevisionId` TEXT, `overlappingSleepAlternatives` INTEGER NOT NULL, `payloadHash` TEXT NOT NULL, PRIMARY KEY(`snapshotId`), FOREIGN KEY(`predictionId`) REFERENCES `recovery_research_predictions`(`predictionId`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "snapshotId",
+            "columnName": "snapshotId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "predictionId",
+            "columnName": "predictionId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "targetWorkoutAttemptId",
+            "columnName": "targetWorkoutAttemptId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "contractVersion",
+            "columnName": "contractVersion",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "schemaVersion",
+            "columnName": "schemaVersion",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cutoffAtMillis",
+            "columnName": "cutoffAtMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAtMillis",
+            "columnName": "createdAtMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "statusCode",
+            "columnName": "statusCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "accessEventId",
+            "columnName": "accessEventId",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "availabilityCode",
+            "columnName": "availabilityCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "grantedTypeMask",
+            "columnName": "grantedTypeMask",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "includedRecordCount",
+            "columnName": "includedRecordCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "includedSourceCount",
+            "columnName": "includedSourceCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "primarySleepRevisionId",
+            "columnName": "primarySleepRevisionId",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "recentHrvRevisionId",
+            "columnName": "recentHrvRevisionId",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "recentRestingHeartRateRevisionId",
+            "columnName": "recentRestingHeartRateRevisionId",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "overlappingSleepAlternatives",
+            "columnName": "overlappingSleepAlternatives",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "payloadHash",
+            "columnName": "payloadHash",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "snapshotId"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_wearable_context_snapshots_predictionId",
+            "unique": true,
+            "columnNames": [
+              "predictionId"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_wearable_context_snapshots_predictionId` ON `${TABLE_NAME}` (`predictionId`)"
+          },
+          {
+            "name": "index_wearable_context_snapshots_targetWorkoutAttemptId",
+            "unique": true,
+            "columnNames": [
+              "targetWorkoutAttemptId"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_wearable_context_snapshots_targetWorkoutAttemptId` ON `${TABLE_NAME}` (`targetWorkoutAttemptId`)"
+          },
+          {
+            "name": "index_wearable_context_snapshots_cutoffAtMillis",
+            "unique": false,
+            "columnNames": [
+              "cutoffAtMillis"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_wearable_context_snapshots_cutoffAtMillis` ON `${TABLE_NAME}` (`cutoffAtMillis`)"
+          },
+          {
+            "name": "index_wearable_context_snapshots_accessEventId",
+            "unique": false,
+            "columnNames": [
+              "accessEventId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_wearable_context_snapshots_accessEventId` ON `${TABLE_NAME}` (`accessEventId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "recovery_research_predictions",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "predictionId"
+            ],
+            "referencedColumns": [
+              "predictionId"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "wearable_context_snapshot_items",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`snapshotItemId` TEXT NOT NULL, `snapshotId` TEXT NOT NULL, `revisionId` TEXT NOT NULL, `roleCode` TEXT NOT NULL, `selectedForSummary` INTEGER NOT NULL, PRIMARY KEY(`snapshotItemId`), FOREIGN KEY(`revisionId`) REFERENCES `wearable_shadow_record_revisions`(`revisionId`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "snapshotItemId",
+            "columnName": "snapshotItemId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "snapshotId",
+            "columnName": "snapshotId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "revisionId",
+            "columnName": "revisionId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "roleCode",
+            "columnName": "roleCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "selectedForSummary",
+            "columnName": "selectedForSummary",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "snapshotItemId"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_wearable_context_snapshot_items_snapshotId",
+            "unique": false,
+            "columnNames": [
+              "snapshotId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_wearable_context_snapshot_items_snapshotId` ON `${TABLE_NAME}` (`snapshotId`)"
+          },
+          {
+            "name": "index_wearable_context_snapshot_items_revisionId",
+            "unique": false,
+            "columnNames": [
+              "revisionId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_wearable_context_snapshot_items_revisionId` ON `${TABLE_NAME}` (`revisionId`)"
+          },
+          {
+            "name": "index_wearable_context_snapshot_items_roleCode",
+            "unique": false,
+            "columnNames": [
+              "roleCode"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_wearable_context_snapshot_items_roleCode` ON `${TABLE_NAME}` (`roleCode`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "wearable_shadow_record_revisions",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "revisionId"
+            ],
+            "referencedColumns": [
+              "revisionId"
+            ]
+          }
+        ]
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '881e2f1165035925aefc8f7663f7d58d')"
+    ]
+  }
+}

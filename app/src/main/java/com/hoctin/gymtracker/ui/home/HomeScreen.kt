@@ -1,7 +1,11 @@
 package com.hoctin.gymtracker.ui.home
 
 import androidx.annotation.DrawableRes
-import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.animation.Crossfade
+import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.core.FastOutSlowInEasing
+import androidx.compose.animation.core.animateDpAsState
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -15,20 +19,17 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.outlined.TrendingUp
-import androidx.compose.material.icons.filled.PlayArrow
-import androidx.compose.material.icons.outlined.CalendarMonth
 import androidx.compose.material.icons.outlined.ChevronRight
 import androidx.compose.material.icons.outlined.FitnessCenter
-import androidx.compose.material.icons.outlined.LocalFireDepartment
 import androidx.compose.material.icons.outlined.SkipNext
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -36,6 +37,13 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.derivedStateOf
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateMapOf
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -43,40 +51,79 @@ import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.layout.onGloballyPositioned
+import androidx.compose.ui.layout.positionInParent
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.hoctin.gymtracker.R
 import com.hoctin.gymtracker.data.WorkoutDayWithExercises
-import com.hoctin.gymtracker.domain.ProgressiveOverloadEngine
+import com.hoctin.gymtracker.ui.BottomNavSpace
 import com.hoctin.gymtracker.ui.components.GymBadge
-import com.hoctin.gymtracker.ui.components.IconThumbnail
-import com.hoctin.gymtracker.ui.components.SectionLabel
-import com.hoctin.gymtracker.ui.components.StatCard
-import com.hoctin.gymtracker.ui.prCount
-import com.hoctin.gymtracker.ui.theme.PurpleBright
-import com.hoctin.gymtracker.ui.theme.PurpleDeep
-import com.hoctin.gymtracker.ui.theme.PurplePrimary
-import com.hoctin.gymtracker.ui.toShortDate
-import com.hoctin.gymtracker.ui.totalVolume
+import com.hoctin.gymtracker.ui.components.gymContainerBorder
+import com.hoctin.gymtracker.ui.theme.auronAccentBright
+import com.hoctin.gymtracker.ui.theme.auronAccentDeep
+import com.hoctin.gymtracker.ui.theme.auronCardElevation
+import com.hoctin.gymtracker.ui.theme.auronGlassSurface
+import com.hoctin.gymtracker.ui.theme.auronGlassSurfaceVariant
+import com.hoctin.gymtracker.ui.theme.auronScreenBackground
+import com.hoctin.gymtracker.ui.theme.auronScreenTopPadding
+import com.hoctin.gymtracker.ui.theme.isAuronDarkTheme
+import com.hoctin.gymtracker.ui.workoutDayLabel
 
-@OptIn(ExperimentalFoundationApi::class)
+private const val MuscleRecoveryItemKey = "home_muscle_recovery"
+
 @Composable
 fun HomeScreen(
     viewModel: HomeViewModel,
-    onStartWorkout: (Long) -> Unit,
-    onOpenExercise: (Long) -> Unit,
+    onViewDetail: (Long) -> Unit,
+    onViewConsistency: () -> Unit,
 ) {
     val state = viewModel.uiState.collectAsStateWithLifecycle().value
+    val boost = viewModel.dailyBoost.collectAsStateWithLifecycle().value
+    val recoveryState = viewModel.muscleRecovery.collectAsStateWithLifecycle().value
+    val healthContext = viewModel.healthContext.collectAsStateWithLifecycle().value
+    // LOG-V4B: the "How it works" sheet and the exercise chooser sheet are gone. Start and Random
+    // both go straight to the shared timer, so one flag is all the card needs.
+    var showBoostTimer by remember { mutableStateOf(false) }
+    var playStreakCelebration by remember { mutableStateOf(false) }
+    val listState = rememberLazyListState()
+    val recoveryCardVisible by remember {
+        derivedStateOf {
+            val layoutInfo = listState.layoutInfo
+            layoutInfo.visibleItemsInfo.any { item ->
+                item.key == MuscleRecoveryItemKey &&
+                    item.offset < layoutInfo.viewportEndOffset &&
+                    item.offset + item.size > layoutInfo.viewportStartOffset
+            }
+        }
+    }
+    LaunchedEffect(
+        state.consistency.ready,
+        state.consistency.todayEpochDay,
+        state.consistency.isTodayActive,
+    ) {
+        if (state.consistency.ready && viewModel.consumeStreakCelebration()) {
+            playStreakCelebration = true
+        }
+    }
 
     LazyColumn(
+        state = listState,
         modifier = Modifier
             .fillMaxSize()
-            .background(MaterialTheme.colorScheme.background),
-        contentPadding = PaddingValues(start = 20.dp, end = 20.dp, top = 16.dp, bottom = 28.dp),
+            .auronScreenBackground {
+                listState.firstVisibleItemIndex * 160f + listState.firstVisibleItemScrollOffset.toFloat()
+            },
+        contentPadding = PaddingValues(
+            start = 20.dp,
+            end = 20.dp,
+            top = auronScreenTopPadding(16.dp),
+            bottom = BottomNavSpace,
+        ),
         verticalArrangement = Arrangement.spacedBy(20.dp),
     ) {
         item { BrandHeader() }
@@ -84,97 +131,57 @@ fun HomeScreen(
         item {
             HeroWorkoutCard(
                 day = state.todayPlan,
+                dayNumber = state.todayPlan?.let { tp ->
+                    state.availableDays.indexOfFirst { it.day.id == tp.day.id } + 1
+                } ?: 0,
                 context = state.context,
-                onQuickStart = { state.todayPlan?.let { onStartWorkout(it.day.id) } },
+                onViewDetail = { state.todayPlan?.let { onViewDetail(it.day.id) } },
             )
         }
 
-        if (state.availableDays.isNotEmpty()) {
-            item {
-                DayChipRow(
-                    days = state.availableDays,
-                    selectedId = state.todayPlan?.day?.id,
-                    onSelect = viewModel::selectDay,
-                    onSkip = viewModel::skipToNextWorkoutDay,
-                )
-            }
-        }
-
         item {
-            Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                SectionLabel("Your progress")
-                Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-                    StatCard(
-                        icon = Icons.Outlined.FitnessCenter,
-                        value = state.totalSessions.toString(),
-                        label = "Workouts",
-                        modifier = Modifier.weight(1f),
-                        accent = PurplePrimary,
-                    )
-                    StatCard(
-                        icon = Icons.Outlined.CalendarMonth,
-                        value = state.sessionsThisWeek.toString(),
-                        label = "Last 7 days",
-                        modifier = Modifier.weight(1f),
-                        accent = MaterialTheme.colorScheme.tertiary,
-                    )
-                    StatCard(
-                        icon = Icons.Outlined.LocalFireDepartment,
-                        value = state.currentStreak.toString(),
-                        label = "Day streak",
-                        modifier = Modifier.weight(1f),
-                        accent = MaterialTheme.colorScheme.secondary,
-                    )
-                }
-            }
+            HomeConsistencyModule(
+                state = state.consistency,
+                playFireCelebration = playStreakCelebration,
+                onViewMore = onViewConsistency,
+            )
         }
 
-        state.todayPlan?.let { today ->
-            item {
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically,
-                ) {
-                    Text(
-                        text = when (state.context) {
-                            WorkoutContext.TODAY -> "Today's workout"
-                            WorkoutContext.SELECTED -> "Selected workout"
-                            WorkoutContext.NEXT -> "Next workout"
-                        },
-                        style = MaterialTheme.typography.titleLarge,
-                        fontWeight = FontWeight.Bold,
-                    )
-                    Text(
-                        text = "${today.exercises.size} exercises",
-                        style = MaterialTheme.typography.labelMedium,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    )
-                }
-            }
-            items(today.exercises, key = { "exercise-${it.id}" }) { exercise ->
-                ExerciseRowCard(
-                    name = exercise.name,
-                    target = "${exercise.targetSets} sets · ${exercise.targetMinReps}-${exercise.targetMaxReps} reps",
-                    onClick = { onOpenExercise(exercise.id) },
-                    modifier = Modifier.animateItemPlacement(),
-                )
-            }
+        // MUSCLE-4: Muscle Recovery — which muscles still carry fatigue and which are ready today.
+        item(key = MuscleRecoveryItemKey) {
+            MuscleRecoverySection(
+                state = recoveryState,
+                animationVisibleTrigger = recoveryCardVisible,
+            )
         }
 
-        if (state.recentSessions.isNotEmpty()) {
-            item { SectionLabel("Recent sessions") }
-            items(state.recentSessions, key = { "session-${it.session.id}" }) { session ->
-                RecentSessionCard(
-                    title = session.session.dayNameSnapshot,
-                    subtitle = session.session.dateEpochDay.toShortDate(),
-                    sets = session.sets.size,
-                    volume = ProgressiveOverloadEngine.formatWeight(session.totalVolume()),
-                    prs = session.prCount(),
-                    modifier = Modifier.animateItemPlacement(),
-                )
-            }
+        item(key = "home_health_shadow_context") {
+            HealthRecoveryContextCard(
+                state = healthContext,
+                onRefresh = viewModel::refreshHealthContext,
+            )
         }
+
+        // Daily Boost: an optional ~2-minute rest-day habit below Recovery. It remains fully
+        // separate from the workout-only Weekly Progress Ring above.
+        item {
+            DailyBoostCard(
+                exercise = boost.exercise,
+                completedToday = boost.completedToday,
+                onStart = { showBoostTimer = true },
+                // Random only swaps the selected win — it must NOT open the timer. Start is the
+                // only action that begins the 2:00 countdown.
+                onRandom = viewModel::randomizeDailyBoostExercise,
+            )
+        }
+
+    }
+
+    if (showBoostTimer) {
+        DailyWinTimerSheet(
+            onCompleted = viewModel::markDailyBoostCompleted,
+            onDismiss = { showBoostTimer = false },
+        )
     }
 }
 
@@ -185,7 +192,7 @@ private fun BrandHeader() {
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Text(
-            text = "GYMATE",
+            text = "AURON",
             style = MaterialTheme.typography.titleLarge,
             fontWeight = FontWeight.Black,
             letterSpacing = 6.sp,
@@ -202,16 +209,24 @@ private fun BrandHeader() {
 @Composable
 private fun HeroWorkoutCard(
     day: WorkoutDayWithExercises?,
+    dayNumber: Int,
     context: WorkoutContext,
-    onQuickStart: () -> Unit,
+    onViewDetail: () -> Unit,
 ) {
     val totalSets = day?.exercises?.sumOf { it.targetSets } ?: 0
     val heroRes = heroResForDay(day?.day?.name)
     val heroShape = MaterialTheme.shapes.extraLarge
+    val darkTheme = isAuronDarkTheme()
+    val heroMid = if (darkTheme) Color(0xFF3A2A66) else Color(0xFF1E5ACF)
+    val heroEnd = if (darkTheme) Color(0xFF120D22) else Color(0xFF0B1F4A)
+    val heroScrim = if (darkTheme) Color(0xFF160F2B) else Color(0xFF071A3C)
     Card(
         shape = heroShape,
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
-        modifier = Modifier.fillMaxWidth(),
+        border = gymContainerBorder(alpha = 0.09f),
+        modifier = Modifier
+            .fillMaxWidth()
+            .auronCardElevation(28.dp),
     ) {
         Box(
             modifier = Modifier
@@ -220,9 +235,9 @@ private fun HeroWorkoutCard(
                 .background(
                     Brush.linearGradient(
                         colors = listOf(
-                            PurpleDeep,
-                            Color(0xFF3A2A66),
-                            Color(0xFF120D22),
+                            auronAccentDeep(),
+                            heroMid,
+                            heroEnd,
                         ),
                     ),
                 ),
@@ -244,8 +259,8 @@ private fun HeroWorkoutCard(
                     .matchParentSize()
                     .background(
                         Brush.horizontalGradient(
-                            0f to Color(0xFF160F2B).copy(alpha = 0.72f),
-                            0.5f to Color(0xFF160F2B).copy(alpha = 0.18f),
+                            0f to heroScrim.copy(alpha = 0.72f),
+                            0.5f to heroScrim.copy(alpha = 0.18f),
                             1f to Color.Transparent,
                         ),
                     ),
@@ -256,22 +271,33 @@ private fun HeroWorkoutCard(
                     .padding(20.dp),
                 verticalArrangement = Arrangement.spacedBy(14.dp),
             ) {
-                Text(
-                    text = when (context) {
-                        WorkoutContext.TODAY -> "TODAY'S WORKOUT"
-                        WorkoutContext.SELECTED -> "SELECTED WORKOUT"
-                        WorkoutContext.NEXT -> "NEXT WORKOUT"
-                    },
-                    style = MaterialTheme.typography.labelMedium,
-                    color = PurpleBright,
-                    letterSpacing = 1.5.sp,
-                )
-                Text(
-                    text = day?.day?.name ?: "Plan not ready",
-                    style = MaterialTheme.typography.displaySmall,
-                    fontWeight = FontWeight.Bold,
-                    color = Color.White,
-                )
+                // Subtle cross-fade on just the hero label + title when the selected workout changes
+                // (small text elements only — no whole-screen transition).
+                val contextLabel = when (context) {
+                    WorkoutContext.TODAY -> "TODAY'S WORKOUT"
+                    WorkoutContext.SELECTED -> "SELECTED WORKOUT"
+                    WorkoutContext.NEXT -> "NEXT WORKOUT"
+                }
+                Crossfade(targetState = contextLabel, animationSpec = tween(200), label = "heroContext") { label ->
+                    Text(
+                        text = label,
+                        style = MaterialTheme.typography.labelMedium,
+                        color = auronAccentBright(),
+                        letterSpacing = 1.5.sp,
+                    )
+                }
+                Crossfade(
+                    targetState = if (day != null) workoutDayLabel(dayNumber, day.day.name) else "Plan not ready",
+                    animationSpec = tween(220),
+                    label = "heroTitle",
+                ) { title ->
+                    Text(
+                        text = title,
+                        style = MaterialTheme.typography.displaySmall,
+                        fontWeight = FontWeight.Black,
+                        color = Color.White,
+                    )
+                }
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                     GymBadge(
                         text = "${day?.exercises?.size ?: 0} exercises",
@@ -286,7 +312,7 @@ private fun HeroWorkoutCard(
                     )
                 }
                 Spacer(Modifier.height(2.dp))
-                QuickStartButton(enabled = day != null, onClick = onQuickStart)
+                ViewDetailButton(enabled = day != null, onClick = onViewDetail)
             }
         }
     }
@@ -310,7 +336,7 @@ private fun heroResForDay(name: String?): Int {
 }
 
 @Composable
-private fun QuickStartButton(enabled: Boolean, onClick: () -> Unit) {
+private fun ViewDetailButton(enabled: Boolean, onClick: () -> Unit) {
     val container = if (enabled) Color.White else Color.White.copy(alpha = 0.4f)
     Row(
         modifier = Modifier
@@ -322,21 +348,24 @@ private fun QuickStartButton(enabled: Boolean, onClick: () -> Unit) {
         horizontalArrangement = Arrangement.Center,
         verticalAlignment = Alignment.CenterVertically,
     ) {
-        Icon(
-            imageVector = Icons.Filled.PlayArrow,
-            contentDescription = null,
-            tint = PurpleDeep,
-            modifier = Modifier.size(22.dp),
-        )
-        Spacer(Modifier.width(8.dp))
         Text(
-            text = "Quick Start",
+            text = "View Detail",
             style = MaterialTheme.typography.labelLarge,
             fontWeight = FontWeight.Bold,
-            color = PurpleDeep,
+            color = auronAccentDeep(),
+        )
+        Spacer(Modifier.width(6.dp))
+        Icon(
+            imageVector = Icons.Outlined.ChevronRight,
+            contentDescription = null,
+            tint = auronAccentDeep(),
+            modifier = Modifier.size(20.dp),
         )
     }
 }
+
+/** Measured geometry of one day chip in the chip-row coordinate space (px). Drives the sliding pill. */
+private data class ChipBounds(val x: Float, val width: Float, val height: Float)
 
 @Composable
 private fun DayChipRow(
@@ -345,6 +374,25 @@ private fun DayChipRow(
     onSelect: (Long) -> Unit,
     onSkip: () -> Unit,
 ) {
+    val density = LocalDensity.current
+    // A single primary "pill" slides behind the selected chip. We measure each chip's position/size
+    // (stable after first layout, even inside horizontalScroll) and animate the pill's x/width to the
+    // selected chip. Works for any number of workout days from the DB, not a fixed four.
+    val chipBounds = remember { mutableStateMapOf<Long, ChipBounds>() }
+    val selectedBounds = selectedId?.let { chipBounds[it] }
+
+    val pillX by animateDpAsState(
+        targetValue = with(density) { (selectedBounds?.x ?: 0f).toDp() },
+        animationSpec = tween(durationMillis = 260, easing = FastOutSlowInEasing),
+        label = "dayPillX",
+    )
+    val pillWidth by animateDpAsState(
+        targetValue = with(density) { (selectedBounds?.width ?: 0f).toDp() },
+        animationSpec = tween(durationMillis = 260, easing = FastOutSlowInEasing),
+        label = "dayPillWidth",
+    )
+    val pillHeight = with(density) { (selectedBounds?.height ?: 0f).toDp() }
+
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -352,19 +400,35 @@ private fun DayChipRow(
         horizontalArrangement = Arrangement.spacedBy(10.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
-        days.forEach { day ->
-            DayChip(
-                label = day.day.name,
-                selected = day.day.id == selectedId,
-                onClick = { onSelect(day.day.id) },
-            )
+        Box {
+            // Sliding indicator, drawn behind the chips. Hidden until the selected chip is measured.
+            if (selectedBounds != null && pillWidth > 0.dp) {
+                Box(
+                    modifier = Modifier
+                        .offset(x = pillX)
+                        .width(pillWidth)
+                        .height(pillHeight)
+                        .clip(RoundedCornerShape(50))
+                        .background(MaterialTheme.colorScheme.primary),
+                )
+            }
+            Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                days.forEach { day ->
+                    DayChip(
+                        label = day.day.name,
+                        selected = day.day.id == selectedId,
+                        onClick = { onSelect(day.day.id) },
+                        onMeasured = { x, w, h -> chipBounds[day.day.id] = ChipBounds(x, w, h) },
+                    )
+                }
+            }
         }
         // Skip / next workout day control.
         Box(
             modifier = Modifier
                 .size(40.dp)
                 .clip(RoundedCornerShape(50))
-                .background(MaterialTheme.colorScheme.surfaceVariant)
+                .background(auronGlassSurfaceVariant())
                 .clickable(onClick = onSkip),
             contentAlignment = Alignment.Center,
         ) {
@@ -383,11 +447,26 @@ private fun DayChip(
     label: String,
     selected: Boolean,
     onClick: () -> Unit,
+    onMeasured: (x: Float, width: Float, height: Float) -> Unit,
 ) {
-    val container = if (selected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.surface
-    val content = if (selected) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onSurfaceVariant
+    // Selected chip's own background fades to transparent so the sliding primary pill shows through;
+    // unselected chips keep their resting surface container. Text colour cross-fades.
+    val container by animateColorAsState(
+        targetValue = if (selected) Color.Transparent else auronGlassSurface(),
+        animationSpec = tween(220),
+        label = "dayChipContainer",
+    )
+    val content by animateColorAsState(
+        targetValue = if (selected) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onSurfaceVariant,
+        animationSpec = tween(220),
+        label = "dayChipContent",
+    )
     Box(
         modifier = Modifier
+            .onGloballyPositioned {
+                val pos = it.positionInParent()
+                onMeasured(pos.x, it.size.width.toFloat(), it.size.height.toFloat())
+            }
             .clip(RoundedCornerShape(50))
             .background(container)
             .clickable(onClick = onClick)
@@ -400,104 +479,5 @@ private fun DayChip(
             fontWeight = FontWeight.SemiBold,
             color = content,
         )
-    }
-}
-
-@Composable
-private fun ExerciseRowCard(
-    name: String,
-    target: String,
-    onClick: () -> Unit,
-    modifier: Modifier = Modifier,
-) {
-    Card(
-        onClick = onClick,
-        shape = MaterialTheme.shapes.large,
-        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
-        modifier = modifier.fillMaxWidth(),
-    ) {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(14.dp),
-            horizontalArrangement = Arrangement.spacedBy(14.dp),
-            verticalAlignment = Alignment.CenterVertically,
-        ) {
-            IconThumbnail(icon = Icons.Outlined.FitnessCenter)
-            Column(
-                modifier = Modifier.weight(1f),
-                verticalArrangement = Arrangement.spacedBy(4.dp),
-            ) {
-                Text(
-                    text = name,
-                    style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.SemiBold,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                )
-                Text(
-                    text = target,
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                )
-            }
-            Icon(
-                imageVector = Icons.Outlined.ChevronRight,
-                contentDescription = null,
-                tint = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
-        }
-    }
-}
-
-@Composable
-private fun RecentSessionCard(
-    title: String,
-    subtitle: String,
-    sets: Int,
-    volume: String,
-    prs: Int,
-    modifier: Modifier = Modifier,
-) {
-    Card(
-        shape = MaterialTheme.shapes.large,
-        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
-        modifier = modifier.fillMaxWidth(),
-    ) {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(14.dp),
-            horizontalArrangement = Arrangement.spacedBy(14.dp),
-            verticalAlignment = Alignment.CenterVertically,
-        ) {
-            IconThumbnail(
-                icon = Icons.AutoMirrored.Outlined.TrendingUp,
-                tint = MaterialTheme.colorScheme.tertiary,
-                container = MaterialTheme.colorScheme.tertiary.copy(alpha = 0.14f),
-            )
-            Column(
-                modifier = Modifier.weight(1f),
-                verticalArrangement = Arrangement.spacedBy(4.dp),
-            ) {
-                Text(
-                    text = title,
-                    style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.SemiBold,
-                )
-                Text(
-                    text = "$subtitle · $sets sets · ${volume}kg",
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                )
-            }
-            if (prs > 0) {
-                GymBadge(
-                    text = "$prs PR",
-                    container = MaterialTheme.colorScheme.secondaryContainer,
-                    content = MaterialTheme.colorScheme.onSecondaryContainer,
-                )
-            }
-        }
     }
 }

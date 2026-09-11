@@ -17,6 +17,13 @@ class PlanViewModel(
     val plan: StateFlow<List<WorkoutDayWithExercises>> = repository.observePlan()
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), emptyList())
 
+    /**
+     * Heaviest logged load per plan exercise id, rendered as a "Max Weight" subtitle under each
+     * exercise row. Stays empty until the user logs their first weighted set.
+     */
+    val maxWeightByExerciseId: StateFlow<Map<Long, Double>> = repository.observeMaxWeightByExerciseId()
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), emptyMap())
+
     init {
         viewModelScope.launch {
             repository.ensureSeedData()
@@ -53,5 +60,10 @@ class PlanViewModel(
 
     fun deleteExercise(exercise: ExerciseEntity) {
         viewModelScope.launch { repository.deleteExercise(exercise) }
+    }
+
+    /** Persist the user's drag-reordered exercises for a day. */
+    fun reorderExercises(orderedExercises: List<ExerciseEntity>) {
+        viewModelScope.launch { repository.reorderExercises(orderedExercises) }
     }
 }

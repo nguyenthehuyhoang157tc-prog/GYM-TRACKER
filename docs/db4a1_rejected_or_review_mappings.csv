@@ -1,0 +1,93 @@
+old_name,old_slug,proposed_fed_name,proposed_fed_slug,reason_rejected,classification,notes
+Barbell Flat Bench Press,barbell-flat-bench-press,Barbell Guillotine Bench Press,barbell-guillotine-bench-press,"variant differs: flat,guillotine",REVIEW_REQUIRED,"flat,guillotine"
+Dumbbell Flat Bench Press,dumbbell-flat-bench-press,Dumbbell Bench Press,dumbbell-bench-press,variant differs: flat,REVIEW_REQUIRED,flat
+Dumbbell Incline Bench Press,dumbbell-incline-bench-press,Dumbbell Bench Press,dumbbell-bench-press,variant differs: incline,REVIEW_REQUIRED,incline
+Flat Dumbbell Fly,flat-dumbbell-fly,Dumbbell Flyes,dumbbell-flyes,variant differs: flat,REVIEW_REQUIRED,flat
+Low to High Cable Fly,low-to-high-cable-fly,High Cable Curls,high-cable-curls,no safe FED equivalent (weak match),KEEP_CUSTOM,
+High to Low Cable Fly,high-to-low-cable-fly,High Cable Curls,high-cable-curls,no safe FED equivalent (weak match),KEEP_CUSTOM,
+Pec Deck Machine Fly,pec-deck-machine-fly,Reverse Machine Flyes,reverse-machine-flyes,variant differs: reverse,REVIEW_REQUIRED,reverse
+Seated Machine Chest Press,seated-machine-chest-press,Cable Chest Press,cable-chest-press,variant differs: seated,REVIEW_REQUIRED,seated
+Incline Machine Chest Press,incline-machine-chest-press,Incline Cable Chest Press,incline-cable-chest-press,equip differs CABLE vs MACHINE,REVIEW_REQUIRED,
+Chest Dip,chest-dip,Bench Dips,bench-dips,no safe FED equivalent (weak match),KEEP_CUSTOM,chest
+Smith Machine Incline Press,smith-machine-incline-press,Smith Machine Incline Bench Press,smith-machine-incline-bench-press,generic-ization or weak match,REVIEW_REQUIRED,
+Dumbbell Pullover,dumbbell-pullover,Bent-Arm Dumbbell Pullover,bent-arm-dumbbell-pullover,"variant differs: arm,bent",REVIEW_REQUIRED,"arm,bent"
+Barbell Floor Press,barbell-floor-press,Alternating Floor Press,alternating-floor-press,variant differs: alternating,REVIEW_REQUIRED,alternating
+Dumbbell Floor Press,dumbbell-floor-press,Alternating Floor Press,alternating-floor-press,variant differs: alternating,REVIEW_REQUIRED,alternating
+Wide-Grip Push-Up,wide-grip-push-up,Incline Push-Up Wide,incline-push-up-wide,variant differs: incline,REVIEW_REQUIRED,incline
+Decline Push-Up,decline-push-up,Pushups,pushups,variant differs: decline,REVIEW_REQUIRED,decline
+Wide-Grip Pull-Up,wide-grip-pull-up,Wide-Grip Rear Pull-Up,wide-grip-rear-pull-up,variant differs: rear,REVIEW_REQUIRED,rear
+Close-Grip Lat Pulldown,close-grip-lat-pulldown,Close-Grip Front Lat Pulldown,close-grip-front-lat-pulldown,variant differs: front,REVIEW_REQUIRED,front
+T-Bar Row,t-bar-row,Lying T-Bar Row,lying-t-bar-row,variant differs: lying,REVIEW_REQUIRED,lying
+Inverted Row,inverted-row,Shotgun Row,shotgun-row,no safe FED equivalent (weak match),KEEP_CUSTOM,
+Chest-Supported Dumbbell Row,chest-supported-dumbbell-row,Dumbbell Incline Row,dumbbell-incline-row,"variant differs: chest,incline,supported",REVIEW_REQUIRED,"chest,incline,supported"
+Barbell Rack Pull,barbell-rack-pull,Barbell Curl,barbell-curl,no safe FED equivalent (weak match),KEEP_CUSTOM,rack
+Back Extension,back-extension,Leg Extensions,leg-extensions,no safe FED equivalent (weak match),KEEP_CUSTOM,
+Dumbbell Rear Delt Fly,dumbbell-rear-delt-fly,Cable Rear Delt Fly,cable-rear-delt-fly,equip differs CABLE vs DUMBBELL,REVIEW_REQUIRED,
+Meadows Row,meadows-row,Shotgun Row,shotgun-row,no safe FED equivalent (weak match),KEEP_CUSTOM,meadows
+Dumbbell Renegade Row,dumbbell-renegade-row,Alternating Renegade Row,alternating-renegade-row,variant differs: alternating,REVIEW_REQUIRED,alternating
+Plate-Loaded Lat Pulldown Machine,plate-loaded-lat-pulldown-machine,One Arm Lat Pulldown,one-arm-lat-pulldown,no safe FED equivalent (weak match),KEEP_CUSTOM,arm
+Plate-Loaded Seated Row Machine,plate-loaded-seated-row-machine,Seated Cable Rows,seated-cable-rows,no safe FED equivalent (weak match),KEEP_CUSTOM,
+Superman,superman,3/4 Sit-Up,3-4-sit-up,no safe FED equivalent (weak match),KEEP_CUSTOM,
+Barbell Good Morning,barbell-good-morning,Stiff Leg Barbell Good Morning,stiff-leg-barbell-good-morning,generic-ization or weak match,REVIEW_REQUIRED,
+Dumbbell Kelso Shrug,dumbbell-kelso-shrug,Dumbbell Shrug,dumbbell-shrug,variant differs: kelso,REVIEW_REQUIRED,kelso
+EZ-Bar Preacher Curl,ez-bar-preacher-curl,EZ-Bar Curl,ez-bar-curl,variant differs: preacher,REVIEW_REQUIRED,preacher
+Dumbbell Hammer Curl,dumbbell-hammer-curl,Preacher Hammer Dumbbell Curl,preacher-hammer-dumbbell-curl,variant differs: preacher,REVIEW_REQUIRED,preacher
+Cable Bicep Curl,cable-bicep-curl,Cable Preacher Curl,cable-preacher-curl,variant differs: preacher,REVIEW_REQUIRED,preacher
+High Pulley Cable Curl,high-pulley-cable-curl,High Cable Curls,high-cable-curls,variant differs: pulley,REVIEW_REQUIRED,pulley
+Spider Curl,spider-curl,Spider Curl,spider-curl,equip differs EZ_BAR vs DUMBBELL,REVIEW_REQUIRED,
+Cable Rope Hammer Curl,cable-rope-hammer-curl,Cable Hammer Curls - Rope Attachment,cable-hammer-curls-rope-attachment,generic-ization or weak match,REVIEW_REQUIRED,
+Lying Triceps Extension (Skullcrusher),lying-triceps-extension,Cable Lying Triceps Extension,cable-lying-triceps-extension,equip differs CABLE vs EZ_BAR,REVIEW_REQUIRED,
+Overhead Dumbbell Triceps Extension,overhead-dumbbell-triceps-extension,Decline Dumbbell Triceps Extension,decline-dumbbell-triceps-extension,"variant differs: decline,overhead",REVIEW_REQUIRED,"decline,overhead"
+Triceps Kickback,triceps-kickback,Glute Kickback,glute-kickback,no safe FED equivalent (weak match),KEEP_CUSTOM,
+Parallel Bar Triceps Dip,parallel-bar-triceps-dip,Dips - Triceps Version,dips-triceps-version,generic-ization or weak match,REVIEW_REQUIRED,
+Cable Overhead Triceps Extension,cable-overhead-triceps-extension,Cable Rope Overhead Triceps Extension,cable-rope-overhead-triceps-extension,variant differs: rope,REVIEW_REQUIRED,rope
+Diamond Push-Up,diamond-push-up,Pushups,pushups,variant differs: diamond,REVIEW_REQUIRED,diamond
+Single-Arm Dumbbell Overhead Extension,single-arm-dumbbell-overhead-extension,Dumbbell One-Arm Triceps Extension,dumbbell-one-arm-triceps-extension,"variant differs: overhead,single",REVIEW_REQUIRED,"overhead,single"
+Cable Kickback,cable-kickback,One-Legged Cable Kickback,one-legged-cable-kickback,generic-ization or weak match,REVIEW_REQUIRED,
+Bulgarian Split Squat,bulgarian-split-squat,Barbell Side Split Squat,barbell-side-split-squat,variant differs: side,REVIEW_REQUIRED,side
+Dumbbell Goblet Squat,dumbbell-goblet-squat,Dumbbell Squat,dumbbell-squat,variant differs: goblet,REVIEW_REQUIRED,goblet
+Walking Lunge,walking-lunge,Barbell Walking Lunge,barbell-walking-lunge,equip differs BARBELL vs DUMBBELL,REVIEW_REQUIRED,
+Bodyweight Sissy Squat,bodyweight-sissy-squat,Bodyweight Squat,bodyweight-squat,variant differs: sissy,REVIEW_REQUIRED,sissy
+Pistol Squat,pistol-squat,Kettlebell Pistol Squat,kettlebell-pistol-squat,equip differs KETTLEBELL vs BODYWEIGHT,REVIEW_REQUIRED,
+Wall Sit,wall-sit,Sit-Up,sit-up,no safe FED equivalent (weak match),KEEP_CUSTOM,
+Cyclist Squat,cyclist-squat,Barbell Squat,barbell-squat,no safe FED equivalent (weak match),KEEP_CUSTOM,
+Sumo Deadlift,sumo-deadlift,Barbell Deadlift,barbell-deadlift,no safe FED equivalent (weak match),KEEP_CUSTOM,sumo
+Glute-Ham Raise,glute-ham-raise,Natural Glute Ham Raise,natural-glute-ham-raise,generic-ization or weak match,REVIEW_REQUIRED,
+Single-Leg Romanian Deadlift,single-leg-romanian-deadlift,Romanian Deadlift,romanian-deadlift,variant differs: single,REVIEW_REQUIRED,single
+Dumbbell Slider Leg Curl,dumbbell-slider-leg-curl,Ball Leg Curl,ball-leg-curl,variant differs: ball,REVIEW_REQUIRED,ball
+Deficit Deadlift,deficit-deadlift,Barbell Deadlift,barbell-deadlift,no safe FED equivalent (weak match),KEEP_CUSTOM,deficit
+Nordic Hamstring Curl,nordic-hamstring-curl,Barbell Curl,barbell-curl,no safe FED equivalent (weak match),KEEP_CUSTOM,
+Trap Bar Deadlift,trap-bar-deadlift,Barbell Deadlift,barbell-deadlift,no safe FED equivalent (weak match),KEEP_CUSTOM,trap
+Barbell Hip Thrust,barbell-hip-thrust,Barbell Curl,barbell-curl,no safe FED equivalent (weak match),KEEP_CUSTOM,
+Cable Glute Kickback,cable-glute-kickback,Glute Kickback,glute-kickback,equip differs BODYWEIGHT vs CABLE,REVIEW_REQUIRED,
+Frog Pump,frog-pump,Frog Sit-Ups,frog-sit-ups,no safe FED equivalent (weak match),KEEP_CUSTOM,
+Curtsy Lunge,curtsy-lunge,Barbell Lunge,barbell-lunge,no safe FED equivalent (weak match),KEEP_CUSTOM,
+Reverse Lunge,reverse-lunge,Barbell Lunge,barbell-lunge,no safe FED equivalent (weak match),KEEP_CUSTOM,reverse
+Cossack Squat,cossack-squat,Barbell Squat,barbell-squat,no safe FED equivalent (weak match),KEEP_CUSTOM,
+Donkey Calf Raise,donkey-calf-raise,Seated Calf Raise,seated-calf-raise,variant differs: seated,REVIEW_REQUIRED,seated
+Barbell Overhead Press (OHP),barbell-overhead-press,Barbell Shoulder Press,barbell-shoulder-press,variant differs: overhead,REVIEW_REQUIRED,overhead
+Seated Dumbbell Shoulder Press,seated-dumbbell-shoulder-press,Dumbbell Shoulder Press,dumbbell-shoulder-press,variant differs: seated,REVIEW_REQUIRED,seated
+Dumbbell Seated Lateral Raise,dumbbell-seated-lateral-raise,Cable Seated Lateral Raise,cable-seated-lateral-raise,equip differs CABLE vs DUMBBELL,REVIEW_REQUIRED,
+Cable Lateral Raise,cable-lateral-raise,Cable Seated Lateral Raise,cable-seated-lateral-raise,variant differs: seated,REVIEW_REQUIRED,seated
+Smith Machine Overhead Press,smith-machine-overhead-press,Smith Machine Overhead Shoulder Press,smith-machine-overhead-shoulder-press,generic-ization or weak match,REVIEW_REQUIRED,
+Dumbbell Incline Rear Delt Row,dumbbell-incline-rear-delt-row,Dumbbell Incline Row,dumbbell-incline-row,variant differs: rear,REVIEW_REQUIRED,rear
+Leaning Dumbbell Lateral Raise,leaning-dumbbell-lateral-raise,Dumbbell Lying Rear Lateral Raise,dumbbell-lying-rear-lateral-raise,"variant differs: lying,rear",REVIEW_REQUIRED,"lying,rear"
+Plate Front Raise,plate-front-raise,Front Cable Raise,front-cable-raise,equip differs CABLE vs OTHER,REVIEW_REQUIRED,
+Barbell Behind-the-Neck Press,barbell-behind-the-neck-press,Standing Barbell Press Behind Neck,standing-barbell-press-behind-neck,variant differs: standing,REVIEW_REQUIRED,standing
+Pike Push-Up,pike-push-up,Pushups,pushups,variant differs: pike,REVIEW_REQUIRED,pike
+Barbell Front Raise,barbell-front-raise,Front Barbell Squat,front-barbell-squat,generic-ization or weak match,REVIEW_REQUIRED,
+Dumbbell Cub Press,dumbbell-cub-press,Arnold Dumbbell Press,arnold-dumbbell-press,variant differs: arnold,REVIEW_REQUIRED,arnold
+Ab Wheel Rollout,ab-wheel-rollout,Barbell Ab Rollout,barbell-ab-rollout,equip differs BARBELL vs BODYWEIGHT,REVIEW_REQUIRED,
+Side Plank,side-plank,Plank,plank,variant differs: side,REVIEW_REQUIRED,side
+Russian Twist,russian-twist,Russian Twist,russian-twist,equip differs BODYWEIGHT vs DUMBBELL,REVIEW_REQUIRED,
+Bicycle Crunch,bicycle-crunch,Crunches,crunches,variant differs: bicycle,REVIEW_REQUIRED,bicycle
+Lying Reverse Crunch,lying-reverse-crunch,Reverse Crunch,reverse-crunch,variant differs: lying,REVIEW_REQUIRED,lying
+Deadbug,deadbug,3/4 Sit-Up,3-4-sit-up,no safe FED equivalent (weak match),KEEP_CUSTOM,
+Captain's Chair Leg Raise,captains-chair-leg-raise,Hanging Leg Raise,hanging-leg-raise,no safe FED equivalent (weak match),KEEP_CUSTOM,
+Cable Woodchopper,cable-woodchopper,Cable Crossover,cable-crossover,no safe FED equivalent (weak match),KEEP_CUSTOM,
+Bird Dog,bird-dog,3/4 Sit-Up,3-4-sit-up,no safe FED equivalent (weak match),KEEP_CUSTOM,
+L-Sit,l-sit,Sit-Up,sit-up,no safe FED equivalent (weak match),KEEP_CUSTOM,
+Mountain Climber,mountain-climber,3/4 Sit-Up,3-4-sit-up,no safe FED equivalent (weak match),KEEP_CUSTOM,
+Dragon Flag,dragon-flag,3/4 Sit-Up,3-4-sit-up,no safe FED equivalent (weak match),KEEP_CUSTOM,
+Hanging Knee Raise,hanging-knee-raise,Hanging Leg Raise,hanging-leg-raise,generic-ization or weak match,REVIEW_REQUIRED,
+Toe Touch Crunch,toe-touch-crunch,Crunches,crunches,no safe FED equivalent (weak match),KEEP_CUSTOM,

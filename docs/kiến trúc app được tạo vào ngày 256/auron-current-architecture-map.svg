@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980" role="img" aria-labelledby="title desc">
+  <title id="title">AURON App Current Architecture Map</title>
+  <desc id="desc">High-level architecture map for the current AURON local-first gym app, including current modules and future dashed modules.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#42515f"/>
+    </marker>
+    <style>
+      .bg { fill: #f6f8fb; }
+      .title { font: 700 30px Arial, sans-serif; fill: #14212b; }
+      .subtitle { font: 400 15px Arial, sans-serif; fill: #52616f; }
+      .box { fill: #f8fbff; stroke: #52616f; stroke-width: 1.4; rx: 14; }
+      .data { fill: #fff7e6; stroke: #b7791f; stroke-width: 1.4; rx: 14; }
+      .engine { fill: #f3e8ff; stroke: #7e22ce; stroke-width: 1.4; rx: 14; }
+      .store { fill: #ecfeff; stroke: #0e7490; stroke-width: 1.4; rx: 14; }
+      .future { fill: #ffffff; stroke: #7b8794; stroke-width: 1.4; stroke-dasharray: 8 6; rx: 14; }
+      .group { fill: #ffffff; stroke: #a7b0ba; stroke-width: 1.2; stroke-dasharray: 8 6; rx: 18; }
+      .label { font: 700 15px Arial, sans-serif; fill: #14212b; text-anchor: middle; }
+      .small { font: 400 12px Arial, sans-serif; fill: #52616f; text-anchor: middle; }
+      .edge { stroke: #42515f; stroke-width: 1.6; fill: none; marker-end: url(#arrow); }
+      .edgeFuture { stroke: #6b7280; stroke-width: 1.5; fill: none; stroke-dasharray: 7 6; marker-end: url(#arrow); }
+      .edgeText { font: 400 11px Arial, sans-serif; fill: #52616f; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1600" height="980"/>
+  <text class="title" x="40" y="48">AURON App Current Architecture Map</text>
+  <text class="subtitle" x="40" y="73">Current product modules, local storage, progression engine, and recommended future attachment points.</text>
+
+  <rect class="box" x="40" y="130" width="170" height="86"/>
+  <text class="label" x="125" y="163">User / Profile</text>
+  <text class="small" x="125" y="186">local profile state</text>
+
+  <rect class="box" x="40" y="280" width="170" height="86"/>
+  <text class="label" x="125" y="313">Onboarding</text>
+  <text class="small" x="125" y="336">training weekdays</text>
+
+  <rect class="box" x="40" y="430" width="170" height="86"/>
+  <text class="label" x="125" y="463">Settings / Profile</text>
+  <text class="small" x="125" y="486">theme, import/export</text>
+
+  <rect class="box" x="300" y="130" width="200" height="92"/>
+  <text class="label" x="400" y="164">Dashboard / Home</text>
+  <text class="small" x="400" y="188">hero, selector, progress</text>
+
+  <rect class="box" x="300" y="270" width="200" height="92"/>
+  <text class="label" x="400" y="304">Weekly Progress Hub</text>
+  <text class="small" x="400" y="328">ring + 6-week calendar</text>
+
+  <rect class="box" x="300" y="410" width="200" height="92"/>
+  <text class="label" x="400" y="444">Daily Boost</text>
+  <text class="small" x="400" y="468">2-minute rest-day habit</text>
+
+  <rect class="store" x="300" y="720" width="200" height="92"/>
+  <text class="label" x="400" y="754">SharedPreferences</text>
+  <text class="small" x="400" y="778">profile, drafts, theme, boost</text>
+
+  <rect class="box" x="580" y="90" width="210" height="80"/>
+  <text class="label" x="685" y="122">Training Plan</text>
+  <text class="small" x="685" y="146">editable split</text>
+
+  <rect class="box" x="580" y="220" width="210" height="86"/>
+  <text class="label" x="685" y="253">Planned Workout</text>
+  <text class="small" x="685" y="276">WorkoutDayEntity</text>
+
+  <rect class="box" x="580" y="350" width="210" height="86"/>
+  <text class="label" x="685" y="383">Workout Exercise</text>
+  <text class="small" x="685" y="406">ExerciseEntity snapshot</text>
+
+  <rect class="box" x="580" y="480" width="210" height="86"/>
+  <text class="label" x="685" y="513">Workout Log</text>
+  <text class="small" x="685" y="536">Log Workout</text>
+
+  <rect class="box" x="580" y="610" width="210" height="86"/>
+  <text class="label" x="685" y="643">History</text>
+  <text class="small" x="685" y="666">sessions + set tables</text>
+
+  <rect class="data" x="890" y="250" width="230" height="96"/>
+  <text class="label" x="1005" y="284">Exercise Catalog</text>
+  <text class="small" x="1005" y="308">568 reference exercises</text>
+
+  <rect class="engine" x="890" y="430" width="230" height="104"/>
+  <text class="label" x="1005" y="466">Progression Engine V3.7A</text>
+  <text class="small" x="1005" y="490">trend + readiness</text>
+  <text class="small" x="1005" y="508">catalog profile</text>
+
+  <rect class="store" x="890" y="660" width="230" height="96"/>
+  <text class="label" x="1005" y="694">Room Database v4</text>
+  <text class="small" x="1005" y="718">gym_tracker.db</text>
+
+  <rect class="group" x="1190" y="130" width="350" height="690"/>
+  <text class="label" x="1365" y="162">Future modules (dashed)</text>
+  <rect class="future" x="1250" y="200" width="230" height="70"/>
+  <text class="label" x="1365" y="230">Muscle Recovery heatmap</text>
+  <rect class="future" x="1250" y="310" width="230" height="70"/>
+  <text class="label" x="1365" y="340">AI Coach</text>
+  <rect class="future" x="1250" y="420" width="230" height="70"/>
+  <text class="label" x="1365" y="450">Firebase Sync</text>
+  <rect class="future" x="1250" y="530" width="230" height="70"/>
+  <text class="label" x="1365" y="560">Ads</text>
+  <rect class="future" x="1250" y="640" width="230" height="70"/>
+  <text class="label" x="1365" y="670">Better UX/UI polish</text>
+
+  <path class="edge" d="M210 173 L300 173"/>
+  <path class="edge" d="M125 216 L125 280"/>
+  <path class="edge" d="M125 366 L125 430"/>
+  <path class="edge" d="M500 176 L580 130"/>
+  <path class="edge" d="M400 222 L400 270"/>
+  <path class="edge" d="M400 362 L400 410"/>
+  <path class="edge" d="M685 170 L685 220"/>
+  <path class="edge" d="M685 306 L685 350"/>
+  <path class="edge" d="M685 436 L685 480"/>
+  <path class="edge" d="M685 566 L685 610"/>
+  <path class="edge" d="M790 393 L890 300"/>
+  <text class="edgeText" x="845" y="338">snapshot add</text>
+  <path class="edge" d="M790 520 L890 482"/>
+  <path class="edge" d="M790 653 L890 482"/>
+  <path class="edge" d="M1005 346 L1005 430"/>
+  <path class="edge" d="M1005 660 L1005 534"/>
+  <path class="edge" d="M1005 660 L790 653"/>
+  <path class="edge" d="M1005 660 L790 130"/>
+  <path class="edge" d="M1005 660 L890 298"/>
+  <path class="edge" d="M300 766 L210 473"/>
+  <path class="edge" d="M500 766 L580 523"/>
+  <path class="edge" d="M500 766 L300 456"/>
+  <path class="edgeFuture" d="M1120 708 L1250 235"/>
+  <path class="edgeFuture" d="M1120 482 L1250 345"/>
+  <path class="edgeFuture" d="M1120 708 L1250 455"/>
+  <path class="edgeFuture" d="M500 176 L1250 565"/>
+  <path class="edgeFuture" d="M500 176 L1250 675"/>
+</svg>

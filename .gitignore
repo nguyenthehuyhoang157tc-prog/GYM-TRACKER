@@ -1,9 +1,214 @@
+# =============================================================================
+# AURON — .gitignore (repo hygiene để đẩy lên GitHub)
+# -----------------------------------------------------------------------------
+# Phạm vi quét : toàn bộ workspace 6.3 GB / 87.017 file (không tính .git)
+# Mục tiêu     : đẩy lên GitHub CHỈ gồm source code + README + docs
+# Số liệu chi tiết và cách xử lý lịch sử git: docs/repo_github_hygiene.md
+# -----------------------------------------------------------------------------
+# QUY ƯỚC QUAN TRỌNG — KHÔNG ignore ảnh/JSON/XML một cách toàn cục:
+#   app/src/main/assets chứa 1.158 ảnh bài tập (jpg/webp) + catalog JSON +
+#   app/src/main/res/raw chứa 4 file Lottie JSON. Đây là tài nguyên runtime
+#   BẮT BUỘC của app, ignore là build/app hỏng. Vì vậy ảnh chỉ bị ignore ở
+#   thư mục gốc (pattern có tiền tố "/"), không ignore theo đuôi file.
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# 0. Rác hệ điều hành / editor
+# -----------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+*~
+*.swp
+*.swo
+*.orig
+*.rej
+
+# -----------------------------------------------------------------------------
+# 1. Node.js
+# -----------------------------------------------------------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.npm/
+.yarn/
+.pnp.*
+coverage/
+.nyc_output/
+
+# -----------------------------------------------------------------------------
+# 2. Python (tools/recovery-evaluation có script phân tích)
+# -----------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+ENV/
+*.egg-info/
+.eggs/
+dist/
+
+# Biến môi trường / bí mật
+.env
+.env.*
+!.env.example
+
+# -----------------------------------------------------------------------------
+# 3. Android / Gradle / Kotlin — output build (KHÔNG phải source)
+# -----------------------------------------------------------------------------
 .gradle/
-.idea/
+.gradle-user/
 build/
-local.properties
+app/build/
+app/release/
+.cxx/
+.kotlin/
 captures/
-*.iml
+externalNativeBuild/
+*.hprof
+*.tlog
+*.iobj
+*.ipdb
+*.pdb
+*.dex
+*.class
+*.flat
+*.ap_
+*.apk
+*.aab
+*.aar
+*.kotlin_module
+*.kapt_metadata
+*.values
+*.at
+*.tab
+*.tab_i
+*.keystream
+
+# Thư viện đóng gói: bỏ .jar/.war/.ear NHƯNG GIỮ gradle wrapper (bắt buộc để build)
+*.jar
+*.war
+*.ear
+
+# -----------------------------------------------------------------------------
+# 4. Ký ứng dụng / bí mật — TUYỆT ĐỐI không đẩy lên GitHub
+# -----------------------------------------------------------------------------
 *.jks
 *.keystore
-app/release/
+keystore.properties
+signing.properties
+local.properties
+
+# -----------------------------------------------------------------------------
+# 5. IDE / AI agent / tooling local (không phải code dự án)
+#    .claude/ chứa git worktree + cache (~477 MB); graphify-out/ là output
+#    sinh tự động (~164 MB) — tái tạo được bằng `graphify update .`
+# -----------------------------------------------------------------------------
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.classpath
+.project
+.settings/
+.claude/
+.agents/
+.codex/
+.android-user/
+.tmp-kotlin/
+.tmp-scan/
+.workbuddy-ai/
+graphify-out/
+skills-lock.json
+
+# -----------------------------------------------------------------------------
+# 6. Ứng dụng/tiện ích cài kèm trong workspace (KHÔNG phải source)
+#    Verdent/ = Electron app đã cài (Verdent.exe + app.asar + node_modules) ~750 MB
+# -----------------------------------------------------------------------------
+Verdent/
+*.exe
+*.dll
+*.so
+*.dylib
+*.msi
+*.dmg
+*.pkg
+*.AppImage
+*.asar
+*.asar.unpacked/
+*.pak
+*.node
+snapshot_blob.bin
+v8_context_snapshot.bin
+
+# -----------------------------------------------------------------------------
+# 7. BACKUP & STAGING ASSET — nhóm chiếm dung lượng LỚN NHẤT (~2.7 GB)
+#    Mọi thư mục _backup_*/ và _asset_*/ chỉ là bản sao lịch sử, không build.
+#    Bao gồm cả file rời _backup_task8_advsheet_20260901_202417.kt ở gốc.
+# -----------------------------------------------------------------------------
+_backup_*/
+_backup_*
+_asset_*/
+_asset_*
+
+# -----------------------------------------------------------------------------
+# 8. Artifact QA / ảnh chụp màn hình test / dump database
+#    Lưu ý: phải phủ CẢ hai kiểu đặt tên "qa-" và "qa_" — thực tế tồn tại 97 file
+#    dump UI hierarchy dạng qa_muscle3c1_*.xml / qa_v311d_*.xml ở thư mục gốc,
+#    nếu chỉ dùng "qa-*" sẽ bị lọt. Dùng pattern có tiền tố "/" để chỉ match ở gốc.
+# -----------------------------------------------------------------------------
+qa-screenshots/
+/qa-*
+/qa_*
+/ui-*
+/ui_*
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+*.log
+
+# Ảnh/video rời ở THƯ MỤC GỐC (không nằm trong app/src/main) — chỉ match ở gốc
+/ảnh mẫu dùng cho onboarding/
+/*.png
+/*.jpg
+/*.jpeg
+/*.webp
+/*.avif
+/*.mp4
+/*.mov
+/*.gif
+
+# JSON trùng lặp ở gốc — đã xác minh md5 trùng 100% với app/src/main/res/raw/
+/Confetti Partyyy!!.json
+/Trophy.json
+
+# -----------------------------------------------------------------------------
+# 9. Nguyên liệu thô (raw) — không phải code, không phải docs
+#    external_catalog_sources/ = ảnh + dữ liệu tải về để build catalog (~97 MB)
+#    trash/ = quarantine tạm của các lần audit dọn repo
+# -----------------------------------------------------------------------------
+external_catalog_sources/
+trash/
+
+# =============================================================================
+# 10. AN TOÀN — ngoại lệ bắt buộc phải giữ (đặt SAU cùng để có hiệu lực)
+# =============================================================================
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+!gradle/libs.versions.toml

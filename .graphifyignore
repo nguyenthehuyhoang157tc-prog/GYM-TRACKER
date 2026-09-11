@@ -1,0 +1,56 @@
+# Timestamped safety copies duplicate the live codebase and must not become graph nodes.
+_backup*/
+
+# Local runtime QA captures are evidence artifacts, not source architecture.
+qa-wearable1a-*
+
+# Reversible quarantine; never index archived duplicates or QA intermediates.
+trash/
+
+# ---- Build infrastructure: not source architecture, and catastrophically expensive to scan ----
+# GRADLE_USER_HOME redirected into the project. NOT covered by graphify's _SKIP_DIRS
+# (which lists ".gradle" but not ".gradle-user") and not in .gitignore, so the walk
+# descends into ~13.6k files / 1.5 GB — including 185 MB and 164 MB jars — and then
+# tries to word-count every one of them. That alone made a full detect() run exceed
+# 10 minutes and pushed an incremental update past 1h17m before it was aborted.
+# Real Kotlin source in this repo is only ~552 files.
+.gradle-user/
+.gradle/
+
+# Compiled / packaged / generated binaries. Never architecturally meaningful, and
+# byte-for-byte the most expensive files in the corpus to read.
+*.jar
+*.aar
+*.class
+*.bin
+*.flat
+*.dex
+*.so
+*.pom
+*.module
+*.marker
+*.iml
+
+# Binary assets: 24k+ exercise images. A previous full build produced 9,503 nodes
+# of which ZERO came from an image, so excluding them loses no graph content while
+# removing one vision subagent per image.
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.svg
+
+# Third-party catalog dumps (external_catalog_sources) are reference data, not code.
+external_catalog_sources/
+
+# ---- Doc noise: these are agent/tooling corpora, not project architecture ----
+# Agent skill + config docs. Indexing them makes the graph describe the tooling
+# around the repo instead of the app itself.
+.agents/
+.claude/
+# graphify's own output (dated snapshot dirs, memory/, reflections/). Self-generated
+# data must never be re-ingested as corpus.
+graphify-out/
+# Vendored third-party reference project.
+react-muscle-highlighter-main/

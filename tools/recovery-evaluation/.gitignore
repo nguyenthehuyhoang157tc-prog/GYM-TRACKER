@@ -1,0 +1,6 @@
+fixtures/generated/
+output/
+reports/runs/
+__pycache__/
+*.pyc
+

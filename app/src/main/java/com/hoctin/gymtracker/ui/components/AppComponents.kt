@@ -1,5 +1,6 @@
 package com.hoctin.gymtracker.ui.components
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -29,8 +30,24 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.hoctin.gymtracker.ui.theme.auronCardElevation
+import com.hoctin.gymtracker.ui.theme.auronGlassSurface
+
+/**
+ * Shared subtle container outline. Uses onSurface alpha so it reads as dark in Light mode and light
+ * in Dark mode without hardcoded per-screen colors.
+ */
+@Composable
+fun gymContainerBorder(
+    alpha: Float = 0.10f,
+    width: Dp = 1.dp,
+): BorderStroke = BorderStroke(
+    width = width,
+    color = MaterialTheme.colorScheme.onSurface.copy(alpha = alpha),
+)
 
 /**
  * Section heading with an optional trailing action slot.
@@ -49,7 +66,9 @@ fun SectionTitle(
         Text(
             text = title,
             style = MaterialTheme.typography.titleLarge,
-            fontWeight = FontWeight.Bold,
+            // UI-1 Part B: section titles read wider/stronger than body text.
+            fontWeight = FontWeight.ExtraBold,
+            letterSpacing = 0.2.sp,
         )
         if (action != null) {
             Row(verticalAlignment = Alignment.CenterVertically, content = action)
@@ -84,11 +103,16 @@ fun StatCard(
     label: String,
     modifier: Modifier = Modifier,
     accent: Color = MaterialTheme.colorScheme.primary,
+    // Optional custom icon (e.g. the animated Day-streak flame). When null, the [icon] is drawn.
+    iconContent: (@Composable () -> Unit)? = null,
 ) {
     Card(
-        modifier = modifier.heightIn(min = 116.dp),
+        modifier = modifier
+            .heightIn(min = 116.dp)
+            .auronCardElevation(22.dp),
         shape = MaterialTheme.shapes.large,
-        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+        colors = CardDefaults.cardColors(containerColor = auronGlassSurface()),
+        border = gymContainerBorder(),
     ) {
         Column(
             modifier = Modifier
@@ -103,12 +127,16 @@ fun StatCard(
                     .background(accent.copy(alpha = 0.16f)),
                 contentAlignment = Alignment.Center,
             ) {
-                Icon(
-                    imageVector = icon,
-                    contentDescription = null,
-                    tint = accent,
-                    modifier = Modifier.size(20.dp),
-                )
+                if (iconContent != null) {
+                    iconContent()
+                } else {
+                    Icon(
+                        imageVector = icon,
+                        contentDescription = null,
+                        tint = accent,
+                        modifier = Modifier.size(20.dp),
+                    )
+                }
             }
             Spacer(Modifier.height(2.dp))
             Text(
@@ -137,9 +165,12 @@ fun MetricCard(
     modifier: Modifier = Modifier,
 ) {
     Card(
-        modifier = modifier.heightIn(min = 92.dp),
+        modifier = modifier
+            .heightIn(min = 92.dp)
+            .auronCardElevation(22.dp),
         shape = MaterialTheme.shapes.large,
-        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+        colors = CardDefaults.cardColors(containerColor = auronGlassSurface()),
+        border = gymContainerBorder(),
     ) {
         Column(
             modifier = Modifier
@@ -220,6 +251,11 @@ fun GymBadge(
             style = MaterialTheme.typography.labelMedium,
             color = content,
             fontWeight = FontWeight.SemiBold,
+            // A pill must read on a single line — never let it crush into a vertical letter stack on
+            // narrow widths (DB-6F). Width-constrained parents (e.g. FlowRow) ellipsize cleanly.
+            maxLines = 1,
+            softWrap = false,
+            overflow = TextOverflow.Ellipsis,
         )
     }
 }
@@ -237,7 +273,7 @@ fun StatChip(label: String) {
 }
 
 /**
- * Primary call-to-action: full-width purple pill.
+ * Primary call-to-action: full-width brand-accent pill.
  */
 @Composable
 fun PrimaryGymButton(

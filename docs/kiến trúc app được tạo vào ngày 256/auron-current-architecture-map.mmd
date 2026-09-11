@@ -1,0 +1,76 @@
+flowchart LR
+    User["User / Profile"]
+    Onboarding["Onboarding\ntraining weekdays"]
+    Dashboard["Dashboard / Home"]
+    WeeklyHub["Weekly Progress Hub\nring + 6-week calendar"]
+    DailyBoost["Daily Boost\n2-minute rest-day habit"]
+    Settings["Settings / Profile\ntheme, training days, import/export"]
+
+    Plan["Training Plan"]
+    PlannedWorkout["Planned Workout\nWorkoutDayEntity"]
+    WorkoutExercise["Workout Exercise\nExerciseEntity snapshot"]
+    WorkoutLog["Workout Log\nLog Workout"]
+    History["History\nsessions + set tables"]
+    Catalog["Exercise Catalog\n568 reference exercises"]
+    Engine["Progression Engine V3.7A\ntrend + readiness + catalog profile"]
+
+    RoomDb[("Room Database v4\ngym_tracker.db")]
+    Prefs[("SharedPreferences\nprofile, drafts, theme, boost")]
+
+    subgraph Future["Future modules (dashed)"]
+        Recovery["Muscle Recovery heatmap"]
+        AiCoach["AI Coach"]
+        Firebase["Firebase Sync"]
+        Ads["Ads"]
+        UxPolish["Better UX/UI polish"]
+    end
+
+    User --> Onboarding
+    User --> Dashboard
+    User --> Settings
+    Onboarding --> Prefs
+    Settings --> Prefs
+    Settings --> RoomDb
+    Dashboard --> WeeklyHub
+    Dashboard --> DailyBoost
+    Dashboard --> PlannedWorkout
+    Dashboard --> Plan
+
+    Plan --> PlannedWorkout
+    PlannedWorkout --> WorkoutExercise
+    Catalog -- "DB-1 picker adds snapshots" --> WorkoutExercise
+    WorkoutExercise --> WorkoutLog
+    WorkoutLog -- "save session + sets" --> History
+    WorkoutLog --> Engine
+    History --> Engine
+    Catalog -- "profile lookup by exact name/alias" --> Engine
+
+    RoomDb --> Plan
+    RoomDb --> Catalog
+    RoomDb --> History
+    Prefs --> Dashboard
+    Prefs --> DailyBoost
+    Prefs --> WorkoutLog
+
+    Recovery -. "derive muscle load from History + Catalog" .-> History
+    Recovery -. "surface on Dashboard / Progress" .-> Dashboard
+    AiCoach -. "read engine outputs, history, catalog" .-> Engine
+    AiCoach -. "explain, do not own persistence" .-> Dashboard
+    Firebase -. "sync boundary after local DB contracts stabilize" .-> RoomDb
+    Firebase -. "account/profile preferences" .-> Prefs
+    Ads -. "attach only to app shell/settings" .-> Dashboard
+    Ads -. "keep out of training data path" .-> Settings
+    UxPolish -. "shared theme/components/screens" .-> Dashboard
+    UxPolish -. "no schema/domain dependency" .-> Plan
+
+    classDef current fill:#f8fbff,stroke:#52616f,stroke-width:1px,color:#14212b;
+    classDef data fill:#fff7e6,stroke:#b7791f,stroke-width:1px,color:#3b2600;
+    classDef engine fill:#f3e8ff,stroke:#7e22ce,stroke-width:1px,color:#2e1065;
+    classDef future fill:#ffffff,stroke:#7b8794,stroke-width:1px,stroke-dasharray: 6 4,color:#4b5563;
+    classDef store fill:#ecfeff,stroke:#0e7490,stroke-width:1px,color:#083344;
+
+    class User,Onboarding,Dashboard,WeeklyHub,DailyBoost,Settings,Plan,PlannedWorkout,WorkoutExercise,WorkoutLog,History current;
+    class Catalog data;
+    class Engine engine;
+    class RoomDb,Prefs store;
+    class Recovery,AiCoach,Firebase,Ads,UxPolish future;

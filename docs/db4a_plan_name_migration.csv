@@ -1,0 +1,93 @@
+auron_old_name,fed_canonical_name,mapping_class,in_default_template,affects_catalog,affects_default_templates,affects_active_plan_rows,affects_drafts,affects_history,recommended
+Barbell Flat Bench Press,Barbell Guillotine Bench Press,FED_RENAME,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Dumbbell Flat Bench Press,Dumbbell Bench Press,FED_RENAME,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Barbell Incline Bench Press,Barbell Incline Bench Press - Medium Grip,FED_RENAME,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Dumbbell Incline Bench Press,Dumbbell Bench Press,FED_RENAME,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Barbell Decline Bench Press,Decline Barbell Bench Press,FED_RENAME,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Dumbbell Decline Bench Press,Decline Dumbbell Bench Press,FED_RENAME,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Push-Up,Pushups,FED_EXACT,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Flat Dumbbell Fly,Dumbbell Flyes,FED_RENAME,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Incline Dumbbell Fly,Incline Dumbbell Flyes,FED_EXACT,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Decline Dumbbell Fly,Decline Dumbbell Flyes,FED_EXACT,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Cable Crossover,Cable Crossover,FED_EXACT,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Smith Machine Bench Press,Smith Machine Bench Press,FED_EXACT,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Smith Machine Incline Press,Smith Machine Incline Bench Press,FED_RENAME,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Barbell Floor Press,Floor Press,FED_RENAME,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Dumbbell Floor Press,Dumbbell Floor Press,FED_EXACT,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Wide-Grip Push-Up,Push-Up Wide,FED_RENAME,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Incline Push-Up,Incline Push-Up,FED_EXACT,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Conventional Barbell Deadlift,Barbell Deadlift,FED_RENAME,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Barbell Bent-Over Row,Bent Over Barbell Row,FED_RENAME,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Wide-Grip Pull-Up,Wide-Grip Rear Pull-Up,FED_RENAME,YES,yes,yes,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Chin-Up,Chin-Up,FED_EXACT,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Wide-Grip Lat Pulldown,Wide-Grip Lat Pulldown,FED_EXACT,YES,yes,yes,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Close-Grip Lat Pulldown,Close-Grip Front Lat Pulldown,FED_RENAME,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Seated Cable Row,Seated Cable Rows,FED_EXACT,YES,yes,yes,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+One-Arm Dumbbell Row,One-Arm Dumbbell Row,FED_EXACT,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+T-Bar Row,Lying T-Bar Row,FED_RENAME,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Barbell Shrug,Barbell Shrug,FED_EXACT,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Dumbbell Shrug,Dumbbell Shrug,FED_EXACT,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Straight-Arm Cable Pulldown,Straight-Arm Pulldown,FED_RENAME,YES,yes,yes,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Cable Face Pull,Face Pull,FED_RENAME,YES,yes,yes,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Superman,Superman,FED_EXACT,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Barbell Good Morning,Good Morning,FED_RENAME,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Barbell Bicep Curl,Barbell Curl,FED_RENAME,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Dumbbell Alternate Bicep Curl,Dumbbell Alternate Bicep Curl,FED_EXACT,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Incline Dumbbell Curl,Incline Dumbbell Curl,FED_EXACT,YES,yes,yes,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Concentration Curl,Concentration Curls,FED_EXACT,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Reverse Barbell Curl,Reverse Barbell Curl,FED_EXACT,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+High Pulley Cable Curl,High Cable Curls,FED_RENAME,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Zottman Curl,Zottman Curl,FED_EXACT,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Machine Preacher Curl,Machine Preacher Curls,FED_EXACT,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Cross-Body Hammer Curl,Cross Body Hammer Curl,FED_EXACT,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Cable Rope Hammer Curl,Cable Hammer Curls - Rope Attachment,FED_RENAME,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Drag Curl,Drag Curl,FED_EXACT,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Triceps Pushdown,Triceps Pushdown,FED_EXACT,YES,yes,yes,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Close-Grip Bench Press,Close-Grip Barbell Bench Press,FED_RENAME,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Overhead Dumbbell Triceps Extension,Decline Dumbbell Triceps Extension,FED_RENAME,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Cable Overhead Triceps Extension,Cable Rope Overhead Triceps Extension,FED_RENAME,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Reverse-Grip Triceps Pushdown,Reverse Grip Triceps Pushdown,FED_EXACT,YES,yes,yes,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Diamond Push-Up,Pushups,FED_RENAME,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+JM Press,JM Press,FED_EXACT,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Tate Press,Tate Press,FED_EXACT,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Machine Triceps Dip,Dip Machine,FED_RENAME,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Barbell Back Squat,Barbell Squat,FED_RENAME,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Barbell Front Squat,Front Barbell Squat,FED_RENAME,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Hack Squat Machine,Hack Squat,FED_RENAME,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Leg Press,Leg Press,FED_EXACT,YES,yes,yes,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Dumbbell Goblet Squat,Dumbbell Squat,FED_RENAME,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Leg Extension,Leg Extensions,FED_EXACT,YES,yes,yes,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Smith Machine Squat,Smith Machine Squat,FED_EXACT,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Dumbbell Step-Up,Dumbbell Step Ups,FED_EXACT,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Romanian Deadlift,Romanian Deadlift,FED_EXACT,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Seated Leg Curl,Seated Leg Curl,FED_EXACT,YES,yes,yes,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Lying Leg Curl,Lying Leg Curls,FED_EXACT,YES,yes,yes,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Sumo Deadlift,Sumo Deadlift,FED_EXACT,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Deficit Deadlift,Deficit Deadlift,FED_EXACT,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Cable Pull-Through,Pull Through,FED_RENAME,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Barbell Hip Thrust,Barbell Hip Thrust,FED_EXACT,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Machine Thigh Abductor,Thigh Abductor,FED_RENAME,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Machine Thigh Adductor,Thigh Adductor,FED_RENAME,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Standing Calf Raise,Standing Calf Raises,FED_EXACT,YES,yes,yes,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Seated Calf Raise,Seated Calf Raise,FED_EXACT,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Leg Press Calf Raise,Calf Press,FED_RENAME,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Smith Machine Reverse Calf Raise,Smith Machine Reverse Calf Raises,FED_EXACT,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Seated Dumbbell Shoulder Press,Dumbbell Shoulder Press,FED_RENAME,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Cable Lateral Raise,Cable Seated Lateral Raise,FED_RENAME,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Arnold Press,Arnold Dumbbell Press,FED_RENAME,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Dumbbell Front Raise,Front Dumbbell Raise,FED_RENAME,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Smith Machine Overhead Press,Smith Machine Overhead Shoulder Press,FED_RENAME,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Machine Shoulder Press,Machine Shoulder (Military) Press,FED_RENAME,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Barbell Upright Row,Upright Barbell Row,FED_RENAME,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Dumbbell Incline Rear Delt Row,Dumbbell Incline Row,FED_RENAME,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Plate Front Raise,Front Plate Raise,FED_RENAME,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Pike Push-Up,Pushups,FED_RENAME,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Hanging Leg Raise,Hanging Leg Raise,FED_EXACT,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Decline Bench Crunch,Decline Crunch,FED_RENAME,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Cable Crunch,Cable Crunch,FED_EXACT,YES,yes,yes,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Forearm Plank,Plank,FED_RENAME,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Side Plank,Plank,FED_RENAME,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Lying Reverse Crunch,Reverse Crunch,FED_RENAME,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Deadbug,3/4 Sit-Up,FED_RENAME,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Pallof Press,Pallof Press,FED_EXACT,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
+Flutter Kicks,Flutter Kicks,FED_EXACT,no,yes,no,yes (if rename active rows),no (keyed by exerciseId),historical-text,update catalog+templates+active plan; preserve history
