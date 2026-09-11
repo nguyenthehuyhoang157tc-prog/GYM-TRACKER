@@ -1,5 +1,6 @@
 package com.hoctin.gymtracker.privacy
 
+import java.io.ByteArrayOutputStream
 import java.io.File
 import java.security.MessageDigest
 import javax.xml.parsers.DocumentBuilderFactory
@@ -114,7 +115,39 @@ class WearableProtectedBoundaryTest {
             ?: error("Cannot locate $path from ${File(".").absolutePath}")
     }
 
-    private fun sha256(file: File): String = MessageDigest.getInstance("SHA-256")
-        .digest(file.readBytes())
-        .joinToString("") { byte -> "%02X".format(byte) }
+    /**
+     * SHA-256 of the file's content, with CRLF normalised to LF first.
+     *
+     * This guard freezes the *content* of the privacy-critical engines. Line endings are a
+     * checkout artefact, not content: the blob stored in git is LF, but with
+     * `core.autocrlf = true` a fresh clone on Windows checks these files out as CRLF. Hashing
+     * the raw bytes therefore made every protected-byte assertion fail on a clean clone even
+     * though the source was unchanged - which is exactly the kind of false alarm that makes a
+     * cloud agent "fix" something that was never broken.
+     *
+     * Normalising first keeps the expected digests valid in every environment (Windows, Linux,
+     * CI, agent sandboxes) and still detects any real change to the protected source.
+     */
+    private fun sha256(file: File): String {
+        val bytes = file.readBytes()
+        val normalised = ByteArrayOutputStream(bytes.size)
+        var index = 0
+        while (index < bytes.size) {
+            val current = bytes[index]
+            if (current == CR && index + 1 < bytes.size && bytes[index + 1] == LF) {
+                index++ // drop the CR of a CRLF pair; the LF is written on the next pass
+                continue
+            }
+            normalised.write(current.toInt())
+            index++
+        }
+        return MessageDigest.getInstance("SHA-256")
+            .digest(normalised.toByteArray())
+            .joinToString("") { byte -> "%02X".format(byte) }
+    }
+
+    private companion object {
+        const val CR: Byte = '\r'.code.toByte()
+        const val LF: Byte = '\n'.code.toByte()
+    }
 }

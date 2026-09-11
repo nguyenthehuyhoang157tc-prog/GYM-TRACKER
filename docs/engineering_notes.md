@@ -38,6 +38,31 @@ making non-trivial changes. Distilled from the project's working memory (Septemb
 - Before editing a shared component, back up to `_backup_<task>_<YYYYMMDD>_<HHMMSS>/`
   (project convention; those folders are git-ignored).
 
+### Line endings — do not hash raw bytes
+
+This machine has `core.autocrlf = true`, so a fresh checkout writes **CRLF** into the working
+tree even though every blob in git is **LF**. The two are equivalent to git, but not to code
+that reads a file as bytes.
+
+`WearableProtectedBoundaryTest.sleepSelectionRepairLeavesProtectedModelBytesFrozen` froze three
+privacy-critical files by comparing a raw SHA-256 against a hard-coded digest. Those digests
+were the **LF** values, so the guard passed in the workspace (whose files happen to be LF) but
+failed on **every clean clone** — `MuscleRecovery.kt`, `MuscleHeatEngine.kt` and
+`ProgressiveOverload.kt` all hashed differently purely because of CRLF. That is exactly the
+false alarm that would make a cloud agent "fix" source that was never broken.
+
+The guard now normalises CRLF → LF before hashing (`sha256()` in that test), so the expected
+digests hold on Windows, Linux, CI and agent sandboxes alike, while still detecting any real
+content change. **If you add another byte-frozen guard, normalise line endings first.**
+
+Verified both ways: 468 tests, 0 failures in the LF workspace *and* in a CRLF clone.
+
+A repo-level `.gitattributes` (`* text=auto eol=lf`) would remove the CRLF/LF split at the
+source. It is deliberately **not** added yet: the blobs are already LF so it would not change
+the repository, but it would rewrite the working-tree line endings and produce a large
+one-off churn diff — not worth doing casually in a repo whose object store has already proved
+fragile.
+
 ---
 
 ## 3. Liquid glass — the hard-won part
